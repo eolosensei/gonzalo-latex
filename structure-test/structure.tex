@@ -1,0 +1,24 @@
+\documentclass{article}
+
+\usepackage{polyglossia}
+    \setdefaultlanguage{spanish}
+
+\usepackage{fontspec}
+    \setmainfont{Fira Sans}
+
+%\usepackage[version=4]{mhchem}
+\usepackage{chemfig}
+\usepackage{chemformula}
+
+\begin{document}
+
+\definesubmol\Me[H_3C]{CH_3}
+\definesubmol\iProp{(-[::60]!\Me)-[::-60]!\Me}
+\definesubmol\iButL{-[::60](-[::60]!\Me)-[::-60]!\Me}
+\definesubmol\iButR{-[::-60](-[::60]!\Me)-[::-60]!\Me}
+\definesubmol\tBut{(-[::90]!\Me)(-[::-90]!\Me)-[::0]!\Me}
+
+
+\chemfig{*6((-!\iButL)=(-!\Me)-(-!\iProp)=(-!\tBut)-(-!\Me)=(-!\iButR)-)}
+
+\end{document}
