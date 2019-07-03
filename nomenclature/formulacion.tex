@@ -1,0 +1,167 @@
+\documentclass{article}
+
+\usepackage{polyglossia}
+    \setdefaultlanguage{spanish}
+
+\usepackage{fontspec}
+    \setmainfont{Fira Sans}
+
+%\usepackage[version=4]{mhchem}
+\usepackage{chemfig}
+\usepackage{chemformula}
+
+\usepackage{tabularx}
+\usepackage{booktabs}
+
+\newcounter{gexformulation}
+
+
+\newenvironment{gemyboxed}
+  {\centering\setcounter{gexformulation}{1}\tabularx{\textwidth}{rlXX}
+    \toprule\midrule}
+  {\endtabularx}
+
+\newcommand{\gexbinary}[3]{
+  \thegexformulation\stepcounter{gexformulation} & \ch{#1} & #2 & #3 \\ \midrule
+}
+
+
+\begin{document}
+
+
+\setchemfig{atom sep=1.5em}  % para una versión más moderna de chemfig
+
+\begin{table}
+  \caption{Óxidos básicos}
+    \centering
+    \begin{tabularx}{\textwidth}{rlXX}
+        \toprule\midrule
+        1   & \ch{BaO}       & Monóxido de bario    & Óxido de bario                         \\ \midrule
+        2   & \ch{Na2O} & Monóxido de disodio & Óxido de sodio                      \\ \midrule
+        3   & \ch{Al2O3} & Trióxido de dialuminio & Óxido de aluminio \\ \midrule
+        4   & \ch{CoO}  & Monóxido de cobalto & Óxido de cobalto (II) \\ \midrule
+        5   & \ch{CuO} & Monóxido de cobre & Óxido de cobre (II) \\ \midrule
+        6   & \ch{Cu2O} & Monóxido de dicobre & Óxido de cobre (III) \\ \midrule
+        7   & \ch{FeO} & Monóxido de hierro & Óxido de hierro (II) \\ \midrule
+        8   & \ch{Fe2O3} & Trióxido de dihierro & Óxido de hierro (III) \\ \midrule
+        9   & \ch{Rb2O} & Monóxido de dirubidio & Óxido de rubidio \\ \midrule
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\begin{table}
+  \caption{Óxidos ácidos}
+    \centering
+    \begin{tabularx}{\textwidth}{rlXX}
+        \toprule\midrule
+        1   & \ch{Cl2O} & Monóxido de dicloro & Óxido de cloro (I) \\ \midrule
+        2   & \ch{Cl2O3} & Trióxido de dicloro & Óxido de cloro (III) \\ \midrule
+        3   & \ch{Cl2O5} & Pentaóxido de dicloro & Óxido de cloro (V) \\ \midrule
+        4   & \ch{Cl2O7}  & Heptaóxido de dicloro & Óxido de cloro (VII) \\ \midrule
+        5   & \ch{SO} & Monóxido de azufre & Óxido de azufre (II) \\ \midrule
+        6   & \ch{SO2} & Dióxido de azufre & Óxido de azufre (IV) \\ \midrule
+        7   & \ch{SO3} & Trióxido de azufre & Óxido de azufre (VI) \\ \midrule
+        8   & \ch{CO2} & Dióxido de carbono & Óxido de carbono (IV) \\ \midrule
+        9   & \ch{CO} & Monóxido de carbono & Óxido de carbono (II) \\ \midrule
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\begin{table}
+  \caption{Ejercicio}
+    \centering
+    \begin{tabularx}{\textwidth}{rlXX}
+        \toprule\midrule
+        1   & \ch{BeO} & Monóxido de berilio & Óxido de berilio \\ \midrule
+        2   & \ch{Au2O3} & Trióxido de dioro & Óxido de oro (II) \\ \midrule
+        3   & \ch{CaO} & Monóxido de calcio & Óxido de calcio \\ \midrule
+        4   & \ch{ZnO} & Monóxido de zinc & Óxido de zinc \\ \midrule
+        5   & \ch{CrO} & Monóxido de cromo & Óxido de cromo (II) \\ \midrule
+        6   & \ch{Cr2O3} & Trióxido de dicromo & Óxido de cromo (III) \\ \midrule
+        7   & \ch{HgO} & Monóxido de mercurio & Óxido de mercurio (II) \\ \midrule
+        8   & \ch{Hg2O} & Monóxido de dimercurio & Óxido de mercurio (I) \\ \midrule
+        9   & \ch{Ag2O} & Monóxido de diplata & Óxido de plata \\ \midrule
+        10  & \ch{CdO} &  Monóxido de cadmio & Óxido de cadmio \\ \midrule
+        11  & \ch{SnO} &  Monóxido de estaño & Óxido de estaño (II) \\ \midrule
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\begin{table}
+  \caption{Peróxidos}
+    \centering
+    \begin{tabularx}{\textwidth}{rlXX}
+        \toprule\midrule
+        1  & \ch{K2O2} & Dióxido de dipotasio & Peróxido de potasio \\ \midrule
+        2  & \ch{Cs2O2} & Dióxido de dicesio & Peróxido de cesio \\ \midrule
+        3  & \ch{Ag2O2} & Dióxido de diplata & Peróxido de plata \\ \midrule
+        4  & \ch{H2O2} &  Dióxido de dihidrógeno & Peróxido de hidrógeno \\ \midrule
+        5  & \ch{MgO2} & Dióxido de magnesio & Peróxido de magnesio \\ \midrule
+        6  & \ch{SrO2} & Dióxido de estroncio & Peróxido de estroncio \\ \midrule
+        7  & \ch{Cu2O2} & Dióxido de dicobre & Peróxido de cobre (I) \\ \midrule
+        8  & \ch{CuO2} & Dióxido de cobre & Peróxido de cobre (II) \\ \midrule
+        9  & \ch{Li2O2} & Dióxido de dilitio & Peróxido de litio \\ \midrule
+        10 & \ch{BaO2} & Dióxido de bario & Peróxido de bario \\ \midrule
+        11 & \ch{NiO2} & Dióxido de níquel & Peróxido de níquel (II) \\ \midrule
+        12 & \ch{CaO2} & Dióxido de calcio & Peróxido de calcio \\ \midrule
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+
+\begin{table}
+  \caption{Óxidos no metálicos}
+  \begin{gemyboxed}
+    \gexbinary{N2O}{Monóxido de dinitrógeno}{Óxido de nitrógeno (I)}
+    \gexbinary{P2O}{Monóxido de difósforo}{Óxido de fósforo (I)}
+    \gexbinary{SeO3}{Trióxido de selenio}{Óxido de selenio (VI)}
+    \gexbinary{As2O3}{Trióxido de diarsénico}{Óxido de arsénico (III)}
+    \gexbinary{SO2}{Dióxido de azufre}{Óxido de azufre (IV)}
+    \gexbinary{SO}{Monóxido de azufre}{Óxido de azufre (II)}
+    \gexbinary{F2O}{Monóxido de diflúor}{Óxido de flúor}
+    \gexbinary{I2O7}{Heptaóxido de diyodo}{Óxido de yodo (III)}
+    \gexbinary{I2O3}{Trióxido de diyodo}{Óxido de yodo (II)}
+    \gexbinary{I2O}{Monóxido de diyodo}{Óxido de yodo (I)}
+    \gexbinary{CO}{Monóxido de carbono}{Óxido de carbono (II)}
+    \gexbinary{N2O5}{Pentaóxido de dinitrógeno}{Óxido de nitrógeno (V)}
+    \gexbinary{N2O3}{Trióxido de dinitrógeno}{Óxido de nitrógeno (III)}
+    \gexbinary{I2O5}{Pentaóxido de diyodo}{Óxido de yodo (V)}
+    \gexbinary{P2O3}{Trióxido de difósforo}{Óxido de fósforo (III)}
+    \gexbinary{P2O5}{Pentaóxido de difósforo}{Óxido de fósforo (V)}
+    \bottomrule
+  \end{gemyboxed}
+\end{table}
+
+\begin{table}
+  \caption{Hidruros metálicos}
+  \begin{gemyboxed}
+    \gexbinary{NaH}{(Mono)hidruro de sodio}{Hidruro de sodio}
+    \gexbinary{KH}{(Mono)hidruro de potasio}{Hidruro de potasio}
+    \gexbinary{CaH2}{Dihidruro de calcio}{Hidruro de calcio}
+    \gexbinary{AlH3}{Trihidruro de aluminio}{Hidruro de aluminio}
+    \gexbinary{BeH3}{Trihidruro de berilio}{Hidruro de berilio}
+    \gexbinary{BaH2}{Dihidruro de bario}{Hidruro de bario}
+    \gexbinary{CuH}{(Mono)hidruro de cobre}{Hidruro de cobre (I)}
+    \gexbinary{LiH}{(Mono)hidruro de litio}{Hidruro de litio}
+    \gexbinary{CuH2}{Dihidruro de cobre}{Hidruro de cobre (II)}
+    \gexbinary{AuH3}{Trihidruro de oro}{Hidruro de oro (III)}
+    \gexbinary{CrH3}{Trihidruro de cromo}{Hidruro de cromo (III)}
+    \gexbinary{CrH2}{Dihidruro de cromo}{Hidruro de cromo (II)}
+    \gexbinary{ZnH2}{Dihidruro de zinc}{Hidruro de zinc}
+    \gexbinary{MgH2}{Dihidruro de magnesio}{Hidruro de magnesio}
+    \gexbinary{CoH3}{Trihidruro de cobalto}{Hidruro de cobalto (III)}
+    \gexbinary{CoH2}{Dihidruro de cobalto}{Hidruro de cobalto (II)}
+    \gexbinary{BeH2}{Dihidruro de berilio}{Hidruro de berilio}
+    \gexbinary{CdH2}{Dihidruro de cadmio}{Hidruro de cadmio}
+    \gexbinary{FeH2}{Dihidruro de hierro}{Hidruro de hierro (II)}
+    \gexbinary{AgH}{(Mono)hidruro de plata}{Hidruro de plata}
+    \gexbinary{SnH4}{Tetrahidruro de estaño}{Hidruro de estaño (IV)}
+    \gexbinary{PtH4}{Tetrahidruro de platino}{Hidruro de platino (IV)}
+    \gexbinary{PbH2}{Dihidruro de plomo}{Hidruro de plomo (II)}
+    \gexbinary{HgH}{(Mono)hidruro de mercurio}{Hidruro de mercurio (I)}
+    \bottomrule
+  \end{gemyboxed}
+\end{table}
+
+
+\end{document}
