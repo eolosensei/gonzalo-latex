@@ -8,6 +8,7 @@
 
 %\usepackage[version=4]{mhchem}
 \usepackage{chemfig}
+  \setchemfig{atom sep=2em}  % para una versión más moderna de chemfig
 \usepackage{chemformula}
 
 \usepackage{tabularx}
@@ -16,8 +17,8 @@
 \newcounter{gexformulation}
 
 
-\newenvironment{gemyboxed}
-  {\centering\setcounter{gexformulation}{1}\tabularx{\textwidth}{rlXX}
+\newenvironment{gorganictable}
+  {\centering\setcounter{gexformulation}{1}\tabularx{\textwidth}{rlX}
     \toprule\midrule}
   {\endtabularx}
 
@@ -25,10 +26,25 @@
   \thegexformulation\stepcounter{gexformulation} & \ch{#1} & #2 & #3 \\ \midrule
 }
 
+\newcommand{\gexorgcf}[2]{
+  \thegexformulation\stepcounter{gexformulation} & #1 & \ch{#2} \\ \midrule
+}
+\newcommand{\gexorgch}[2]{
+  \thegexformulation\stepcounter{gexformulation} & #1 & \chemfig{#2} \\ \midrule
+}
+
 
 \begin{document}
 
-\setchemfig{atom sep=1.5em}  % para una versión más moderna de chemfig
 
+
+\begin{table}
+  \caption{Alcanos}
+  \begin{gorganictable}
+    \gexorgcf{propano}{CH3-CH2-CH2-CH3}
+    \gexorgch{propano}{CH_3-CH_2-CH_2-CH_3}
+    \bottomrule
+  \end{gorganictable}
+\end{table}
 
 \end{document}
