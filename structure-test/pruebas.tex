@@ -1,0 +1,19 @@
+\documentclass{article}
+
+\usepackage{polyglossia}
+    \setdefaultlanguage{spanish}
+
+\usepackage{fontspec}
+    \setmainfont{Fira Sans}
+
+
+\begin{document}
+Creo un nuevo contador
+\newcounter{contador}
+
+El contador vale \thecontador
+
+\stepcounter{contador}
+
+Ahora el contador vale \thecontador
+\end{document}
