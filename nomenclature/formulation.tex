@@ -1,3 +1,6 @@
+\usepackage{chemfig}
+\usepackage{chemformula}
+
 \newcounter{gexformulation}
 
 \newenvironment{gemyboxed}
@@ -17,6 +20,7 @@
 \newcommand{\gexOrgCf}[2]{
   \thegexformulation\stepcounter{gexformulation} & {#1} & \ch{#2} \\ \midrule
 }
+
 \newcommand{\gexOrgCh}[2]{
   \thegexformulation\stepcounter{gexformulation} & {#1} & \chemfig{#2} \\ \midrule
 }
