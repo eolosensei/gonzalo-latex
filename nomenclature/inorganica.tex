@@ -13,18 +13,7 @@
 \usepackage{tabularx}
 \usepackage{booktabs}
 
-\newcounter{gexformulation}
-
-
-\newenvironment{gemyboxed}
-  {\centering\setcounter{gexformulation}{1}\tabularx{\textwidth}{rlXX}
-    \toprule\midrule}
-  {\endtabularx}
-
-\newcommand{\gexbinary}[3]{
-  \thegexformulation\stepcounter{gexformulation} & \ch{#1} & #2 & #3 \\ \midrule
-}
-
+\input{formulation.tex}
 
 \begin{document}
 
