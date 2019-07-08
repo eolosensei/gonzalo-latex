@@ -6,30 +6,12 @@
 \usepackage{fontspec}
     \setmainfont{Fira Sans}
 
-%\usepackage[version=4]{mhchem}
-\usepackage{chemfig}
-\usepackage{chemformula}
+\input{formulation.tex}
 
 \usepackage{tabularx}
 \usepackage{booktabs}
 
-\newcounter{gexformulation}
-
-
-\newenvironment{gemyboxed}
-  {\centering\setcounter{gexformulation}{1}\tabularx{\textwidth}{rlXX}
-    \toprule\midrule}
-  {\endtabularx}
-
-\newcommand{\gexbinary}[3]{
-  \thegexformulation\stepcounter{gexformulation} & \ch{#1} & #2 & #3 \\ \midrule
-}
-
-
 \begin{document}
-
-
-\setchemfig{atom sep=1.5em}  % para una versión más moderna de chemfig
 
 \begin{table}
   \caption{Óxidos básicos}

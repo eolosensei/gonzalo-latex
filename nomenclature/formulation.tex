@@ -1,0 +1,26 @@
+\usepackage{chemfig}
+\usepackage{chemformula}
+
+\newcounter{gexformulation}
+
+\newenvironment{gemyboxed}
+  {\centering\setcounter{gexformulation}{1}\tabularx{\textwidth}{rlXX}
+    \toprule\midrule}
+  {\endtabularx}
+
+\newenvironment{gorganictable}
+  {\centering\setcounter{gexformulation}{1}\tabularx{\textwidth}{rlX}
+    \toprule\midrule}
+  {\endtabularx}
+
+\newcommand{\gexbinary}[3]{
+  \thegexformulation\stepcounter{gexformulation} & \ch{#1} & #2 & #3 \\ \midrule
+}
+
+\newcommand{\gexOrgCf}[2]{
+  \thegexformulation\stepcounter{gexformulation} & {#1} & \ch{#2} \\ \midrule
+}
+
+\newcommand{\gexOrgCh}[2]{
+  \thegexformulation\stepcounter{gexformulation} & {#1} & \chemfig{#2} \\ \midrule
+}

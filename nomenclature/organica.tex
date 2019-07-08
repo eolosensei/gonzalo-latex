@@ -6,37 +6,15 @@
 \usepackage{fontspec}
     \setmainfont{Fira Sans}
 
-%\usepackage[version=4]{mhchem}
-\usepackage{chemfig}
+\input{formulation.tex}
   \setchemfig{atom sep=2em}  % para una versión más moderna de chemfig
-\usepackage{chemformula}
 
 \usepackage{tabularx}
 \usepackage{booktabs}
 
-\newcounter{gexformulation}
-
-
-\newenvironment{gorganictable}
-  {\centering\setcounter{gexformulation}{1}\tabularx{\textwidth}{rlX}
-    \toprule\midrule}
-  {\endtabularx}
-
-\newcommand{\gexbinary}[3]{
-  \thegexformulation\stepcounter{gexformulation} & \ch{#1} & #2 & #3 \\ \midrule
-}
-
-\newcommand{\gexOrgCf}[2]{
-  \thegexformulation\stepcounter{gexformulation} & {#1} & \ch{#2} \\ \midrule
-}
-\newcommand{\gexOrgCh}[2]{
-  \thegexformulation\stepcounter{gexformulation} & {#1} & \chemfig{#2} \\ \midrule
-}
 
 
 \begin{document}
-
-
 
 \begin{table}
   \caption{Alcanos}
@@ -170,6 +148,16 @@
     \gexOrgCh{propeno}{}
     \gexOrgCh{hexano}{}
     \gexOrgCh{hept-1-en-5-ino}{CH_2=CH-CH_2-CH_2-C~C-CH_3}
+    \bottomrule
+  \end{gorganictable}
+\end{table}
+
+\begin{table}
+  \caption{EJ. 5, página 36}
+  \begin{gorganictable}
+    \gexOrgCh{}{CH_2(-[4]*3(---))-CH(-[6]CH_3)-CH_3}
+    \gexOrgCh{}{CH~C-**6(------)}
+    \gexOrgCh{}{CH_3-CH_2-CH_2-C(=[2]CH_2)-C~CH}
     \bottomrule
   \end{gorganictable}
 \end{table}
