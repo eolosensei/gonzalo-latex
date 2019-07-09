@@ -1,0 +1,48 @@
+\documentclass{article}
+
+\usepackage{polyglossia}
+    \setdefaultlanguage{spanish}
+
+\usepackage{fontspec}
+    \setmainfont{Fira Sans}
+
+\input{formulation.tex}
+
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{booktabs}
+
+\begin{document}
+
+\begin{table}
+  \caption{Oxoácidos}
+  \centering\setcounter{gexformulation}{1}
+  \begin{tabularx}{\textwidth}{rllll}
+    \toprule\midrule
+    \gexTernary{H2SO4}{Ácido sulfúrico}{Dihidrogeno(tetraoxidosulfato)}{Dihidroxidodioxidoazufre}
+    \gexTernary{HNO3}{Ácido nítrico}{Hidrogeno(trioxidonitrato)}{Hidroxidodioxidonitrógeno}
+    \gexTernary{H2SO3}{Ácido sulfuroso}{Dihidrogeno(trioxidosulfato)}{Dihidroxidooxidoazufre}
+    \gexTernary{HClO4}{Ácido perclórico}{Hidrogeno(tetraoxidoclorato)}{Hidroxidotrioxidocloro}
+    \gexTernary{H4P2O7}{Ácido difosfórico}{Tetrahidrogeno(heptaoxidodifosfato)}{Tetrahidroxidotrioxidodifósforo}
+    \gexTernary{HIO3}{Ácido yódico}{Hidrogeno(trioxidoyodato)}{Hidroxidodioxidoyodo}
+    \gexTernary{HBrO}{Ácido hipobromoso}{Hidrogeno(oxidobromato)}{Hidroxidobromo}
+    \gexTernary{HClO2}{Ácido cloroso}{Hidrogeno(dioxidoclorato)}{Hidroxidooxidocloro}
+    \gexTernary{H2SeO2}{Ácido hiposelenioso}{Dihidrogeno(dioxidoseleniato)}{Dihidroxidoselenio}
+    \gexTernary{H2CO3}{Ácido carbónico}{Dihidrogeno(trioxidocarbonato)}{Dihidroxidooxidocarbono}
+    \gexTernary{HNO2}{Ácido nitroso}{Hidrogeno(dioxidonitrato)}{Hidroxidooxidonitrógeno}
+    \gexTernary{H2SeO3}{Ácido selenioso}{Dihidrogeno(trioxidoseleniato)}{Dihidroxidooxidoselenio}
+    \gexTernary{HPO3}{Ácido metafosfórico}{Hidrogeno(trioxidofosfato)}{Hidroxidodioxidofósforo}
+    \gexTernary{H3AsO4}{Ácido (orto)arsénico}{Trihidrogeno(tetraoxidoarseniato)}{Trihidroxidooxidoarsénico}
+    \gexTernary{H2TeO4}{Ácido telúrico}{Dihidrogeno(tetratoxidoteluriato)}{Dihidróxidooxidoteluro}
+    \gexTernary{H3SbO3}{Ácido ortoantimonioso}{Trihidrogeno(trioxidoantimoniato)}{Trhidroxidoantimonio}
+    \gexTernary{H3PO4}{Ácido (orto)fosfórico}{Trihidrogeno(tetraoxidofosfato)}{Trihidroxidooxidofósforo}
+    \gexTernary{H3AsO3}{}{Trihidrogeno(trioxidoarseniato)}{Trihidroxidoarsénico}
+    \gexTernary{}{}{}{}
+    \gexTernary{}{}{}{}
+    \gexTernary{}{}{}{}
+    \gexTernary{}{}{}{}
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\end{document}
