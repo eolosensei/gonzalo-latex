@@ -1,0 +1,861 @@
+\documentclass{article}
+
+\usepackage{polyglossia}
+    \setdefaultlanguage{spanish}
+
+\usepackage{fontspec}
+    \setmainfont{Fira Sans}
+
+\usepackage{siunitx}
+
+\begin{document}
+
+\section{BLOQUE 2. ASPECTOS CUALITATIVOS DE LA QUÍMICA (tema 3 del libro)}
+
+4> Sabemos que \SI{40}{uma} es la masa del átomo de calcio. Calcula:
+
+a) La masa en gramos de \SI{1}{átomo} de Ca.
+
+b) ¿Cuál de las siguientes cantidades tienen mayor número de átomos? \SI{40}{g} de Ca; \SI{0,20}{moles} de Ca; \SI{5e23}{átomos} de Ca.
+
+S: a) m = \SI{6,6E-23}{\gram}. b) \SI{40}{\gram} de Ca.
+
+% 5> Si tenemos en cuenta que 56 uma es la masa del átomo de hierro, calcula:
+% a) La masa atómica en gramos de 1 átomo de Fe.
+% b) Cuál de las siguientes cantidades tiene mayor número de átomos de Fe: 56 g, 0,20 moles o 5·10^23 átomos.
+% S: a) m = 9,3·10^-23 g. b) 56 g de Fe.
+%
+% 6> Responde a las siguientes cuestiones:
+% a) ¿En cuál de las siguientes cantidades de los elementos que se enumeran a continuación
+% existe un mayor número de moles: 100 g de hierro, 100 gramos de oxígeno
+% molecular, 100 gramos de cinc o 100 gramos de níquel?
+% b) ¿Y un mayor número de átomos?
+% S: a) En los 100 gramos de oxígeno molecular. b) En los 100 gramos de oxígeno molecular.
+%
+% 10> Sabiendo que un gas a 1,5 atm y 290 K tiene una densidad de 1,178 g/L, calcula su masa molecular.
+% S: M = 18,7 g/mol
+%
+% 11> Calcula la densidad del metano (CH4) a 700 mmHg y 75 ºC.
+% S: d = 0,52 g/L
+%
+% 12> Calcula el número de moléculas de CO2 que habrá en 10 L del
+% mismo gas medidos en condiciones normales.
+% S: M = 2, 7 • 10^23 moléculas.
+%
+% 13> Calcula la masa en gramos de un mol de 502 sabiendo que
+% exactamente 5 cm 3 de dicho gas, medidos en condiciones
+% normales, tienen una masa de 0,01428 g.
+% S: M = 64 g/mol
+%
+% 14> La masa de 1,20 mg de una sustancia gaseosa pura equivale
+% a 1,20 • 10^19 moléculas. Calcula la masa en gramos de 1 mol
+% de dicha sustancia.
+% S: M = 60,2 g/mol
+%
+% 15> Se introducen, en un recipiente de 5,0 L, 10 gramos de alcohol etílico (C2H5OH) y 10
+% gramos de acetona (C3H6O) y posteriormente se calienta el reactor a 200 ºC, con lo cual
+% ambos líquidos pasan a la fase gaseosa. Calcula la presión en el interior del reactor,
+% suponiendo comportamiento ideal, y la presión parcial de cada componente.
+% S: P_alcohol = 1,7 atm; P_acetona = 1,3 atm ; P_T = 3,0 atm
+%
+% 16> Calcula la composición centesimal de la molécula de propano (C3H8).
+% S: 81,8\% de carbono; 18,2\% de hidrógeno.
+%
+% 18> Calcula la fracción molar de cada uno de los componentes
+% de una disolución que se ha preparado mezclando 90 gramos
+% de alcohol etílico (C2H50H) y 110 gramos de agua.
+% S: X_alcohol = 0,24, X_agua = O,76.
+%
+% 20> Una disolución de hidróxido de sodio en agua que contiene
+% un 25 \% de hidróxido tiene una densidad de 1,25 g/ml. Calcula
+% su molaridad y su normalidad. S: M = 7,8 M y N = 7,8 N.
+%
+% 22> ¿Cuál es la molaridad de una disolución de ácido sulfúrico
+% del 26\% de riqueza y densidad 1,19 g/mL? S: M = 3,2 M.
+%
+% 23> El alcanfor puro tiene un punto de fusión de 178 ºC y una constante crioscópica de
+% 40 ºC kg/mol • La disolución resultante de añadir 2 gramos de un soluto no volátil a
+% 10 gramos de alcanfor congela a 158 ºC. Calcula la masa molecular del soluto añadido.
+% S: M = 400 g/mol
+%
+% 24> Tenemos 100 mL de una disolución acuosa que contiene 0,25 gramos de un polisacárido.
+% Dicha disolución a 25 °C, ejerce una presión osmótica de 23,9 mm Hg. El polisacárido
+% tiene la siguiente fórmula empírica (C6H10O5)n. Calcula el valor de la masa molecular del
+% polisacárido.
+% S: M = 1938 g/mol
+%
+%
+%
+%
+% \subsection{Problemas propuestos}
+%
+% \subsubsection{Leyes de los volúmenes de combinación. Hipótesis de Avogadro. Concepto de molécula. Mol}
+%
+% 8. Determina la masa, M, de un mol de un gas en los siguientes
+% casos:
+% a) Su densidad en c.n. es de 3,17 g/L.
+% b) Su densidad es de 2,4 g/L a 20 ºC y 1 atm de presión.
+% e) Dos gramos de dicho gas ocupan un volumen de 600 mL,
+% medido a 17 ºC y 1,8 atm de presión.
+% S: a) M = 71 g/mol; b) M = 58 g/mol; e) M = 44 g/mol.
+%
+% 9. Realiza los siguientes cálculos numéricos:
+% a) Los átomos de oxígeno que hay en 0,25 moles de sulfato
+% de potasio (K2SO4).
+% b) Las moléculas de gasolina (C8H18) que hay en un depósito
+% de 40 L (d = 0,76 g/ mL) .
+% c) Los gramos de calcio que hay en 60 g de un carbonato de
+% calcio (CaCO3) del 80 \% de riqueza.
+% d) De una sustancia pura, sabemos que 1,75 • 10^19 moléculas
+% corresponden a una masa de 2,73 mg. ¿Cuál será la masa de 1 mol?
+% S: a) 6,0 • 10^23 átomos; b) 1,6 • 10^26 moléculas; c) 19 g; d) M = 94 g/mol.
+%
+% 10. Disponemos de 3 moles de sulfuro de hidrógeno. Calcula,
+% sabiendo que las masas atómicas son S = 32 y H = 1:
+% a) Cuántos gramos de H2S hay en esos 3 moles.
+% b) El número de moléculas de H2S que forman los 3 moles.
+% e) Los moles de H2 y de S que tenemos en los 3 moles de H2S.
+% S: a) m_H2S = 102 g; b) 1,8 · 10^24 moléculas; e) 3 moles de H2 y 3 moles de S.
+%
+% 12. ¿Dónde crees que habrá más moléculas, en 15 g de H2 o en
+% 15 g de O2? Justifica la respuesta.
+% S: En 15 g de H2
+%
+% 13. ¿Cuál será el volumen de HCl, medido en c.n., que podremos
+% obtener con 6 • 10^22 moléculas de cloro?
+% S: V= 4,5 L de HCl.
+%
+% 14. Calcula los gramos de amoniaco que podrías obtener con 10 L
+% de N2, medidos en c.n.
+% S: m_NH = 15 g.
+%
+% 15. A 20 ºC la presión de un gas encerrado en un volumen V constante
+% es de 850 mmHg. ¿Cuál será el valor de la presión si
+% bajamos la temperatura a O ºC?
+% S: p = 792 mmHg.
+%
+%
+%
+% \subsubsection{Leyes de los gases}
+%
+% 17. Diez litros de un gas medidos en c.n., ¿qué volumen ocuparán
+% si cambiamos las condiciones a 50 ºC y 4 atm de presión?
+% S: V= 2,96 L.
+%
+% 18. En un matraz de 5 L hay 42 g de N2 a 27 ºC. Se abre el recipiente
+% hasta que su presión se iguala con la presión atmosférica,
+% que es de 1 atm.
+% a) ¿Cuántos gramos de N2 han salido a la atmósfera?
+% b) ¿A qué T deberíamos poner el recipiente para igualar la
+% presión inicial?
+% S: a) 36,3 g de N2 han salido; b) T' = 2 214 K.
+%
+% 20. En una bombona se introducen 0,21 moles de N2, 0,12 moles
+% de H2 y 2,32 moles de N H3. Si la presión total es de 12,4 atm,
+% ¿cuál es la presión parcial de cada componente?
+% S: pN 2 = 0,98 atm; pH 2 = 0,56 atm; pNH 3 = 10,9 atm.
+%
+% 21. En c.n. de p y T, 1 mol de NH3 ocupa 22,4 L y contiene 6,02·10^23 moléculas. Calcula:
+% a) ¿Cuántas moléculas habrá en 37 g de amoniaco a 142 ºC y 748 mmHg?
+% b) ¿Cuál es la densidad del amoniaco a 142 ºC y 748 mmHg?
+% S: a) 1,31·10^24 moléculas de NH3; b) d = 0,49 g/L.
+%
+% 22. Resuelve los siguientes ejercicios referidos a la ecuación de Clapeyron:
+% a) Un gas ocupa un volumen de 15 La 60 ºC y 900 mmHg. ¿Qué volumen ocuparía en c.n.?
+% b) En una bombona de 15,0 L hay gas helio a 20 ºC. Si el manómetro marca 5,2 atm, ¿cuántos gramos de helio hay
+% en la bombona? ¿A qué T estaría el gas si la presión fuera la atmosférica?
+% c) Una cierta cantidad de aire ocupa un volumen de 10 L a 47 ºC y 900 mm Hg. Si la densidad del aire es de 1,293 g/L,
+% ¿qué masa de aire hay en el recipiente?
+% S: a) V= 14,6 L; b) m = 13 g de He, T = 56 K; c) m = 13 g de aire.
+%
+%
+%
+%
+% \subsubsection{Composición centesimal. Fórmulas moleculares y empíricas}
+%
+% 23. Un compuesto orgánico tiene la siguiente composición centesimal:
+% C = 24,24 \%, H = 4,05 \%, Cl = 71,71 \%. Calcula:
+% a) La fórmula empírica.
+% b) Su fórmula molecular, sabiendo que 0,942 g de dicho compuesto
+% ocupan un volumen de 213 ml medidos a 1 atm y 0 ºC.
+% S: a) (CH2Cl)n; b) C2H4Cl2
+%
+%
+% 24. Resuelve los siguientes ejercicios:
+% a) Entre dos minerales de fórmulas Cu5FeS4 y Cu2S, ¿cuál es más rico en cobre?
+% b) De los siguientes fertilizantes indica cuál es más rico en nitrógeno: NH4NO3 o (NH4)3PO3.
+% e) Halla la composición centesimal del arseniato de cobre(II)
+% y del sulfato de sodio decahidratado.
+% S: a) Cu 2S; b) NH 4N0 3; e) 40,7 \% de Cu, 32 \% de As, 27,3 \% de O; 14,3 \% de Na, 9,9 \% de S, 69,6 \% de O, 6,2 \% de H.
+%
+%
+%
+%
+% \subsubsection{Disoluciones y propiedades coligativas}
+%
+% 26. Calcula la fracción molar de agua y alcohol etílico en una
+% disolución preparada agregando 50 g de alcohol etílico y 100 g de agua.
+% S: X_alcohol = O, 16, X_agua = 0,84
+%
+% 29. Un ácido sulfúrico diluido tiene una densidad de 1,10 g/mL y
+% una riqueza del 65\% en masa. Calcula la molaridad y la normalidad
+% de la disolución.
+% S: 7,3 M, 14,6 N
+%
+% 30. Calcula los gramos de hidróxido de sodio comercial de un
+% 85 \% de riqueza en masa que harán falta para preparar 250 mL
+% de una disolución de NaOH 0,5 M.
+% S: 5,9 g
+%
+% 31. Una disolución de ácido sulfúrico está formada por 12,0 g de
+% ácido, 19,2 g de agua y ocupa un volumen de 27 ml. Calcula
+% la densidad de la disolución, la concentración centesimal, la
+% molaridad y la molalidad.
+% S: d = 1,16 g/mL; \%masa= 38,5\%; M= 4,5 M; m= 6,4 m
+%
+% 32. En la etiqueta de un frasco de HCl dice: densidad 1,19 g/mL,
+% riqueza 37,1\% en peso. Calcula:
+% a) masa de 1 L de esta disolución.
+% b) Concentración del ácido en g/L
+% e) Molaridad del ácido.
+% S: a) 1,19 kg; b) 441 ,5; e) 12,1 M.
+%
+% 33. Cuando se agrega 27,8 gramos de una sustancia a 200 cm3 de
+% agua, la presión de vapor baja de 23,7 mmHg a 22,9 mmHg.
+% Calcula la masa molecular de la sustancia.
+% S: 71,7 g/mol
+%
+% 34. Una disolución compuesta por 24 gramos de azúcar en 75 cm 3
+% de agua, congela a -1,8 ºC. Calcula: a) La masa molecular del azúcar,
+% b) Si su fórmula empírica es CH2O, ¿cuál es su fórmula
+% molecular? Dato: Kc = 1,86 ºC kg/mol.
+% S: 330g; C11H22O11
+%
+% 35. Una disolución que contiene 25 gramos de albúmina de
+% huevo por litro ejerce una presión osmótica de 13,5 mmHg, a
+% 25 ºC. Determina la masa molecular de esa proteína.
+% S: 3,44 • 10^4 g/mol
+%
+% 36. Cuando llega el invierno y bajan las temperaturas decidimos
+% fabricar nuestro propio anticongelante añadiendo 3 litros de
+% etilenglicol (C2H6O2), cuya densidad es de 1,12 g/cm 3 a 8 litros
+% de agua que vertemos al radiador del coche. ¿A qué temperatura
+% podrá llegar la disolución del radiador sin que se congele?
+% Dato: constante crioscópica molal del agua Kc = 1,86 ºC
+% kg/mol.
+% S: -12,6 ºC
+%
+%
+%
+%
+% \subsubsection{Aplica lo aprendido}
+%
+% 38. Razona en cuál de las siguientes cantidades habrá un mayor
+% número de átomos :
+% a) 20 g de hierro.
+% b) 20 g de azufre .
+% e) 20 g de oxígeno molecular.
+% d) Todas tienen la misma cantidad de átomos .
+% S: La e): 7,53 • 10^23 átomos de O.
+%
+% 39. Una determinada cantidad de aire a la presión de 2 atm y
+% temperatura de 298 K ocupa un volumen de 10 L. Calcula la
+% masa molecular media del aire, sabiendo que el contenido del
+% mismo en el matraz tiene una masa de 23,6 g.
+% S: m = 28,8 g/mol.
+%
+% 43. Si tenemos encerrado aire en un recipiente de cristal, al
+% calentarlo a 20 ºC la presión se eleva a 1,2 atm. ¿Cuánto marcará
+% el barómetro si elevamos la temperatura 10 ºC?
+% S: p = 1,24 atm.
+%
+% 44. Se queman completamente 1,50 g de un compuesto orgánico
+% formado por carbono, hidrógeno y oxígeno. En la combustión
+% se obtuvieron 0,71 g de agua y 1,74 g de C02. Determina
+% las fórmulas empírica y molecular del compuesto si
+% 1,03 g del mismo ocupan un volumen de 350 mL a 20 ºC y 750 mmHg.
+% S: Empírica C2H4O3 ; molecular C2H4O3
+%
+% 45. Sabiendo que la densidad del aire en c. n. es de 1,293 g/L,
+% calcula la masa de aire que contiene un recipiente de 25 L, si
+% hemos medido que la presión interior, cuando la temperatura
+% es de 77 ºC, es de 1,5 atm. Calcula, asimismo, el número de
+% moles de aire que tenemos.
+% S: m = 37,82 g; n = 1,31 moles.
+%
+% 46. A partir de los siguientes datos, determina la fórmula empírica
+% y molecular de:
+% a) Un hidrocarburo con 82,76 \% de C; si su densidad en c.n.
+% es de 2,59 g/L.
+% b) Un hidrocarburo formado por un 85,7 \% de C; si 651 g contienen
+% 15,5 moles del mismo
+% e) Un compuesto con 57,1 \% de C, 4,8 \% de H y 38,1 \% de S;
+% si en 10 g hay 3,6 • 10^22 moléculas.
+% d) Un compuesto con 55 \% de CL, 37,2 \% de C y 7,8 \% de H; si
+% 2,8 g del compuesto ocupan un volumen de 1,15 La 27 ºC
+% y 0,93 atm de presión.
+% S: a) C4H10; b) C3H6; e) C8H8S2 ; d) C2H2Cl.
+%
+% 49. Se dispone de tres recipientes que contienen 1 L de CH4 gas,
+% 2 L de N2 gas y 15 L de O2 gas, respectivamente, en condiciones
+% normales de presión y temperatura. Indica razonadamente:
+% a) Cuál contiene mayor número de moléculas.
+% b) Cuál contiene mayor número de átomos.
+% e) Cuál tiene mayor densidad.
+% Datos: masas atómicas: H = 1; C = 12; N = 14; O = 16.
+% S: a) El O2 (4,0·10^23 moléculas); b) el O2 (8,0·10^23 átomos);
+% e) el O2 (1,4 g/L).
+%
+% 50. Un frasco de 1,0 L de capacidad está lleno de dióxido de carbono gaseoso a 27 ºC. Se hace vacío hasta que la presión del
+% gas es 10 mmHg. Indica razonadamente:
+% a) Cuántos gramos de dióxido de carbono contiene el frasco.
+% b) Cuántas moléculas hay en el frasco.
+% Datos: R = 0,082 atm L mol-1 K-1; masas atómicas: C = 12; O= 16.
+% S: a) 0,024 g CO2; b) 3,2 · 10 20 moléculas de CO2
+%
+%
+%
+%
+% #\section{BLOQUE 5. QUÍMICA DEL CARBONO (tema 5 del libro)}
+%
+% 7> Formula los siguientes alcanos:
+% a) n-pentano
+% b) 2,3,5-trimetilheptano.
+% e) 4-etil-2,6 - dimetiloctano.
+% d) 4,6-dietil-2,4,8-trimetilnonano.
+% e) 4-etil-2,2,5,8-tetrametil-6-propildecano.
+% f) 3,7-dietil-5-isopropildecano.
+%
+% 9> Formula los siguientes hidrocarburos insaturados:
+% a) But-1-eno
+% b) Pent-2-eno
+% c) Hexa-2,4-dieno
+% d) 3- butilhexa-1,4-dieno
+% e) But-2-ino
+% f) 3,4-dimetilpent-1-ino
+% g) 3,6 -dimetilnona-1,4,7-triino
+% h) Pent-1-en-3-ino
+% i) Hept-3-en-1,6-diino
+% j) 4-etilhexa-1,3-dien-5-ino
+%
+% 11> Formula los siguientes hidrocarburos cíclicos:
+% a) Etilciclohexano.
+% b) Ciclopenteno.
+% c) Ciclohexino.
+% d) 1, 1,4,4-tetrametilciclohexano.
+% e) 3-etilciclopenteno.
+% f) 2,3-dimetilciclohexeno.
+% g) 4-ciclobutilpent-1-ino
+% h) 3-ciclohexil-5-metilhex-2-eno
+% i) Ciclohexa-1,3-dieno
+% j) 3-ciclopentilprop-1-eno
+%
+% 12> Nombra los siguientes hidrocarburos cíclicos:
+% VER EN EL LIBRO, PÁGINA 131
+%
+% 13> Formula los siguientes hidrocarburos aromáticos:
+% a) Metilbenceno (tolueno). b) Etenilbenceno.
+% c) 1,3-dietilbenceno. d) 1-butil-4-isopropilbenceno.
+% e) Para-propiltolueno. f) 3-fenil-5-metilheptano.
+% g) 4-fenilpent-1-eno. h) 2,4-difenil-3-metilhexano.
+%
+% 15> Formula los siguientes derivados halogenados:
+% a) 2-cloropropano.
+% b) 1,3-dibromobenceno.
+% c) 1,1,2,2-tetrafluoretano.
+% d) 1,4-diclorociclohexano.
+% e) 4-bromopent-1-ino
+% f) 3-flúor-5-metilhex-2-eno
+% g) 1,4-dibromo-6-ciclopentiloct-2-eno
+% h) 4-yodo-3,5-difenilpent-1-ino
+% i) 4-clorobut-1-eno
+% j) 1,2-dibromobenceno
+%
+% 17> Formula los siguientes alcoholes y éteres: 18> Nomb ra los siguientes alcoholes y éteres:
+% a) 3-metilpentan-1-ol
+% b) Butano-1,2,3-triol
+% c) 2-fenilpropano-1,3-diol
+% d) Ciclohexanol
+% e) Hexa-3,5-dien-2-ol
+% f) Fenol (Hidroxibenceno)
+% g) 2-etilpentan-1-ol
+% h) Pent-3-en-1-ol
+% i) Etilisopropiléter.
+% j) Etenilfeniléter.
+% k) Dimetiléter.
+% l) Butilciclopentiléter
+%
+% 18> Nombra los siguientes alcoholes y éteres:
+% VER EN EL LIBRO, PÁGINA 135
+%
+% 19> Formula los siguientes aldehídos y cetonas:
+% a) Etanal (acetaldehído). b) Benzaldehído .
+% c) 3-metilpentanal. d) 2-metilpentanodial
+% e) Propenal. J) Hex-2-endial.
+% g) 5-ciclohexilpent-3-inal. h) 3-metilpent-2-enal.
+% i) Hex-2-endial. j) Pentan-2-ona.
+% k) He xa-2,4-diona. 1) 3-clorobutanona.
+% m) 1,4-difenilpentan-2-ona. n) Hexa-1,5-dien-3-ona .
+%
+% 20> Nombra los siguientes aldehídos y cetonas: VER EN EL LIBRO, PÁGINA 136
+% a) HCHO
+% b) CH3-CH2-CH2-CHO
+% c) OHC-CH=CH-CHO
+% d) CH2=C-CH2-(CH2)4-CHO
+% e) OHC- CH=CH-CH 2- CH(CH 3)-CHO
+% f) CH3 -CH-CH=CH-CHO
+% 1
+% C6Hs
+% g) CHO- CH 2-C= C-CH 2- CH 2- CHO
+% h) CH 3- CO - CH 2- CH 3
+% i) CH 3- CH = CH - CH 2- CO- CH 3
+% j) CH 3-CO - CH 2-CH 2-CH 2-CO- CH 3
+% k) CH 3- CH(CH 3)-CO-CH 2-CH(CH 3)-CH 3
+% 1) CH 2=CH-CO-CH=CH-CH3
+%
+% 21> Formula los siguientes ácidos y ésteres:
+% a) Ácido etanoico (ácido acético).
+% b) Ácido 3-metilhexanoico.
+% c) Ácido 2-fenilpentanodioico.
+% d) Ácido tricloroetanoico.
+% e) Ácido but-3-enoico .
+% f) Ácido hepta-2,4-dienoico.
+% g) Ácido pent-2-enodioico.
+% h) Ácido benzoico.
+% i) Butanoato de metilo.
+% j) Propanoato de etilo.
+% k) Benzoato de propilo.
+% l) Etanoato de octilo.
+% m) 3-cloropentanoato de etenilo.
+% n) But-3-enoato de isopropilo.
+%
+% 23> Formula los siguientes compuest os con funciones nitrogenadas:
+% a) Isopropilamina
+% b) Pe ntan-3-amina
+% c) Buta-1,3-diamina
+% d) 3-etilhexan-3-amina
+% e) 3,5-dimetilhexan-1-amina
+% f) Pent-3-en - 2-amina
+% g) N-metilfenilamina
+% h) N-ciclopentilbutilamina
+% i) Etanamida.
+% j) N-metiletanamida
+% k) 4-fenilpentanamida
+% l) N-etilhex-4-enamida
+%
+% 24> Nombra los siguientes compuestos nitrogenados:
+% VER EN EL LIBRO, PÁGINA 140
+%
+% 25> Formula los siguientes compuestos orgánicos:
+% a) 2,2-dimetilpentano.
+% b) Hepta-1,5-dieno .
+% c) 1-fenilpent-2-ino .
+% d) 3-isopropilciclohe xeno.
+% e) 1-butil-3-metilbenceno.
+% f) Butano-1,3-diol.
+% g) Butileteniléter.
+% h) But-3 -enal
+% 1) Hex-5-in -2-ona .
+% j) Ácido 3-isopropilhexanoico .
+% k) Pentanoato de metilo .
+% 1) 5-meilhexan-2,4-diamina
+% m) N-metiletilamina .
+% n) N,N-dietilbutilami na.
+% o) He x-3 - enamida.
+% p) N-metilbutanamida
+%
+% 27> Formula y nombra:
+% a) Dos hidrocarburos alifáticos que presenten isomería de cadena.
+% b) Dos aminas con isomería de posición.
+% e) Dos compuestos oxigenados con isomería de función.
+%
+% 28> Escribe y nombra:
+% a) Todos los isómeros de cadena de fórmula C5H12
+% b) Cuatro isómeros de función de fórmula C4H80.
+% e) Tres isómeros de posición de la amina C5H13N.
+%
+% Dados los siguientes compuestos , formúlalos y justifica cuáles
+% de ellos presentan isomería geométrica y cuáles isomería
+% óptica:
+% a) 2-clorobutano.
+% e) Pent-3-en-2-ol.
+% b) Pentan-3-amina.
+% d) 2-fenilpent-2-eno.
+%
+%
+%
+% \subsection{Problemas propuestos}
+%
+% \subsubsection{Grupos funcionales y series homólogas}
+%
+% 7. Escribe el número de carbonos y el grupo funcional al que
+% corresponden los siguientes compuestos :
+% a) Octano.
+% e) Butanamina.
+% e) Pentinamida.
+% g) Ácido decanoico.
+% i) Hexenal.
+% b) Propanona.
+% d) Butino.
+% f) Hepteno.
+% h) Metanol.
+% j) Dietiléter.
+%
+% 8. Indica si la estructura de cada pareja representa el mismo
+% i:ñcompuesto o compuestos diferentes, identificando los grupos
+% funcionales presentes:
+% a) CH3CH2OCH3 y  CH3OCH2CH3
+% b) CH3CH2OCH3 y CH3CHOHCH3
+% c) CH3CH2CH2OH y CH3CHOHCH3
+%
+% 9. Contesta a cada uno de los siguientes apartados referidos a
+% compuestos de cadena abierta:
+% a) ¿Qué grupos funcionales pueden tener los compuestos de
+% fórmula molecular CnH2n+2O?
+% b) ¿Qué compuestos tienen por fórmula molecular CnH2n-2?
+%
+% 10. Nombra y formula los siguientes compuestos orgánicos:
+% a) CH3-CH2-COOH
+% b) CH3-CH2-C~CH
+% c) CH3-CHOH-CH2-CH2-CH3
+% d) CH3-CH2-CO-CH2-CH2-CH3
+% e) C6H14
+% f) Metil etil éter.
+% g) Metanoato de propilo.
+% h) Dietilamina.
+% i) Pentanal.
+% j) Metilpropeno.
+%
+% 13. Formula las siguientes especies químicas:
+% a) 1-bromo-2,2-diclorobutano.
+% b) Trimetilamina.
+% e) 2-metilhex-1,5-dien-3-ino.
+% d) Butanoato de 2-metilpropilo.
+% e) Tolueno (metilbenceno).
+% f) Propanamida.
+% g) 2,3-dimetilbut-1-eno.
+% h) Ácido 2,3-dimetilpentanodioico.
+%
+% 14. Nombra las siguientes especies químicas:
+% a) H2C=CH-CH=CH-CHO
+% b) H3C-CO-CO-CH3
+% c) H2C=CH-CH=CH-CH2-COOH
+% d) H3C-CH2-NH-CH2-CH3
+% e) CH~C-CH2-COOH
+% J) CH3-CH2-CH(CH3)-CONH2
+% g) H3C-C(OH)2-CH2-CH20H
+%
+% 15. Nombra y/o formula los siguientes compuestos:
+% a) CHCl3
+% b) CH3-CH2-CHO
+% e) CH3-CH2-CH2-CH2-CO-NH2
+% d) (CH3)2-CHOH
+% e) 2,2-dimetilbutano.
+% f) Para-diaminobenceno.
+% g) Ciclohexano.
+% h) Etil propil éter.
+%
+% 16. Formula o nombra, según corresponda:
+% a) 1-etil-3-metilbenceno.
+% b) 2-metilpropan-2-ol.
+% e) 2-metil-propanoato de etilo.
+% d) Pent-3-en-1-amina.
+% e) ClCH=CH-CH3
+% f) CH3-CH2-O-CH2-CH3
+% g) CH3-CH(CH3)-CO-CH2-CH(CH3)-CH3
+% h) CH2=CH-CH2-CO-NH-CH3
+%
+% 20. Formula o nombra los siguientes compuestos:
+% "i::ñ a) Cromato de cobre(II)
+% b) Hidruro de magnesio
+% e) Hidrogenosulfuro de bario
+% d) Etanamina
+% e) Propan-1,2-diol
+% f) Fe(OH)2
+% g) H2SO3
+% h) N2O5
+% i), j) VER EN EL LIBRO, PÁGINA 140
+%
+% 21. Formula o nombra los siguientes compuestos orgánicos :
+% a) 3-etil-2-metilhexano
+% b) 1-bromopent-2-ino:
+% e) 3-etilhe xano-1,5-diol:
+% d) 3-metilpentan-2,4-diamina
+% e) CH2=CH-CH2-CO-O-CH3
+% f) C6H5-O-C6H5
+% g) CH3-CH2-CO-NH-CH2-CH3
+% h) COOH-CH2-CH2-CHBr-COOH
+%
+% \subsubsection{Isomería estructural y espacial}
+%
+% 23. Formula los siguientes compuestos orgánicos:
+% a) But-3-en-2-ona
+% b) Buta-1,3-dien-2-ol
+% c) Dietiléter.
+% ¿Cuáles de ellos son isómeros entre sí?
+%
+% 24. Escribe y nombra cinco isómeros de cadena de fórmula molecular C6H14.
+%
+% 25. Escribe y nombra cuatro isómeros de función de fórmula molecular C4H8O
+%
+% 28. Escribe y nombra todos los isómeros estructurales de fórmula C5H10
+%
+% Formula y nombra:
+% a) Dos isómeros de posición de fórmula C3H8O.
+% b) Dos isómeros de función de fórmula C3H8O.
+% e) Dos isómeros geométricos de fórmula C4H8.
+% d) Un compuesto que tenga dos carbonos quirales (asimétricos) de fórmula C4H8BrCl.
+%
+% 31. Un derivado halogenado etilénico que presenta isomería cis-trans
+% está formado en un 22,4\% de C, un 2,8\% de H y un
+% 74,8\% de bromo. Además, a 130 ºC y 1 atm de presión, una
+% muestra de 12,9 g ocupa un volumen de 2 L. Halla su fórmula
+% molecular y escribe los posibles isómeros.
+% S: C4H6Br2
+%
+% 32. Un alcohol monoclorado está formado en un 38,1\% de C,
+% un 7,4\% de H, un 37,6\% de Cl y el resto es oxígeno. Escribe
+% su fórmula semidesarrollada sabiendo que tiene un carbono
+% asimétrico y que su fórmula molecular y su fórmula empírica
+% coinciden.
+% S: C3H7OCl.
+%
+% 33. Un hidrocarburo monoinsaturado tiene un 87,8\% de carbono.
+% Si su densidad en condiciones normales es 3,66 g/L, determina
+% sus fórmulas empírica y molecular.
+% S: Formula empírica: C3H5; Fórmula molecular: C6H10.
+%
+%
+% \section{BLOQUE 4. Transformaciones energéticas y espontaneidad (tema 6 del libro)}
+%
+% 5> Determina la variación de energía interna que sufre un sistema
+% cuando:
+% a) Realiza un trabajo de 600 J y cede 40 calorías al entorno.
+% b) Absorbe 300 calorías del entorno y se realiza un trabajo de compresión de 5 kJ.
+% S: a) dU = -767 J; b) dU = 6,25 · 10^3 J
+%
+% 13> La descomposición térmica del clorato de potasio (KClO3)
+% origina cloruro de potasio (KCl) y oxígeno molecular. Calcula
+% el calor que se desprende cuando se obtienen 150 litros de
+% oxígeno medidos a 25ºC y 1 atm de presión.
+% Datos: dH^0_f (kJ/mol): KClO3 (s) = -91,2; KCl (s) = -436
+% S: Se desprenden 1,41·10^3 kJ
+%
+% 14> Las entalpías estándar de formación del propano (g),
+% dióxido de carbono (g) y agua (l), son respectivamente :
+% -103,8; -393,5 y -285,8 kJ/mol. Calcula:
+% a) La entalpía de la reacción de combustión del propano.
+% b) Las calorías generadas en la combustión de una bombona
+% de propano de 1,80 litros a 25ºC y 4 atm de presión.
+% S: a) dH^0_c = -2,22 · 10^3 kJ/mol de propano; b) Se desprenden
+% 156 kcal
+%
+% 15> En la reacción del oxígeno molecular con el cobre para formar
+% óxido de cobre(II) se desprenden 2,30 kJ por cada gramo de
+% cobre que reacciona, a 298 K y 760 mm Hg. Calcula :
+% a) La entalpía de formación del óxido de cobre(II). '
+% b) El calor desprendido a presión constante cuando reaccionan
+% 100 L de oxígeno, medidos a 1,5 atm y 27 °C
+% S: a) dH^0_f (CuO) = -146 kJ/mol;
+% b) Se desprenden 1,78·10^3 kJ
+%
+% 16> En la combustión completa de 1,00 g de etanol (CH3-CH2OH) se desprenden 29,8 kJ y en la combustión de 1,00 g
+% de ácido etanoico (CH3-COOH) se desprenden 14,5 kJ.
+% Determina numéricamente :
+% a) Cuál de las dos sustancias tiene mayor entalpía de combustión.
+% b) Cuál de las dos sustancias tiene mayor entalpía de formación
+% S: a) dH^0_c etanol = -1,37·10^3 kJ/mol; dH^0_c ácido etanoico = -870 kJ/mol
+% b) dH^0_f etanol = -273 kJ/mol; dH^0_f ácido etanoico = -489 kJ/mol
+%
+% 24> Calcula la entalpía de la reacción:
+% CH4 (g) + Cl2 (g) ➔ CH3Cl (g) + HCl (g) a partir de:
+% a) Las energías de enlace.
+% b) Las entalpías de formación.
+% Datos: Energías de enlace (kJ/mol):
+% C-H = 414; Cl-Cl = 244; C-Cl = 330; H-Cl = 430.
+% Entalpías de formación (kJ/mol) :
+% (CH4) = -74,9; (CH3Cl) = -82,0; dH^0_f (HCl) = -92,3.
+% S: a) dH^0_R = -102 kJ; b) dH^0_R = -99,4 kJ
+%
+% 25> El eteno se hidrogena para dar etano, según:
+% CH2=CH2 (g) + H2 (g) ➔ CH3-CH3 (g) dH^0_R = -130 kJ
+% Calcula la energía del enlace C=C, si las energías de los
+% enlaces C-C, H-H y C-H son, respectivamente, 347, 436
+% y 414 kJ/mol. S: dH^0 (C=C) = 609 kJ/mol
+%
+% 26> A partir de los siguientes datos:
+% Entalpía estándar de sublimación del C (s) = 717 kJ/mol.
+% Entalpía de formación del CH3-CH3 (g) = -85,0 kJ/mol.
+% Entalpía media del enlace H-H = 436 kJ/mol.
+% Entalpía media del enlace C-C = 347 kJ/mol.
+% a) Calcula la variación de entalpía de la reacción:
+% 2C (g) + 3H2 (g) ➔ CH3-CH3 (g) e indica si es exotérmica
+% o endotérmica.
+% b) Determina el valor medio del enlace C-H.
+% S: a) dH^0_R = -1,52·10^3 kJ; b) dH^0 (C-H) = 413 kJ/mol
+%
+%
+% \subsection{Problemas resueltos}
+%
+% \subsubsection{Entalpias de formación, de reacción y de combustión}
+%
+% 4. El sulfuro de carbono reacciona con el oxígeno según:
+% CS2 (l) + 3 O2(9) -> CO2 (g) + 2 SO2 (g) dH_R = -1072 kJ
+% a) Calcula la entalpía de formación del CS2
+% b) Halla el volumen de SO2 emitido a la atmósfera, a 1 atm y
+% 25 °C, cuando se ha liberado una energía de 6000 kJ
+% Datos: dH^0_f (kJ/mol): CO2(g) = -393,5; SO2(g) = -296,4.
+% S: a) dH^0_f CS2(l) = 85,7 kJ/mol; b) V = 274 L (SO2)
+%
+% 5. El dióxido de manganeso se reduce a manganeso metal reaccionando
+% con el aluminio según:
+% MnO2 (s) + Al (s) --> Al2O3 (s) + Mn (s)
+% a) Halla la entalpía de esa reacción sabiendo que las entalpías
+% de formación valen:
+% dH^0_f (Al2O3) = -1676 kJ/mol; dH^0_f (MnO2) = -520 kJ/mol
+% b) ¿Qué energía se transfiere cuando reaccionan 10,0 g de
+% MnO2 con 10,0 g de Al?
+% S: a) dH_R = -896 kJ/mol de Al2O3 ; b) 68,7 kJ se desprenden
+%
+% 6. Durante la fotosíntesis, las plantas verdes sintetizan la glucosa
+% según la siguiente reacción:
+% 6 CO2(g) + 6 H2O(l) --> C6H12O6 (s) + 6 O2(g) dH_R = 2815 kJ/mol
+% a) ¿Cuál es la entalpía de formación de la glucosa?
+% b) ¿Qué energía se requiere para obtener 50,0 g de glucosa?
+% c) ¿Cuántos litros de oxígeno, en condiciones estándar, se
+% desprenden por cada gramo de glucosa formado?
+% Datos : dH^0_f (kJ/mol): H2O(l) = -285,8; CO2(g) = -393,5
+% S: a) dH^0_f = -1,26·10^3 kJ/mol; b) 782 kJ; e) 0,8 L
+%
+% Las entalpías de combustión del etano y del eteno son
+% -1560 kJ/mol y -1410 kJ/ mol respectivamente. Determina:
+% a) El valor de dH^0_f para el etano y el eteno.
+% b) Razona si el proceso de hidrogenación del eteno a etano
+% es un proceso endotérmico o exotérmico.
+% c) Calcula el calor que se desprende en la combustión de
+% 50,0 g de cada gas.
+% Datos: dH^0_f (kJ/mol) : CO2(g) = -393,5; H2O(l) = -285,9
+% S: a) dH^0_f (C2H6)= -84,7 kJ/mol; dH^0_f (C2H4 = 51,2 kJ/mol; b) Exotérmico; e) etano: 2,60·10^3 kJ; eteno: 2,52 • 10^3 kJ.
+%
+% 8. La gasolina es una mezcla compleja de hidrocarburos que
+% vamos a considerar como si estuviera formada únicamente
+% por hidrocarburos saturados de fórmula (C8H18)
+% a) Calcula el calor que se desprende en la combustión de
+% 50,0 litros de gasolina (d = 0,78 g/mL).
+% b) Halla la masa de CO2 que se emite a la atmósfera en esa
+% combustión.
+% c) Si el consumo de un vehículo es de 7,00 litros por cada
+% 100 km, ¿qué energía necesita por cada km recorrido?
+% Datos: dH^0_f (kJ/mol): CO2(g) = -394; H2O(l) = -286; C8H18 (l) = -250
+% S: 1,87·10^6 kJ; b) 120 kg; e) 2,62·10^3 kJ/km
+%
+% Se quema benceno (C6H6) en exceso de oxígeno, liberando energía.
+% a) Formula la reacción de combustión del benceno.
+% b) Calcula la entalpía de combustión estándar de un mol de
+% benceno líquido.
+% c) Calcula el volumen de oxígeno, medido a 25 ºC y 5 atm,
+% necesario para quemar 1 L de benceno líquido.
+% d) Calcula el calor necesario para evaporar 10 L de benceno
+% líquido.
+% Datos: dH^0_f (kJ/mol): C6H6 (l)= +49; C6H6 (v)= +83;
+% H2O(l)= -286; CO2 (g)= -393;
+% Densidad benceno(l) = 0,879 g cm^-3
+% S: b) dH^0_C = -3,27·10^3 kJ/mol; e) 413 L; d) 3,83·10^3 kJ
+%
+%
+%
+%
+%
+% \subsubsection{Ley de Hess}
+%
+% 11. El motor de una máquina cortacésped funciona con una gasolina que podemos considerar de composición única octano
+% (C8H18). Calcula:
+% a) La entalpía estándar de combustión del octano, aplicando la ley de Hess.
+% b) El calor que se desprende en la combustión de 2,00 kg de octano.
+% Datos: dH^0_f (kJ/mol): CO2(g)= -393,8; C8H18 (l)= -264,0;
+% H2O(l)= -285,8
+% S: a) dH^0_C = -5,46·10^3 kJ/mol; b) 9,58·10^4 kJ
+%
+% 12. Sabiendo que las entalpías estándar de combustión del
+% hexano (l), del carbono (s) y del hidrógeno (g) son respectivamente:
+% -4192; -393,5; y -285,8 kJ/mol, halla:
+% a) La entalpía de formación del hexano líquido en esas condiciones.
+% b) Los gramos de carbono consumidos en la formación del
+% hexano cuando se han intercambiado 50,0 kJ.
+% S: a) dH^0_f (hexano) = -170 kJ/mol b) m = 21,2 g de C
+%
+% 14. El calor desprendido en el proceso de obtención del benceno a partir de etino es:
+% 3 C2H2 (g) -> C6H6 (l) dH^0_R = -631 kJ
+% a) Calcula la entalpía estándar de combustión del benceno,
+% sabiendo que la del etino es -1302 kJ/mol.
+% b) ¿Qué volumen de etino, medido a 26ºC y 15 atm, se necesita
+% para obtener 0,25 L de benceno?
+% Datos: densidad del benceno = 880 g L^-1
+% S: a) dH^0_C C6H6 (l) = -3,28·10^3 kJ/mol; b) 13,8 L C2H2
+%
+%
+%
+%
+% \subsubsection{Entalpías de enlace}
+%
+% 18. Calcula la variación de entalpía estándar de la hidrogenación
+% del etino a etano:
+% a) A partir de las energías de enlace.
+% b) A partir de las entalpías de formación.
+% Datos: Energías de enlace (kJ/mol): C-H = 415; H-H = 436; C-C = 350: C~C = 825
+% dH^0_f (kJ/mol): etino = 227; etano = -85,0
+% S: a) dH_R = -313 kJ/mol; b) dH_R = -312 kJ/mol
+%
+%
+%
+%
+% \subsubsection{Entropía y espontaneidad}
+%
+% 20. Dadas las siguientes ecuaciones termoquímicas:
+% 2 H2O2 (l) --> 2 H2O(l) + O2(g) dH = -196 kJ
+% N2 (g) + 3 H2(g) --> 2 NH3 (g) dH = -92,4 kJ
+% a) Define el concepto de entropía y explica el signo más probable de dS en cada una de ellas .
+% b) Explica si esos procesos serán o no espontáneos a cualquier
+% temperatura, a temperaturas altas, a temperaturas
+% bajas, o no serán nunca espontáneos.
+%
+% 21. Dada la reacción: N2O(g) --> N2(g) + 1/2 O2 (g)
+% siendo dH^0 = 43,0 kJ/mol y dS^0 = 80,0 J/mol K
+% a) Justifica el signo positivo de la variación de entropía.
+% b) ¿Será espontánea a 25 ºC? ¿A qué temperatura estará en
+% equilibrio?
+% S: a) Aumentan los moles de sustancias gaseosas b) dG^0_R = 19,2 kJ (no es espontánea); T = 538 K
+%
+% 23. Se pretende obtener etileno (eteno) a partir de grafito e
+% hidrógeno, a 25ºC y 1 atm, según la reacción:
+% 2 C(s) + 2 H2(g) --> C2H4 (g). Calcula:
+% a) La entalpía de reacción en condiciones estándar. ¿La reacción
+% es endotérmica o exotérmica?
+% b) La variación de energía libre de Gibbs en condiciones
+% estándar. ¿Es espontánea la reacción en esas condiciones?
+% Datos: S^0 (J mol-1 K-1): C(s) = 5, 70; H2(g) = 130,6;
+% C2H4(g)= 219,2 dH^0_f (kJ/mol) : C2H4 (g) = +52,5
+% S: a) dH^0_R = +52,5 kJ (endotérmica)
+% b) dG^0_R = +68,4 kJ (no es espontánea)
+%
+%
+%
+%
+% \subsubsection{Aplica lo aprendido}
+%
+%
+% El acetileno o etino (C 2HJ se hidrogena para producir etano. Calcula a 298 K:
+% a) La entalpía estándar de reacción.
+% b) La energía de Gibbs estándar de reacción.
+% e) La entropía estándar de reacción.
+% d) La entropía molar del hidrógeno.
+%
+% Sustancia & dH^0_f (kJ mol^-1) & dG^0_f (kJ mol^-1) & S^0 (kJ mol^-1 K^-1) \\
+% C2H2 & 227 & 209 & 200 \\
+% C2H6 & -85 & -33 & 230 \\
+%
+% S: a) dH^0_R = -312 kJ; b) dG^0_R = -242 kJ; c) dS^0_R = -235 J/K d) S^0_H2, = 132 J/mol K
+
+
+
+\end{document}
