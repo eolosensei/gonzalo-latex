@@ -134,3 +134,7 @@ sympy-plots-for-*.tex/
 # WinEdt
 *.bak
 *.sav
+
+# Auxiliary xsim files
+*/xsim-files
+*.xsim
