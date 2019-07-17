@@ -7,9 +7,25 @@
     \setmainfont{Fira Sans}
 
 \usepackage{xsim}
+% Configuración general de xsim
+  \loadxsimstyle{layouts}
+  \xsimsetup{
+    solution/print    = {true},
+    path              = {xsim-files},
+    exercise/template = {margin},
+    exercise/name     = {Ej. },
+    solution/template = {margin},
+    solution/name     = {Sol. }
+  }
 
 \usepackage{siunitx}
+
 \usepackage[inline]{enumitem}
+% Configuración general de enumitem
+% Establece la configuración por defecto en a), b), c)
+  \setlist[enumerate,1]{label=\alph*)}
+
+\usepackage{chemformula}
 
 \begin{document}
 
@@ -17,14 +33,14 @@
 
 \begin{exercise}
 4> Sabemos que \SI{40}{uma} es la masa del átomo de calcio. Calcula:
-  \begin{enumerate}[label=\alph*)]
+  \begin{enumerate}
     \item La masa en gramos de \SI{1}{átomo} de Ca.
     \item ¿Cuál de las siguientes cantidades tienen mayor número de átomos? \SI{40}{g} de Ca; \SI{0,20}{moles} de Ca; \SI{5e23}{átomos} de Ca.
   \end{enumerate}
 \end{exercise}
 
-\begin{solution}[print]
-  \begin{enumerate*}[label=\alph*)]
+\begin{solution}
+  \begin{enumerate*}
     \item $m = \SI{6,6E-23}{\gram}$;
     \item \SI{40}{\gram} de Ca.
   \end{enumerate*}
@@ -38,8 +54,8 @@
   \end{enumerate}
 \end{exercise}
 
-\begin{solution}[print]
-  \begin{enumerate*}[label=\alph*)]
+\begin{solution}
+  \begin{enumerate*}
     \item $m = \SI{9,3E-23}{\gram}$;
     \item \SI{65}{\gram} de Fe.
   \end{enumerate*}
@@ -336,317 +352,578 @@
 %
 %
 %
-% #\section{BLOQUE 5. QUÍMICA DEL CARBONO (tema 5 del libro)}
-%
-% 7> Formula los siguientes alcanos:
-% a) n-pentano
-% b) 2,3,5-trimetilheptano.
-% e) 4-etil-2,6 - dimetiloctano.
-% d) 4,6-dietil-2,4,8-trimetilnonano.
-% e) 4-etil-2,2,5,8-tetrametil-6-propildecano.
-% f) 3,7-dietil-5-isopropildecano.
-%
-% 9> Formula los siguientes hidrocarburos insaturados:
-% a) But-1-eno
-% b) Pent-2-eno
-% c) Hexa-2,4-dieno
-% d) 3- butilhexa-1,4-dieno
-% e) But-2-ino
-% f) 3,4-dimetilpent-1-ino
-% g) 3,6 -dimetilnona-1,4,7-triino
-% h) Pent-1-en-3-ino
-% i) Hept-3-en-1,6-diino
-% j) 4-etilhexa-1,3-dien-5-ino
-%
-% 11> Formula los siguientes hidrocarburos cíclicos:
-% a) Etilciclohexano.
-% b) Ciclopenteno.
-% c) Ciclohexino.
-% d) 1, 1,4,4-tetrametilciclohexano.
-% e) 3-etilciclopenteno.
-% f) 2,3-dimetilciclohexeno.
-% g) 4-ciclobutilpent-1-ino
-% h) 3-ciclohexil-5-metilhex-2-eno
-% i) Ciclohexa-1,3-dieno
-% j) 3-ciclopentilprop-1-eno
-%
-% 12> Nombra los siguientes hidrocarburos cíclicos:
-% VER EN EL LIBRO, PÁGINA 131
-%
-% 13> Formula los siguientes hidrocarburos aromáticos:
-% a) Metilbenceno (tolueno). b) Etenilbenceno.
-% c) 1,3-dietilbenceno. d) 1-butil-4-isopropilbenceno.
-% e) Para-propiltolueno. f) 3-fenil-5-metilheptano.
-% g) 4-fenilpent-1-eno. h) 2,4-difenil-3-metilhexano.
-%
-% 15> Formula los siguientes derivados halogenados:
-% a) 2-cloropropano.
-% b) 1,3-dibromobenceno.
-% c) 1,1,2,2-tetrafluoretano.
-% d) 1,4-diclorociclohexano.
-% e) 4-bromopent-1-ino
-% f) 3-flúor-5-metilhex-2-eno
-% g) 1,4-dibromo-6-ciclopentiloct-2-eno
-% h) 4-yodo-3,5-difenilpent-1-ino
-% i) 4-clorobut-1-eno
-% j) 1,2-dibromobenceno
-%
-% 17> Formula los siguientes alcoholes y éteres: 18> Nomb ra los siguientes alcoholes y éteres:
-% a) 3-metilpentan-1-ol
-% b) Butano-1,2,3-triol
-% c) 2-fenilpropano-1,3-diol
-% d) Ciclohexanol
-% e) Hexa-3,5-dien-2-ol
-% f) Fenol (Hidroxibenceno)
-% g) 2-etilpentan-1-ol
-% h) Pent-3-en-1-ol
-% i) Etilisopropiléter.
-% j) Etenilfeniléter.
-% k) Dimetiléter.
-% l) Butilciclopentiléter
-%
-% 18> Nombra los siguientes alcoholes y éteres:
-% VER EN EL LIBRO, PÁGINA 135
-%
-% 19> Formula los siguientes aldehídos y cetonas:
-% a) Etanal (acetaldehído). b) Benzaldehído .
-% c) 3-metilpentanal. d) 2-metilpentanodial
-% e) Propenal. J) Hex-2-endial.
-% g) 5-ciclohexilpent-3-inal. h) 3-metilpent-2-enal.
-% i) Hex-2-endial. j) Pentan-2-ona.
-% k) He xa-2,4-diona. 1) 3-clorobutanona.
-% m) 1,4-difenilpentan-2-ona. n) Hexa-1,5-dien-3-ona .
-%
-% 20> Nombra los siguientes aldehídos y cetonas: VER EN EL LIBRO, PÁGINA 136
-% a) HCHO
-% b) CH3-CH2-CH2-CHO
-% c) OHC-CH=CH-CHO
-% d) CH2=C-CH2-(CH2)4-CHO
-% e) OHC- CH=CH-CH 2- CH(CH 3)-CHO
-% f) CH3 -CH-CH=CH-CHO
-% 1
-% C6Hs
-% g) CHO- CH 2-C= C-CH 2- CH 2- CHO
-% h) CH 3- CO - CH 2- CH 3
-% i) CH 3- CH = CH - CH 2- CO- CH 3
-% j) CH 3-CO - CH 2-CH 2-CH 2-CO- CH 3
-% k) CH 3- CH(CH 3)-CO-CH 2-CH(CH 3)-CH 3
-% 1) CH 2=CH-CO-CH=CH-CH3
-%
-% 21> Formula los siguientes ácidos y ésteres:
-% a) Ácido etanoico (ácido acético).
-% b) Ácido 3-metilhexanoico.
-% c) Ácido 2-fenilpentanodioico.
-% d) Ácido tricloroetanoico.
-% e) Ácido but-3-enoico .
-% f) Ácido hepta-2,4-dienoico.
-% g) Ácido pent-2-enodioico.
-% h) Ácido benzoico.
-% i) Butanoato de metilo.
-% j) Propanoato de etilo.
-% k) Benzoato de propilo.
-% l) Etanoato de octilo.
-% m) 3-cloropentanoato de etenilo.
-% n) But-3-enoato de isopropilo.
-%
-% 23> Formula los siguientes compuest os con funciones nitrogenadas:
-% a) Isopropilamina
-% b) Pe ntan-3-amina
-% c) Buta-1,3-diamina
-% d) 3-etilhexan-3-amina
-% e) 3,5-dimetilhexan-1-amina
-% f) Pent-3-en - 2-amina
-% g) N-metilfenilamina
-% h) N-ciclopentilbutilamina
-% i) Etanamida.
-% j) N-metiletanamida
-% k) 4-fenilpentanamida
-% l) N-etilhex-4-enamida
-%
-% 24> Nombra los siguientes compuestos nitrogenados:
-% VER EN EL LIBRO, PÁGINA 140
-%
-% 25> Formula los siguientes compuestos orgánicos:
-% a) 2,2-dimetilpentano.
-% b) Hepta-1,5-dieno .
-% c) 1-fenilpent-2-ino .
-% d) 3-isopropilciclohe xeno.
-% e) 1-butil-3-metilbenceno.
-% f) Butano-1,3-diol.
-% g) Butileteniléter.
-% h) But-3 -enal
-% 1) Hex-5-in -2-ona .
-% j) Ácido 3-isopropilhexanoico .
-% k) Pentanoato de metilo .
-% 1) 5-meilhexan-2,4-diamina
-% m) N-metiletilamina .
-% n) N,N-dietilbutilami na.
-% o) He x-3 - enamida.
-% p) N-metilbutanamida
-%
-% 27> Formula y nombra:
-% a) Dos hidrocarburos alifáticos que presenten isomería de cadena.
-% b) Dos aminas con isomería de posición.
-% e) Dos compuestos oxigenados con isomería de función.
-%
-% 28> Escribe y nombra:
-% a) Todos los isómeros de cadena de fórmula C5H12
-% b) Cuatro isómeros de función de fórmula C4H80.
-% e) Tres isómeros de posición de la amina C5H13N.
-%
-% Dados los siguientes compuestos , formúlalos y justifica cuáles
-% de ellos presentan isomería geométrica y cuáles isomería
-% óptica:
-% a) 2-clorobutano.
-% e) Pent-3-en-2-ol.
-% b) Pentan-3-amina.
-% d) 2-fenilpent-2-eno.
-%
-%
-%
-% \subsection{Problemas propuestos}
-%
-% \subsubsection{Grupos funcionales y series homólogas}
-%
-% 7. Escribe el número de carbonos y el grupo funcional al que
-% corresponden los siguientes compuestos :
-% a) Octano.
-% e) Butanamina.
-% e) Pentinamida.
-% g) Ácido decanoico.
-% i) Hexenal.
-% b) Propanona.
-% d) Butino.
-% f) Hepteno.
-% h) Metanol.
-% j) Dietiléter.
-%
-% 8. Indica si la estructura de cada pareja representa el mismo
-% i:ñcompuesto o compuestos diferentes, identificando los grupos
-% funcionales presentes:
-% a) CH3CH2OCH3 y  CH3OCH2CH3
-% b) CH3CH2OCH3 y CH3CHOHCH3
-% c) CH3CH2CH2OH y CH3CHOHCH3
-%
-% 9. Contesta a cada uno de los siguientes apartados referidos a
-% compuestos de cadena abierta:
-% a) ¿Qué grupos funcionales pueden tener los compuestos de
-% fórmula molecular CnH2n+2O?
-% b) ¿Qué compuestos tienen por fórmula molecular CnH2n-2?
-%
-% 10. Nombra y formula los siguientes compuestos orgánicos:
-% a) CH3-CH2-COOH
-% b) CH3-CH2-C~CH
-% c) CH3-CHOH-CH2-CH2-CH3
-% d) CH3-CH2-CO-CH2-CH2-CH3
-% e) C6H14
-% f) Metil etil éter.
-% g) Metanoato de propilo.
-% h) Dietilamina.
-% i) Pentanal.
-% j) Metilpropeno.
-%
-% 13. Formula las siguientes especies químicas:
-% a) 1-bromo-2,2-diclorobutano.
-% b) Trimetilamina.
-% e) 2-metilhex-1,5-dien-3-ino.
-% d) Butanoato de 2-metilpropilo.
-% e) Tolueno (metilbenceno).
-% f) Propanamida.
-% g) 2,3-dimetilbut-1-eno.
-% h) Ácido 2,3-dimetilpentanodioico.
-%
-% 14. Nombra las siguientes especies químicas:
-% a) H2C=CH-CH=CH-CHO
-% b) H3C-CO-CO-CH3
-% c) H2C=CH-CH=CH-CH2-COOH
-% d) H3C-CH2-NH-CH2-CH3
-% e) CH~C-CH2-COOH
-% J) CH3-CH2-CH(CH3)-CONH2
-% g) H3C-C(OH)2-CH2-CH20H
-%
-% 15. Nombra y/o formula los siguientes compuestos:
-% a) CHCl3
-% b) CH3-CH2-CHO
-% e) CH3-CH2-CH2-CH2-CO-NH2
-% d) (CH3)2-CHOH
-% e) 2,2-dimetilbutano.
-% f) Para-diaminobenceno.
-% g) Ciclohexano.
-% h) Etil propil éter.
-%
-% 16. Formula o nombra, según corresponda:
-% a) 1-etil-3-metilbenceno.
-% b) 2-metilpropan-2-ol.
-% e) 2-metil-propanoato de etilo.
-% d) Pent-3-en-1-amina.
-% e) ClCH=CH-CH3
-% f) CH3-CH2-O-CH2-CH3
-% g) CH3-CH(CH3)-CO-CH2-CH(CH3)-CH3
-% h) CH2=CH-CH2-CO-NH-CH3
-%
-% 20. Formula o nombra los siguientes compuestos:
-% "i::ñ a) Cromato de cobre(II)
-% b) Hidruro de magnesio
-% e) Hidrogenosulfuro de bario
-% d) Etanamina
-% e) Propan-1,2-diol
-% f) Fe(OH)2
-% g) H2SO3
-% h) N2O5
-% i), j) VER EN EL LIBRO, PÁGINA 140
-%
-% 21. Formula o nombra los siguientes compuestos orgánicos :
-% a) 3-etil-2-metilhexano
-% b) 1-bromopent-2-ino:
-% e) 3-etilhe xano-1,5-diol:
-% d) 3-metilpentan-2,4-diamina
-% e) CH2=CH-CH2-CO-O-CH3
-% f) C6H5-O-C6H5
-% g) CH3-CH2-CO-NH-CH2-CH3
-% h) COOH-CH2-CH2-CHBr-COOH
-%
-% \subsubsection{Isomería estructural y espacial}
-%
-% 23. Formula los siguientes compuestos orgánicos:
-% a) But-3-en-2-ona
-% b) Buta-1,3-dien-2-ol
-% c) Dietiléter.
-% ¿Cuáles de ellos son isómeros entre sí?
-%
-% 24. Escribe y nombra cinco isómeros de cadena de fórmula molecular C6H14.
-%
-% 25. Escribe y nombra cuatro isómeros de función de fórmula molecular C4H8O
-%
-% 28. Escribe y nombra todos los isómeros estructurales de fórmula C5H10
-%
-% Formula y nombra:
-% a) Dos isómeros de posición de fórmula C3H8O.
-% b) Dos isómeros de función de fórmula C3H8O.
-% e) Dos isómeros geométricos de fórmula C4H8.
-% d) Un compuesto que tenga dos carbonos quirales (asimétricos) de fórmula C4H8BrCl.
-%
-% 31. Un derivado halogenado etilénico que presenta isomería cis-trans
-% está formado en un 22,4\% de C, un 2,8\% de H y un
-% 74,8\% de bromo. Además, a 130 ºC y 1 atm de presión, una
-% muestra de 12,9 g ocupa un volumen de 2 L. Halla su fórmula
-% molecular y escribe los posibles isómeros.
-% S: C4H6Br2
-%
-% 32. Un alcohol monoclorado está formado en un 38,1\% de C,
-% un 7,4\% de H, un 37,6\% de Cl y el resto es oxígeno. Escribe
-% su fórmula semidesarrollada sabiendo que tiene un carbono
-% asimétrico y que su fórmula molecular y su fórmula empírica
-% coinciden.
-% S: C3H7OCl.
-%
-% 33. Un hidrocarburo monoinsaturado tiene un 87,8\% de carbono.
-% Si su densidad en condiciones normales es 3,66 g/L, determina
-% sus fórmulas empírica y molecular.
-% S: Formula empírica: C3H5; Fórmula molecular: C6H10.
-%
-%
-% \section{BLOQUE 4. Transformaciones energéticas y espontaneidad (tema 6 del libro)}
+\section{BLOQUE 5. QUÍMICA DEL CARBONO (tema 5 del libro)}
+
+\begin{exercise}
+  7> Formula los siguientes alcanos:
+  \begin{enumerate}
+    \item n-pentano
+    \item 2,3,5-trimetilheptano.
+    \item 4-etil-2,6-dimetiloctano.
+    \item 4,6-dietil-2,4,8-trimetilnonano.
+    \item 4-etil-2,2,5,8-tetrametil-6-propildecano.
+    \item 3,7-dietil-5-isopropildecano.
+  \end{enumerate}
+\end{exercise}
+
+\begin{solution}[print=false]
+  Todavía sin solución
+\end{solution}
+
+\begin{exercise}
+  9> Formula los siguientes hidrocarburos insaturados:
+  \begin{enumerate}
+    \item But-1-eno
+    \item Pent-2-eno
+    \item Hexa-2,4-dieno
+    \item 3- butilhexa-1,4-dieno
+    \item But-2-ino
+    \item 3,4-dimetilpent-1-ino
+    \item 3,6 -dimetilnona-1,4,7-triino
+    \item Pent-1-en-3-ino
+    \item Hept-3-en-1,6-diino
+    \item 4-etilhexa-1,3-dien-5-ino
+  \end{enumerate}
+\end{exercise}
+
+\begin{solution}[print=false]
+  Todavía sin solución
+\end{solution}
+
+\begin{exercise}
+  11> Formula los siguientes hidrocarburos cíclicos:
+  \begin{enumerate}
+    \item Etilciclohexano.
+    \item Ciclopenteno.
+    \item Ciclohexino.
+    \item 1, 1,4,4-tetrametilciclohexano.
+    \item 3-etilciclopenteno.
+    \item 2,3-dimetilciclohexeno.
+    \item 4-ciclobutilpent-1-ino
+    \item 3-ciclohexil-5-metilhex-2-eno
+    \item Ciclohexa-1,3-dieno
+    \item 3-ciclopentilprop-1-eno
+  \end{enumerate}
+\end{exercise}
+
+\begin{solution}[print=false]
+  Todavía sin solución
+\end{solution}
+
+\begin{exercise}
+  12> Nombra los siguientes hidrocarburos cíclicos:
+
+  VER EN EL LIBRO, PÁGINA 131
+\end{exercise}
+
+\begin{solution}[print=false]
+  Todavía sin solución
+\end{solution}
+
+\begin{exercise}
+  13> Formula los siguientes hidrocarburos aromáticos:
+  \begin{enumerate}
+    \item Metilbenceno (tolueno).
+    \item Etenilbenceno.
+    \item 1,3-dietilbenceno.
+    \item 1-butil-4-isopropilbenceno.
+    \item Para-propiltolueno.
+    \item 3-fenil-5-metilheptano.
+    \item 4-fenilpent-1-eno.
+    \item 2,4-difenil-3-metilhexano.
+  \end{enumerate}
+\end{exercise}
+
+\begin{solution}[print=false]
+  Todavía sin solución
+\end{solution}
+
+\begin{exercise}
+  15> Formula los siguientes derivados halogenados:
+  \begin{enumerate}
+    \item 2-cloropropano.
+    \item 1,3-dibromobenceno.
+    \item 1,1,2,2-tetrafluoretano.
+    \item 1,4-diclorociclohexano.
+    \item 4-bromopent-1-ino
+    \item 3-flúor-5-metilhex-2-eno
+    \item 1,4-dibromo-6-ciclopentiloct-2-eno
+    \item 4-yodo-3,5-difenilpent-1-ino
+    \item 4-clorobut-1-eno
+    \item 1,2-dibromobenceno
+  \end{enumerate}
+\end{exercise}
+
+\begin{solution}[print=false]
+  Todavía sin solución
+\end{solution}
+
+\begin{exercise}
+  17> Formula los siguientes alcoholes y éteres: 18> Nomb ra los siguientes alcoholes y éteres:
+  \begin{enumerate}
+    \item 3-metilpentan-1-ol
+    \item Butano-1,2,3-triol
+    \item 2-fenilpropano-1,3-diol
+    \item Ciclohexanol
+    \item Hexa-3,5-dien-2-ol
+    \item Fenol (Hidroxibenceno)
+    \item 2-etilpentan-1-ol
+    \item Pent-3-en-1-ol
+    \item Etilisopropiléter.
+    \item Etenilfeniléter.
+    \item Dimetiléter.
+    \item Butilciclopentiléter
+  \end{enumerate}
+\end{exercise}
+
+\begin{solution}[print=false]
+  Todavía sin solución
+\end{solution}
+
+\begin{exercise}
+  18> Nombra los siguientes alcoholes y éteres:
+
+  VER EN EL LIBRO, PÁGINA 135
+\end{exercise}
+
+\begin{solution}[print=false]
+  Todavía sin solución
+\end{solution}
+
+
+\begin{exercise}
+  % 19> Formula los siguientes aldehídos y cetonas:
+  \begin{enumerate}
+    \item Etanal (acetaldehído).
+    \item Benzaldehído .
+    \item 3-metilpentanal.
+    \item 2-metilpentanodial
+    \item Propenal.
+    \item Hex-2-endial.
+    \item 5-ciclohexilpent-3-inal.
+    \item 3-metilpent-2-enal.
+    \item Hex-2-endial.
+    \item Pentan-2-ona.
+    \item He xa-2,4-diona.
+    \item 3-clorobutanona.
+    \item 1,4-difenilpentan-2-ona.
+    \item Hexa-1,5-dien-3-ona .
+  \end{enumerate}
+\end{exercise}
+
+\begin{solution}[print=false]
+  Todavía sin solución
+\end{solution}
+
+\begin{exercise}
+  20> Nombra los siguientes aldehídos y cetonas:
+
+  VER EN EL LIBRO, PÁGINA 136
+  \begin{enumerate}
+    \item HCHO
+    \item CH3-CH2-CH2-CHO
+    \item OHC-CH=CH-CHO
+    \item CH2=C-CH2-(CH2)4-CHO
+    \item OHC- CH=CH-CH 2- CH(CH 3)-CHO
+    \item MIRAR EN EL LIBRO % FIXME
+    \item CHO- CH 2-C= C-CH 2- CH 2- CHO
+    \item CH 3- CO - CH 2- CH 3
+    \item CH 3- CH = CH - CH 2- CO- CH 3
+    \item CH 3-CO - CH 2-CH 2-CH 2-CO- CH 3
+    \item CH 3- CH(CH 3)-CO-CH 2-CH(CH 3)-CH 3
+    \item CH 2=CH-CO-CH=CH-CH3
+  \end{enumerate}
+
+\end{exercise}
+
+\begin{solution}[print=false]
+  Todavía sin solución
+\end{solution}
+
+\begin{exercise}
+  21> Formula los siguientes ácidos y ésteres:
+  \begin{enumerate}
+    \item Ácido etanoico (ácido acético).
+    \item Ácido 3-metilhexanoico.
+    \item Ácido 2-fenilpentanodioico.
+    \item Ácido tricloroetanoico.
+    \item Ácido but-3-enoico .
+    \item Ácido hepta-2,4-dienoico.
+    \item Ácido pent-2-enodioico.
+    \item Ácido benzoico.
+    \item Butanoato de metilo.
+    \item Propanoato de etilo.
+    \item Benzoato de propilo.
+    \item Etanoato de octilo.
+    \item 3-cloropentanoato de etenilo.
+    \item But-3-enoato de isopropilo.
+  \end{enumerate}
+\end{exercise}
+
+\begin{solution}[print=false]
+  Todavía sin solución
+\end{solution}
+
+\begin{exercise}
+  23> Formula los siguientes compuest os con funciones nitrogenadas:
+  % a) Isopropilamina
+  % b) Pe ntan-3-amina
+  % c) Buta-1,3-diamina
+  % d) 3-etilhexan-3-amina
+  % e) 3,5-dimetilhexan-1-amina
+  % f) Pent-3-en - 2-amina
+  % g) N-metilfenilamina
+  % h) N-ciclopentilbutilamina
+  % i) Etanamida.
+  % j) N-metiletanamida
+  % k) 4-fenilpentanamida
+  % l) N-etilhex-4-enamida
+\end{exercise}
+
+\begin{solution}[print=false]
+  Todavía sin solución
+\end{solution}
+
+\begin{exercise}
+  24> Nombra los siguientes compuestos nitrogenados:
+
+  VER EN EL LIBRO, PÁGINA 140
+\end{exercise}
+
+\begin{solution}[print=false]
+  Todavía sin solución
+\end{solution}
+
+\begin{exercise}
+  25> Formula los siguientes compuestos orgánicos:
+  % a) 2,2-dimetilpentano.
+  % b) Hepta-1,5-dieno .
+  % c) 1-fenilpent-2-ino .
+  % d) 3-isopropilciclohe xeno.
+  % e) 1-butil-3-metilbenceno.
+  % f) Butano-1,3-diol.
+  % g) Butileteniléter.
+  % h) But-3 -enal
+  % 1) Hex-5-in -2-ona .
+  % j) Ácido 3-isopropilhexanoico .
+  % k) Pentanoato de metilo .
+  % 1) 5-meilhexan-2,4-diamina
+  % m) N-metiletilamina .
+  % n) N,N-dietilbutilami na.
+  % o) He x-3 - enamida.
+  % p) N-metilbutanamida
+\end{exercise}
+
+\begin{solution}[print=false]
+  Todavía sin solución
+\end{solution}
+
+\begin{exercise}
+  27> Formula y nombra:
+  % a) Dos hidrocarburos alifáticos que presenten isomería de cadena.
+  % b) Dos aminas con isomería de posición.
+  % e) Dos compuestos oxigenados con isomería de función.
+\end{exercise}
+
+\begin{solution}[print=false]
+  Todavía sin solución
+\end{solution}
+
+\begin{exercise}
+  28> Escribe y nombra:
+  % a) Todos los isómeros de cadena de fórmula C5H12
+  % b) Cuatro isómeros de función de fórmula C4H80.
+  % e) Tres isómeros de posición de la amina C5H13N.
+\end{exercise}
+
+\begin{solution}[print=false]
+  Todavía sin solución
+\end{solution}
+
+\begin{exercise}
+  Dados los siguientes compuestos , formúlalos y justifica cuáles
+  de ellos presentan isomería geométrica y cuáles isomería
+  óptica:
+  \begin{enumerate}
+    \item 2-clorobutano.
+    \item Pent-3-en-2-ol.
+    \item Pentan-3-amina.
+    \item 2-fenilpent-2-eno.
+  \end{enumerate}
+\end{exercise}
+
+\begin{solution}[print=false]
+  Todavía sin solución
+\end{solution}
+
+\subsection{Problemas propuestos}
+
+\subsubsection{Grupos funcionales y series homólogas}
+
+\begin{exercise}
+  7. Escribe el número de carbonos y el grupo funcional al que
+  corresponden los siguientes compuestos:
+  % a) Octano.
+  % e) Butanamina.
+  % e) Pentinamida.
+  % g) Ácido decanoico.
+  % i) Hexenal.
+  % b) Propanona.
+  % d) Butino.
+  % f) Hepteno.
+  % h) Metanol.
+  % j) Dietiléter.
+\end{exercise}
+
+\begin{solution}[print=false]
+  Todavía sin solución
+\end{solution}
+
+\begin{exercise}
+  8. Indica si la estructura de cada pareja representa el mismo
+  compuesto o compuestos diferentes, identificando los grupos
+  funcionales presentes:
+  % a) CH3CH2OCH3 y  CH3OCH2CH3
+  % b) CH3CH2OCH3 y CH3CHOHCH3
+  % c) CH3CH2CH2OH y CH3CHOHCH3
+\end{exercise}
+
+\begin{solution}[print=false]
+  Todavía sin solución
+\end{solution}
+
+\begin{exercise}
+  9. Contesta a cada uno de los siguientes apartados referidos a
+  compuestos de cadena abierta:
+  % a) ¿Qué grupos funcionales pueden tener los compuestos de
+  % fórmula molecular CnH2n+2O?
+  % b) ¿Qué compuestos tienen por fórmula molecular CnH2n-2?
+\end{exercise}
+
+\begin{solution}[print=false]
+  Todavía sin solución
+\end{solution}
+
+\begin{exercise}
+  10. Nombra y formula los siguientes compuestos orgánicos:
+  % a) CH3-CH2-COOH
+  % b) CH3-CH2-C~CH
+  % c) CH3-CHOH-CH2-CH2-CH3
+  % d) CH3-CH2-CO-CH2-CH2-CH3
+  % e) C6H14
+  % f) Metil etil éter.
+  % g) Metanoato de propilo.
+  % h) Dietilamina.
+  % i) Pentanal.
+  % j) Metilpropeno.
+\end{exercise}
+
+\begin{solution}[print=false]
+  Todavía sin solución
+\end{solution}
+
+\begin{exercise}
+  13. Formula las siguientes especies químicas:
+  % a) 1-bromo-2,2-diclorobutano.
+  % b) Trimetilamina.
+  % e) 2-metilhex-1,5-dien-3-ino.
+  % d) Butanoato de 2-metilpropilo.
+  % e) Tolueno (metilbenceno).
+  % f) Propanamida.
+  % g) 2,3-dimetilbut-1-eno.
+  % h) Ácido 2,3-dimetilpentanodioico.
+\end{exercise}
+
+\begin{solution}[print=false]
+  Todavía sin solución
+\end{solution}
+
+\begin{exercise}
+  14. Nombra las siguientes especies químicas:
+  % a) H2C=CH-CH=CH-CHO
+  % b) H3C-CO-CO-CH3
+  % c) H2C=CH-CH=CH-CH2-COOH
+  % d) H3C-CH2-NH-CH2-CH3
+  % e) CH~C-CH2-COOH
+  % J) CH3-CH2-CH(CH3)-CONH2
+  % g) H3C-C(OH)2-CH2-CH20H
+\end{exercise}
+
+\begin{solution}[print=false]
+  Todavía sin solución
+\end{solution}
+
+\begin{exercise}
+  15. Nombra y/o formula los siguientes compuestos:
+  % a) CHCl3
+  % b) CH3-CH2-CHO
+  % e) CH3-CH2-CH2-CH2-CO-NH2
+  % d) (CH3)2-CHOH
+  % e) 2,2-dimetilbutano.
+  % f) Para-diaminobenceno.
+  % g) Ciclohexano.
+  % h) Etil propil éter.
+\end{exercise}
+
+\begin{solution}[print=false]
+  Todavía sin solución
+\end{solution}
+
+\begin{exercise}
+  \begin{enumerate}
+  \end{enumerate}
+\end{exercise}
+
+\begin{solution}[print=false]
+  Todavía sin solución
+\end{solution}
+
+\begin{exercise}
+  16. Formula o nombra, según corresponda:
+  \begin{enumerate}
+    \item 1-etil-3-metilbenceno.
+    \item 2-metilpropan-2-ol.
+    \item 2-metil-propanoato de etilo.
+    \item Pent-3-en-1-amina.
+    \item ClCH=CH-CH3
+    \item CH3-CH2-O-CH2-CH3
+    \item CH3-CH(CH3)-CO-CH2-CH(CH3)-CH3
+    \item CH2=CH-CH2-CO-NH-CH3
+  \end{enumerate}
+\end{exercise}
+
+\begin{solution}[print=false]
+  Todavía sin solución
+\end{solution}
+
+\begin{exercise}
+  20. Formula o nombra los siguientes compuestos:
+  \begin{enumerate}
+    \item Cromato de cobre(II)
+    \item Hidruro de magnesio
+    \item Hidrogenosulfuro de bario
+    \item Etanamina
+    \item Propan-1,2-diol
+    \item Fe(OH)2
+    \item H2SO3
+    \item N2O5
+    \item VER EN EL LIBRO, PÁGINA 140
+    \item VER EN EL LIBRO, PÁGINA 140
+  \end{enumerate}
+\end{exercise}
+
+\begin{solution}[print=false]
+  Todavía sin solución
+\end{solution}
+
+\begin{exercise}
+  21. Formula o nombra los siguientes compuestos orgánicos :
+  \begin{enumerate}
+    \item 3-etil-2-metilhexano
+    \item 1-bromopent-2-ino:
+    \item 3-etilhe xano-1,5-diol:
+    \item 3-metilpentan-2,4-diamina
+    \item CH2=CH-CH2-CO-O-CH3
+    \item C6H5-O-C6H5
+    \item CH3-CH2-CO-NH-CH2-CH3
+    \item COOH-CH2-CH2-CHBr-COOH
+  \end{enumerate}
+\end{exercise}
+
+\begin{solution}[print=false]
+  Todavía sin solución
+\end{solution}
+
+\subsubsection{Isomería estructural y espacial}
+
+\begin{exercise}
+  23. Formula los siguientes compuestos orgánicos:
+  \begin{enumerate}
+    \item But-3-en-2-ona
+    \item Buta-1,3-dien-2-ol
+    \item Dietiléter.
+  \end{enumerate}
+  ¿Cuáles de ellos son isómeros entre sí?
+\end{exercise}
+
+\begin{solution}[print=false]
+  Todavía sin solución
+\end{solution}
+
+\begin{exercise}
+  24. Escribe y nombra cinco isómeros de cadena de fórmula molecular C6H14.
+\end{exercise}
+
+\begin{solution}[print=false]
+  Todavía sin solución
+\end{solution}
+
+\begin{exercise}
+  25. Escribe y nombra cuatro isómeros de función de fórmula molecular C4H8O
+\end{exercise}
+
+\begin{solution}[print=false]
+  Todavía sin solución
+\end{solution}
+
+\begin{exercise}
+  28. Escribe y nombra todos los isómeros estructurales de fórmula C5H10
+\end{exercise}
+
+\begin{solution}[print=false]
+  Todavía sin solución
+\end{solution}
+
+\begin{exercise}
+  Formula y nombra:
+  \begin{enumerate}
+    \item Dos isómeros de posición de fórmula C3H8O.
+    \item Dos isómeros de función de fórmula C3H8O.
+    \item Dos isómeros geométricos de fórmula C4H8.
+    \item Un compuesto que tenga dos carbonos quirales (asimétricos) de fórmula C4H8BrCl.
+  \end{enumerate}
+\end{exercise}
+
+\begin{solution}[print=false]
+  Todavía sin solución
+\end{solution}
+
+\begin{exercise}
+  31. Un derivado halogenado etilénico que presenta isomería cis-trans
+  está formado en un 22,4\% de C, un 2,8\% de H y un
+  74,8\% de bromo. Además, a \SI{130}{\celsius} y \SI{1}{atm} de presión, una
+  muestra de \SI{12,9}{\gram} ocupa un volumen de \SI{2}{\liter}. Halla su fórmula
+  molecular y escribe los posibles isómeros.
+\end{exercise}
+
+\begin{solution}[print=false]
+  \ch{C4H6Br2}
+\end{solution}
+
+\begin{exercise}
+  32. Un alcohol monoclorado está formado en un 38,1\% de C,
+  un 7,4\% de H, un 37,6\% de Cl y el resto es oxígeno. Escribe
+  su fórmula semidesarrollada sabiendo que tiene un carbono
+  asimétrico y que su fórmula molecular y su fórmula empírica
+  coinciden.
+\end{exercise}
+
+\begin{solution}[print=false]
+  \dh{C3H7OCl}
+\end{solution}
+
+\begin{exercise}
+  33. Un hidrocarburo monoinsaturado tiene un 87,8\% de carbono.
+  Si su densidad en condiciones normales es \SI{3,66}{\gram\per\liter}, determina
+  sus fórmulas empírica y molecular.
+\end{exercise}
+
+\begin{solution}[print=false]
+  Formula empírica: \ch{C3H5}; Fórmula molecular: \ch{C6H10}.
+\end{solution}
+
+
+\section{BLOQUE 4. Transformaciones energéticas y espontaneidad (tema 6 del libro)}
 %
 % 5> Determina la variación de energía interna que sufre un sistema
 % cuando:
