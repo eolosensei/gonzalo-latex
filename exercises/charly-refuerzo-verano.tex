@@ -6,6 +6,9 @@
 \usepackage{fontspec}
     \setmainfont{Fira Sans}
 
+\usepackage{multicol}
+  \setlength{\columnsep}{2cm}
+
 \usepackage{xsim}
 % Configuración general de xsim
   \loadxsimstyle{layouts}
@@ -19,7 +22,7 @@
   }
 
 \usepackage{siunitx}
-% Exponent simbol options: \times for the typical cross
+% Exponent symbol options: \times for the typical cross
   \sisetup{
     per-mode                = symbol,
     output-decimal-marker   = {,},
@@ -38,6 +41,8 @@
 \begin{document}
 
 \section{BLOQUE 2. ASPECTOS CUALITATIVOS DE LA QUÍMICA (tema 3 del libro)}
+
+\begin{multicols}{2}
 
 \begin{exercise}
 4> Sabemos que \SI{40}{uma} es la masa del átomo de calcio. Calcula:
@@ -145,7 +150,7 @@ S: d = 0,52 g/L
 % polisacárido.
 % S: M = 1938 g/mol
 %
-%
+\end{multicols}
 %
 %
 % \subsection{Problemas propuestos}
