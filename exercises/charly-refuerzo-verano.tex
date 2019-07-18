@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[twocolumn]{article}
 
 \usepackage{polyglossia}
     \setdefaultlanguage{spanish}
@@ -6,8 +6,8 @@
 \usepackage{fontspec}
     \setmainfont{Fira Sans}
 
-\usepackage{multicol}
-%  \setlength{\columnsep}{2cm}
+%\usepackage{multicol}
+  \setlength{\columnsep}{2cm}
 
 \usepackage{xsim}
 % Configuración general de xsim
@@ -15,10 +15,10 @@
   \xsimsetup{
     solution/print    = {true},
     path              = {xsim-files},
-    exercise/template = {default},
+    exercise/template = {margin},
     exercise/name     = {Ej. },
     solution/template = {runin},
-    solution/name     = {Sol. }
+    solution/name     = {Sol.}
   }
 
 \usepackage{siunitx}
@@ -42,7 +42,7 @@
 
 \section{BLOQUE 2. ASPECTOS CUALITATIVOS DE LA QUÍMICA (tema 3 del libro)}
 
-\begin{multicols}{2}
+%\begin{multicols}{2}
 
 \begin{exercise}
 4> Sabemos que \SI{40}{uma} es la masa del átomo de calcio. Calcula:
@@ -150,7 +150,7 @@ S: d = 0,52 g/L
 % polisacárido.
 % S: M = 1938 g/mol
 %
-\end{multicols}
+%\end{multicols}
 %
 %
 % \subsection{Problemas propuestos}
