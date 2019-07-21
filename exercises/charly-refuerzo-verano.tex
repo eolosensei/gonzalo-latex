@@ -10,8 +10,7 @@
 \usepackage{unicode-math}
   \unimathsetup{
     math-style  = ISO,
-    bold-style  = ISO,
-    mathrm      = sym
+    bold-style  = ISO
   }
   \setmathfont{Fira Math}
 
@@ -29,9 +28,9 @@
     solution/print    = {true},
     path              = {xsim-files},
     exercise/template = {margin},
-    exercise/name     = {Ej. },
+    exercise/name     = {E},
     solution/template = {margin},
-    solution/name     = {Sol. }
+    solution/name     = {s}
   }
 
 \usepackage{siunitx}
@@ -40,7 +39,8 @@
     per-mode                = symbol,
     output-decimal-marker   = {,},
     exponent-product        = \cdot,
-    text-celsius            = \ensuremath{{}^{^^b0}}\kern -\scriptspace C
+    text-celsius            = ^^b0\kern -\scriptspace C,  % soluciona problemas con el símbolo de grados
+    math-celsius            = ^^b0\kern -\scriptspace C
   }
 
 \usepackage[inline]{enumitem}
@@ -60,14 +60,6 @@
 
 \begin{exercise}
 4> Sabemos que \SI{40}{uma} es la masa del átomo de calcio. Calcula:
-
-Celsius: \si{\celsius}
-
-Circ: \circ
-
-Unicode: ^^b0
-
-
   \begin{enumerate}
     \item La masa en gramos de \SI{1}{átomo} de Ca.
     \item ¿Cuál de las siguientes cantidades tienen mayor número de átomos? \SI{40}{g} de Ca; \SI{0,20}{moles} de Ca; \SI{5e23}{átomos} de Ca.
