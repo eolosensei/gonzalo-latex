@@ -6,12 +6,21 @@
 \usepackage{fontspec}
     \setmainfont{Fira Sans}
 
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{unicode-math}
+  \unimathsetup{
+    math-style  = ISO,
+    bold-style  = ISO,
+    mathrm      = sym
+  }
+  \setmathfont{Fira Math}
+
+
 \usepackage{multicol}
   \setlength{\columnsep}{2cm}
 
 \usepackage[top=2cm, bottom=3cm, left=3cm, right=2.5cm]{geometry}
 
-% \usepackage{amsmath, amsthm, amssymb}
 
 \usepackage{xsim}
 % Configuración general de xsim
@@ -30,7 +39,8 @@
   \sisetup{
     per-mode                = symbol,
     output-decimal-marker   = {,},
-    exponent-product        = \cdot
+    exponent-product        = \cdot,
+    text-celsius            = \ensuremath{{}^{^^b0}}\kern -\scriptspace C
   }
 
 \usepackage[inline]{enumitem}
@@ -50,6 +60,14 @@
 
 \begin{exercise}
 4> Sabemos que \SI{40}{uma} es la masa del átomo de calcio. Calcula:
+
+Celsius: \si{\celsius}
+
+Circ: \circ
+
+Unicode: ^^b0
+
+
   \begin{enumerate}
     \item La masa en gramos de \SI{1}{átomo} de Ca.
     \item ¿Cuál de las siguientes cantidades tienen mayor número de átomos? \SI{40}{g} de Ca; \SI{0,20}{moles} de Ca; \SI{5e23}{átomos} de Ca.
@@ -256,10 +274,10 @@
 
 \begin{exercise}
   13. ¿Cuál será el volumen de \ch{HCl}, medido en c.n., que podremos
-  obtener con \SI{6e22}{moléculas} moléculas de cloro?
+  obtener con \SI{6e22}{moléculas} de cloro?
 \end{exercise}
 \begin{solution}
-  $V = \SI{4.5}{\liter} de \ch{HCl}$.
+  $V = \SI{4.5}{\liter}$ de \ch{HCl}.
 \end{solution}
 
 \begin{exercise}
