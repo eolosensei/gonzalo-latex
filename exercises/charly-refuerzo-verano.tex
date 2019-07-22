@@ -30,7 +30,7 @@
     exercise/template = {margin},
     exercise/name     = {E},
     solution/template = {margin},
-    solution/name     = {s}
+    solution/name     = {S}
   }
 
 \usepackage{siunitx}
@@ -52,8 +52,10 @@
 
 \usepackage[inline]{enumitem}
 % Configuración general de enumitem
-% Establece la configuración por defecto en \item, \item, \item
-  \setlist[enumerate,1]{label=\alph*)}
+% Establece la configuración por defecto en a), b), c)
+  \setlist[enumerate,1]{
+    label=\alph*),
+  }
 
 \usepackage{chemformula}
 \usepackage{chemfig}
