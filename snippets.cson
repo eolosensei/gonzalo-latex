@@ -14,6 +14,7 @@
       \\\\begin{exercise}
         ${1:content}
       \\\\end{exercise}
+      
       \\\\begin{solution}
         ${2:solution}
       \\\\end{solution}
