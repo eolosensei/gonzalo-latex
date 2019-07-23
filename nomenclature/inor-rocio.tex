@@ -1,0 +1,104 @@
+\documentclass[10pt]{article}
+\usepackage{polyglossia}
+    \setdefaultlanguage{spanish}
+\usepackage{fontspec}
+    \setmainfont{Fira Sans}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{unicode-math}
+  \unimathsetup{
+    math-style  = ISO,
+    bold-style  = ISO
+  }
+  \setmathfont{Fira Math}
+\usepackage{multicol}
+  \setlength{\columnsep}{1.8cm}
+\usepackage[top=2cm, bottom=3cm, left=2.5cm, right=2cm]{geometry}
+\usepackage{xsim}
+% Configuración general de xsim
+  \loadxsimstyle{layouts}
+  \xsimsetup{
+    solution/print    = {true},
+    path              = {xsim-files},
+    exercise/template = {margin},
+    exercise/name     = {E},
+    solution/template = {margin},
+    solution/name     = {S}
+  }
+\usepackage{siunitx}
+% Exponent symbol options: \times for the typical cross
+  \sisetup{
+    per-mode                = symbol,
+    output-decimal-marker   = {,},
+    exponent-product        = \cdot,
+    text-celsius            = ^^b0\kern -\scriptspace C,  % soluciona problemas con el símbolo de grados
+    math-celsius            = ^^b0\kern -\scriptspace C,
+    list-final-separator    = { y },
+    list-pair-separator     = { y },
+    range-phrase            = { \translate{to (numerical range)} }
+  }
+\usepackage[inline]{enumitem}
+% Configuración general de enumitem
+% Establece la configuración por defecto en a), b), c)
+  \setlist[enumerate,1]{
+    label=\alph*),
+  }
+\usepackage{chemformula}
+\usepackage{chemfig}
+  \setchemfig{atom sep=2em}
+
+
+
+
+\newenvironment{gexdatos}{
+  \noindent\makebox[0pt][r]{\textit{Datos:}}
+  }{\vspace{5pt}}
+
+
+
+
+\begin{document}
+
+\begin{exercise}[
+    tags    = {inorgánica,compuestos binarios,sales,hidruros},
+    topics  = {química inorgánica,formulación,nomenclatura}
+  ]
+  Nombra y formula los siguientes compuestos binarios, indicando cuando proceda su nomenclatura de composición (sistemática) y su nombre de Stock:
+
+  \begin{enumerate}
+    \item \ch{KH}
+    \item yoduro de cesio
+    \item hidruro de titanio(III)
+    \item \ch{SrCl2}
+    \item cloruro de hidrógeno
+    \item arseniuro de galio
+    \item \ch{Li3N}
+    \item \ch{CF4}
+    \item yoduro de plomo(II)
+    \item seleniuro de hidrógeno
+  \end{enumerate}
+\end{exercise}
+
+\begin{exercise}[
+    tags    = {inorgánica,compuestos binarios,sales},
+    topics  = {química inorgánica,formulación,nomenclatura}
+  ]
+
+  Nombra y formula los siguientes compuestos binarios, indicando cuando proceda su nomenclatura de composición (sistemática) y su nombre de Stock:
+  
+  \begin{enumerate}
+    \item pentacloruro de fósforo
+    \item cloruro de antimonio(III)
+    \item \ch{ScI3}
+    \item bromuro de plata
+    \item cloruro de mercurio(II)
+    \item \ch{Zn3P2}
+    \item teluluro de cadmio
+    \item bromuro de platino(II)
+    \item \ch{Na2Se}
+    \item tricloruro de oro
+  \end{enumerate}
+\end{exercise}
+
+
+
+\end{document}
