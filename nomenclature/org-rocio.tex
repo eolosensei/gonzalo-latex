@@ -1,0 +1,123 @@
+\documentclass[10pt]{article}
+\usepackage{polyglossia}
+    \setdefaultlanguage{spanish}
+\usepackage{fontspec}
+    \setmainfont{Fira Sans}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{unicode-math}
+  \unimathsetup{
+    math-style  = ISO,
+    bold-style  = ISO
+  }
+  \setmathfont{Fira Math}
+\usepackage{multicol}
+  \setlength{\columnsep}{1.8cm}
+\usepackage[top=2cm, bottom=3cm, left=2.5cm, right=2cm]{geometry}
+\usepackage{xsim}
+% Configuración general de xsim
+  \loadxsimstyle{layouts}
+  \xsimsetup{
+    solution/print    = {true},
+    path              = {xsim-files},
+    exercise/template = {default},
+    exercise/name     = {E},
+    solution/template = {margin},
+    solution/name     = {S}
+  }
+  \DeclareExerciseProperty{source}
+\usepackage{siunitx}
+% Exponent symbol options: \times for the typical cross
+  \sisetup{
+    per-mode                = symbol,
+    output-decimal-marker   = {,},
+    exponent-product        = \cdot,
+    text-celsius            = ^^b0\kern -\scriptspace C,  % soluciona problemas con el símbolo de grados
+    math-celsius            = ^^b0\kern -\scriptspace C,
+    list-final-separator    = { y },
+    list-pair-separator     = { y },
+    range-phrase            = { \translate{to (numerical range)} }
+  }
+\usepackage[inline]{enumitem}
+% Configuración general de enumitem
+% Establece la configuración por defecto en a), b), c)
+  \setlist[enumerate,1]{
+    label=\alph*),
+  }
+\usepackage{chemformula}
+\usepackage{chemfig}
+  \setchemfig{atom sep=2em}
+\usepackage{booktabs}
+\usepackage{tasks}
+
+
+
+\newenvironment{gexdatos}{
+  \noindent\makebox[0pt][r]{\textit{Datos:}}
+  }{\vspace{5pt}}
+
+\newcommand{\gexBinRow}[3]{
+  \ch{#1} & #2 & #3 \\ \midrule
+}
+
+
+\begin{document}
+
+\begin{multicols}{2}[
+  \section{Ejercicios de nomenclatura}
+  ]
+
+  \begin{exercise}[
+      tags    = {inorgánica,formulación,múltiple,2B},
+      topics  = {química inorgánica,formulación,nomenclatura},
+      source  = {Química 2B SAN 2016, p391, e11},
+    ]
+
+    Nombra las siguientes sustancias dadas por su nombre
+
+    \begin{tasks}(1)
+      \task \chemfig{CH_2=CH-CH(-[6]CH_3-CH_3}
+      \task \chemfig{CH_3-CH_2-O-CH_2-CH_3}
+      \task \chemfig{CH_3-CH(-[2]CH_3)-CH_2-CH_3}
+      \task \chemfig{CH_3-CH2-C~C-CH_3}
+      \task \chemfig{CH_3-CH_2-CH_2-CH_2-CH_2-CH_2-NH_2}
+      \task \chemfig{CH_3-CO-CH_3}
+      \task \chemfig{CH_3-CH_2OH}
+      \task \chemfig{CH_3-COO-CH_2-CH_3}
+    \end{tasks}
+  \end{exercise}
+
+\end{multicols}
+
+\end{document}
+
+% TEMPLATES
+
+  \begin{tasks}(1)
+    \task \chemfig{}
+    \task \chemfig{}
+    \task \chemfig{}
+    \task \chemfig{}
+    \task \chemfig{}
+    \task \chemfig{}
+    \task \chemfig{}
+    \task \chemfig{}
+    \task \chemfig{}
+    \task \chemfig{}
+  \end{tasks}
+
+
+  \begin{enumerate}
+    \item \ch{}
+    \item \ch{}
+    \item \ch{}
+    \item \ch{}
+    \item \ch{}
+    \item \ch{}
+    \item \ch{}
+    \item \ch{}
+    \item \ch{}
+    \item \ch{}
+    \item \ch{}
+    \item \ch{}
+  \end{enumerate}
+\end{exercise}
