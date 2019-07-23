@@ -46,6 +46,7 @@
 \usepackage{chemformula}
 \usepackage{chemfig}
   \setchemfig{atom sep=2em}
+\usepackage{booktabs}
 
 
 
@@ -54,7 +55,9 @@
   \noindent\makebox[0pt][r]{\textit{Datos:}}
   }{\vspace{5pt}}
 
-
+\newcommand{\gexBinRow}[3]{
+  \ch{#1} & #2 & #3 \\ \midrule
+}
 
 
 \begin{document}
@@ -126,7 +129,7 @@
 
 
 \begin{exercise}[
-    tags    = {inorgánica,compuestos binarios,oxidos,peróxidos},
+    tags    = {inorgánica,compuestos binarios,óxidos,peróxidos},
     topics  = {química inorgánica,formulación,nomenclatura},
     source  = {SAN Formulación, p27, e31},
   ]
@@ -149,7 +152,7 @@
 
 
 \begin{exercise}[
-    tags    = {inorgánica,compuestos binarios,oxidos,peróxidos},
+    tags    = {inorgánica,compuestos binarios,óxidos,peróxidos},
     topics  = {química inorgánica,formulación,nomenclatura},
     source  = {SAN Formulación, p27, e32},
   ]
@@ -172,7 +175,7 @@
 
 
 \begin{exercise}[
-    tags    = {inorgánica,compuestos binarios,oxidos,peróxidos,hidróxidos},
+    tags    = {inorgánica,compuestos binarios,óxidos,peróxidos,hidróxidos},
     topics  = {química inorgánica,formulación,nomenclatura},
     source  = {SAN Formulación, p27, e33},
   ]
@@ -195,7 +198,7 @@
 
 
 \begin{exercise}[
-    tags    = {inorgánica,ácidos,ácidos binarios,ácidos ternarios},
+    tags    = {inorgánica,ácidos,ácidos binarios,ácidos ternarios,oxoácidos},
     topics  = {química inorgánica,formulación,nomenclatura},
     source  = {SAN Formulación, p28, e34},
   ]
@@ -218,7 +221,7 @@
 
 
 \begin{exercise}[
-  tags    = {inorgánica,ácidos,ácidos binarios,ácidos ternarios},
+  tags    = {inorgánica,ácidos,ácidos binarios,ácidos ternarios,oxoácidos},
   topics  = {química inorgánica,formulación,nomenclatura},
   source  = {SAN Formulación, p28, e35},
   ]
@@ -241,7 +244,7 @@
 
 
 \begin{exercise}[
-    tags    = {inorgánica,ácidos,ácidos binarios,ácidos ternarios},
+    tags    = {inorgánica,ácidos,ácidos binarios,ácidos ternarios,oxoácidos},
     topics  = {química inorgánica,formulación,nomenclatura},
     source  = {SAN Formulación, p28, e36},
   ]
@@ -263,29 +266,257 @@
 \end{exercise}
 
 
+\begin{exercise}[
+    tags    = {inorgánica,sales, sales binarias,sales ternarias},
+    topics  = {química inorgánica,formulación,nomenclatura},
+    source  = {SAN Formulación, p29, e37},
+  ]
+
+  Nombra y formula las siguientes sales, indicando cuando proceda su nomenclatura de composición (sistemática) y su nombre de Stock:
+
+  \begin{enumerate}
+    \item \ch{BeCl2}
+    \item hidrogenosulfuro de calcio
+    \item tetraoxidosulfato de disodio
+    \item \ch{KMnO4}
+    \item carbonato de amonio
+    \item tris(hidrogenoselenuro) de níquel
+    \item \ch{CoSO3}
+    \item hidrogenosufito de zinc
+    \item heptaoxidodicromato de dilitio
+    \item \ch{Ca(CN)2}
+  \end{enumerate}
+\end{exercise}
+
+
+\begin{exercise}[
+    tags    = {inorgánica,sales, sales binarias,sales ternarias},
+    topics  = {química inorgánica,formulación,nomenclatura},
+    source  = {SAN Formulación, p29, e38},
+  ]
+
+  Nombra y formula las siguientes sales, indicando cuando proceda su nomenclatura de composición (sistemática) y su nombre de Stock:
+
+  \begin{enumerate}
+    \item nitrato de cromo(III)
+    \item tris(tetraoxidoyodato) de galio
+    \item \ch{Sn(ClO)4}
+    \item fosfato de calcio
+    \item tris(tetraoxidosulfato) de dialuminio
+    \item \ch{Pb(NO2)4}
+    \item cromato de cesio
+    \item trioxidoborato de níquel
+    \item \ch{MnSO4}
+    \item fluoruro de bario
+  \end{enumerate}
+\end{exercise}
+
+
+\begin{exercise}[
+    tags    = {inorgánica,sales,sales binarias,sales ternarias},
+    topics  = {química inorgánica,formulación,nomenclatura},
+    source  = {SAN Formulación, p29, e39},
+  ]
+
+  Nombra y formula las siguientes sales, indicando cuando proceda su nomenclatura de composición (sistemática) y su nombre de Stock:
+
+  \begin{enumerate}
+    \item hidrogenotelururo de rubidio
+    \item \ch{KClO2}
+    \item sulfito de titanio(III)
+    \item dioxidotelurato de dicobre
+    \item \ch{NH4HSO2}
+    \item hipoclorito de plata
+    \item tetraoxidomanganato de dilitio
+    \item \ch{Ca3(AsO3)2}
+    \item yodato de magnesio
+    \item trioxidonitrato de amonio
+  \end{enumerate}
+\end{exercise}
+
+
+\begin{exercise}[
+    tags    = {inorgánica,óxidos,compuestos binarios,2B},
+    topics  = {química inorgánica,formulación,nomenclatura},
+    source  = {Química 2B OXF 2016, p342, e5},
+  ]
+
+  A continuación se indica la fórmula o el nombre de una serie de compuestos. Completa la información mostrando la fórmula y el nombre de cada uno tanto con prefijos multiplicadores como con número de oxidación o número de carga.
+
+  \begin{enumerate}
+    \item dióxido de silicio
+    \item \ch{Li2O}
+    \item \ch{ZnO}
+    \item óxido de cobre(I)
+    \item \ch{CaO}
+    \item \ch{Cr2O3}
+    \item óxido de boro(III)
+    \item óxido de magnesio
+    \item \ch{SeO3}
+    \item pentaóxido de dinitrógeno
+  \end{enumerate}
+\end{exercise}
+
+\begin{exercise}[
+    tags    = {inorgánica,compuestos ternarios,oxoácidos,2B},
+    topics  = {química inorgánica,formulación,nomenclatura},
+    source  = {Química 2B OXF 2016, p344, e8 y p345, e9},
+  ]
+
+  Completa la tabla siguiente indicando la fórmula o el nombre de hidrógeno de cada compuesto:
+
+  \begin{table}
+    \centering
+    \begin{tabular}{cll}
+      Formula      & Nom. de hidrógeno & Nom. tradicional \\ \toprule
+      \gexBinRow{HClO3}{}{}
+      \gexBinRow{}{trihidrogeno(trioxidoborato)}{ácido bórico}
+      \gexBinRow{H2SO3}{}{}
+      \gexBinRow{}{hidrogeno(tetraoxidoyodato)}{ácido peryódico}
+      \gexBinRow{H2CrO4}{}{}
+      \gexBinRow{}{dihidrogeno(trioxidotelurato)}{ácido teluroso}
+      \gexBinRow{HBrO2}{}{}
+      \gexBinRow{}{dihidrogeno(tetraoxidomanganato)}{ácido mangánico}
+      \gexBinRow{H3AsO4}{}{}
+      \gexBinRow{}{trihidrogeno(trioxidofosfato)}{ácido fosforoso}
+      \gexBinRow{}{dihidrogeno(trioxidocarbonato)}{ácido carbónico}
+      \gexBinRow{}{hidrogeno(tetraoxidomanganato)}{ácido permangánico}
+      \gexBinRow{H3PO4}{}{}
+      \gexBinRow{}{dihidrogeno(heptaoxidodicromato)}{ácido dicrómico}
+      \gexBinRow{HNO}{}{}
+      \gexBinRow{}{trihidrogeno(trioxidoarsenato)}{}
+      \gexBinRow{HNO3}{}{}
+      \gexBinRow{}{hidrogeno(oxidoclorato)}{ácido hipocloroso}
+      \gexBinRow{H2SeO2}{}{}
+    \end{tabular}
+  \end{table}
+\end{exercise}
+
+\begin{exercise}[
+    tags    = {inorgánica,sales, sales ternarias, oxosales,2B},
+    topics  = {química inorgánica,formulación,nomenclatura},
+    source  = {Química 2B OXF 2016, p347, e12},
+  ]
+
+  Formula los siguientes compuestos
+
+  \begin{enumerate}
+    \item Hiposulfito de oro(III)
+    \item Carbonato de sodio
+    \item Dicromato de cinc
+    \item Fosfato de aluminio
+    \item Bromuro de amonio
+    \item Perclorato de cromo(II)
+    \item Bistrioxidoborato de trihierro
+    \item Trioxidoarsenato de trisamonio
+    \item Bis(hidrogenoselenuro) de mercurio
+    \item Nitrito de cobalto(II)
+    \item Oxidoyodato de oro
+    \item Fosfito de magnesio
+    \item Hidrogenosulfato de níquel(II)
+    \item Clorato de cesio
+    \item Sulfato de aluminio
+    \item Tris(trioxidoclorato) de cobalto
+    \item Hidrogenocarbonato de calcio
+    \item Manganato de bismuto(III)
+    \item Tris(trioxidonitrato) de cromo
+    \item Yoduro de plomo(IV)
+  \end{enumerate}
+\end{exercise}
+
+
+\begin{exercise}[
+    tags    = {inorgánica,nomenclatura,múltiple,2B},
+    topics  = {química inorgánica,formulación,nomenclatura},
+    source  = {Química 2B SAN 2016, p372, e6},
+  ]
+
+  Nombra las siguientes sustancias dadas por su fórmula
+
+  \begin{enumerate}
+    \item \ch{PCl3}
+    \item \ch{Fe(OH)2}
+    \item \ch{Sr(OH)2}
+    \item \ch{SO2}
+    \item \ch{Al2(SO4)3}
+    \item \ch{H2SO4}
+    \item \ch{H3PO4}
+    \item \ch{Fe(HSO4)2}
+    \item \ch{PbO2}
+    \item \ch{N2O5}
+    \item \ch{Fe(NO3)3}
+    \item \ch{CsH}
+  \end{enumerate}
+\end{exercise}
+
+
+\begin{exercise}[
+    tags    = {inorgánica,nomenclatura,múltiple,2B},
+    topics  = {química inorgánica,formulación,nomenclatura},
+    source  = {Química 2B SAN 2016, p372, e7},
+  ]
+
+  Nombra las siguientes sustancias dadas por su fórmula
+
+  \begin{enumerate}
+    \item \ch{KMnO4}
+    \item \ch{HgS}
+    \item \ch{NaHSO4}
+    \item \ch{Ag2O}
+    \item \ch{NaHCO3}
+    \item \ch{Ar}
+    \item \ch{Ni(OH)2}
+    \item \ch{Fe2S3}
+    \item \ch{Ca(OH)2}
+    \item \ch{NH4Cl}
+    \item \ch{Na2O2}
+    \item \ch{HClO4}
+  \end{enumerate}
+\end{exercise}
+
+\begin{exercise}[
+    tags    = {inorgánica,nomenclatura,múltiple,2B},
+    topics  = {química inorgánica,formulación,nomenclatura},
+    source  = {Química 2B SAN 2016, p372, e8},
+  ]
+
+  Nombra las siguientes sustancias dadas por su fórmula
+
+  \begin{enumerate}
+    \item \ch{PH3}
+    \item \ch{HgSO3}
+    \item \ch{SiH4}
+    \item \ch{As2O5}
+    \item \ch{B2O3}
+    \item \ch{CaO}
+    \item \ch{As2O3}
+    \item \ch{NO3-}
+    \item \ch{HBrO3}
+    \item \ch{HIO3}
+    \item \ch{Co(OH)3}
+    \item \ch{H4P2O7}
+  \end{enumerate}
+\end{exercise}
+
+
 
 \end{document}
 
 % TEMPLATES
 
-\begin{exercise}[
-    tags    = {inorgánica,compuestos binarios,oxidos,peróxidos},
-    topics  = {química inorgánica,formulación,nomenclatura},
-    source  = {SAN Formulación, p27, e31},
-  ]
-
-  Nombra y formula los siguientes compuestos binarios, indicando cuando proceda su nomenclatura de composición (sistemática) y su nombre de Stock:
 
   \begin{enumerate}
-    \item
-    \item
-    \item
-    \item
-    \item
-    \item
-    \item
-    \item
-    \item
-    \item
+    \item \ch{}
+    \item \ch{}
+    \item \ch{}
+    \item \ch{}
+    \item \ch{}
+    \item \ch{}
+    \item \ch{}
+    \item \ch{}
+    \item \ch{}
+    \item \ch{}
+    \item \ch{}
+    \item \ch{}
   \end{enumerate}
 \end{exercise}
