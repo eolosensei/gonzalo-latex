@@ -11,18 +11,19 @@
   }
   \setmathfont{Fira Math}
 \usepackage{multicol}
-  \setlength{\columnsep}{1.8cm}
+  \setlength{\columnsep}{1cm}
 \usepackage[top=2cm, bottom=3cm, left=2.5cm, right=2cm]{geometry}
 \usepackage{xsim}
 % Configuración general de xsim
   \loadxsimstyle{layouts}
   \xsimsetup{
-    solution/print    = {true},
     path              = {xsim-files},
-    exercise/template = {default},
+    exercise/template = {runin},
     exercise/name     = {E},
-    solution/template = {margin},
-    solution/name     = {S}
+    exercise/print    = {true},
+    solution/template = {runin},
+    solution/name     = {S},
+    solution/print    = {false},
   }
   \DeclareExerciseProperty{source}
 \usepackage{siunitx}
@@ -41,14 +42,16 @@
 % Configuración general de enumitem
 % Establece la configuración por defecto en a), b), c)
   \setlist[enumerate,1]{
-    label=\alph*),
+    label   =\alph*),
+    itemsep = 0.3\itemsep,
   }
 \usepackage{chemformula}
 \usepackage{chemfig}
-  \setchemfig{atom sep=2em}
+  \setchemfig{
+    atom sep = 2em
+  }
 \usepackage{booktabs}
 \usepackage{tasks}
-
 
 
 \newenvironment{gexdatos}{
@@ -62,6 +65,10 @@
 
 \begin{document}
 
+
+\begin{multicols*}{2}[
+  \section{Ejercicios variados}
+  ]
 
 \begin{exercise}[
     tags    = {inorgánica,compuestos binarios,sales binarias,sales,hidruros},
@@ -84,12 +91,28 @@
   \end{enumerate}
 \end{exercise}
 
+\begin{solution}
+  \begin{enumerate}
+    \item hidruro de potasio, hidruro de potasio
+    \item \ch{CsI}, yoduro de cesio
+    \item \ch{TiH3}, trihidruro de titanio
+    \item dicloruro de estroncio, cloruro de estroncio
+    \item \ch{HCl}, cloruro de hidrógeno / ácido clorhídrico
+    \item \ch{GaAs}, arsenuro de galio
+    \item nitruro de trilitio, nitruro de litio
+    \item tetrafluoruro de carbono, fluoruro de carbono(IV)
+    \item \ch{PbI2}, diyoduro de plomo
+    \item \ch{H2Se}, selenuro de dihidrógeno
+  \end{enumerate}
+\end{solution}
+
+
+
 \begin{exercise}[
     tags    = {inorgánica,compuestos binarios,sales binarias,sales},
     topics  = {química inorgánica,formulación,nomenclatura},
     source  = {SAN Formulación, p26, e29},
   ]
-
   Nombra y formula los siguientes compuestos binarios, indicando cuando proceda su nomenclatura de composición (sistemática) y su nombre de Stock:
 
   \begin{enumerate}
@@ -106,12 +129,29 @@
   \end{enumerate}
 \end{exercise}
 
+\begin{solution}
+  \begin{enumerate}
+    \item \ch{PCl5}, cloruro de fósforo(V)
+    \item \ch{SbCl3}, tricloruro de antimonio
+    \item triyoduro de escandio, yoduro de escandio
+    \item \ch{AgBr}, bromuro de plata
+    \item \ch{HgCl2}, dicloruro de mercurio;
+    \item difosfuro de trizinc, fosfuro de zinc
+    \item \ch{CdTe}, telururo de cadmio
+    \item \ch{PtBr2}, dibromuro de platino
+    \item selenuro de disodio, selenuro de sodio
+    \item \ch{AuCl3}, cloruro de oro(III)
+  \end{enumerate}
+\end{solution}
+
+
+
+
 \begin{exercise}[
     tags    = {inorgánica,compuestos binarios,sales binarias,sales},
     topics  = {química inorgánica,formulación,nomenclatura},
     source  = {SAN Formulación, p26, e30},
   ]
-
   Nombra y formula los siguientes compuestos binarios, indicando cuando proceda su nomenclatura de composición (sistemática) y su nombre de Stock:
 
   \begin{enumerate}
@@ -128,13 +168,29 @@
   \end{enumerate}
 \end{exercise}
 
+\begin{solution}
+  \begin{enumerate}
+    \item \ch{H2Te}, telururo de dihidrógeno
+    \item carburo de silicio, carburo de silicio(IV)
+    \item \ch{CaBr2}, bromuro de calcio
+    \item \ch{Ag3P}, fosfuro de triplata
+    \item arsenuro de níquel, arsenuro de níquel(III)
+    \item \ch{Sb2S3}, sulfuro de antimonio(III)
+    \item \ch{BiH3}, trihidruro de bismuto
+    \item \ch{IF7}, fluoruro de yodo(VII)
+    \item sulfuro de dihidrógeno, sulfuro de hidrógeno
+    \item \ch{CuH2}, sulfuro de cobre(II)
+  \end{enumerate}
+\end{solution}
+
+
+
 
 \begin{exercise}[
     tags    = {inorgánica,compuestos binarios,óxidos,peróxidos},
     topics  = {química inorgánica,formulación,nomenclatura},
     source  = {SAN Formulación, p27, e31},
   ]
-
   Nombra y formula los siguientes compuestos binarios, indicando cuando proceda su nomenclatura de composición (sistemática) y su nombre de Stock:
 
   \begin{enumerate}
@@ -151,13 +207,29 @@
   \end{enumerate}
 \end{exercise}
 
+\begin{solution}
+  \begin{enumerate}
+    \item monóxido de hierro, óxido de hierro(II)
+    \item \ch{Cr2O3}, óxido de cromo(III)
+    \item \ch{HgO}, monóxido de mercurio
+    \item dióxido de dilitio, peróxido de litio
+    \item \ch{MgO2}, peróxido de magnesio
+    \item \ch{Al2O6}, hexaóxido de dialuminio
+    \item \ch{N2O5}, óxido de nitrógeno(V)
+    \item dióxido de azufre, óxido de azufre(IV)
+    \item \ch{CO}, óxido de carbono(II)
+    \item \ch{SeO3}, trióxido de selenio
+  \end{enumerate}
+\end{solution}
+
+
+
 
 \begin{exercise}[
     tags    = {inorgánica,compuestos binarios,óxidos,peróxidos},
     topics  = {química inorgánica,formulación,nomenclatura},
     source  = {SAN Formulación, p27, e32},
   ]
-
   Nombra y formula los siguientes compuestos binarios, indicando cuando proceda su nomenclatura de composición (sistemática) y su nombre de Stock:
 
   \begin{enumerate}
@@ -174,13 +246,29 @@
   \end{enumerate}
 \end{exercise}
 
+\begin{solution}
+  \begin{enumerate}
+    \item dicloruro de trioxígeno, -
+    \item \ch{MnO2}, óxido de manganeso(IV)
+    \item \ch{P2O5}, pentaóxido de difósforo
+    \item trióxido de cromo, óxido de cromo(VI)
+    \item \ch{O7I2}, -
+    \item \ch{SnO4}, tetraóxido de estaño
+    \item dióxido de dihidrógeno, peróxido de hidrógen
+    \item \ch{Li2O2}, peróxido de litio
+    \item \ch{TiO}, monóxido de titanio
+    \item dióxido de silicio, óxido de silicio(IV)
+  \end{enumerate}
+\end{solution}
+
+
+
 
 \begin{exercise}[
     tags    = {inorgánica,compuestos binarios,óxidos,peróxidos,hidróxidos},
     topics  = {química inorgánica,formulación,nomenclatura},
     source  = {SAN Formulación, p27, e33},
   ]
-
   Nombra y formula los siguientes compuestos binarios, indicando cuando proceda su nomenclatura de composición (sistemática) y su nombre de Stock:
 
   \begin{enumerate}
@@ -197,13 +285,29 @@
   \end{enumerate}
 \end{exercise}
 
+\begin{solution}
+  \begin{enumerate}
+    \item \ch{Ba(OH)2}, hidróxido de bario
+    \item \ch{Zn(OH)2}, dihidróxido de zinc
+    \item trihidróxido de oro, hidróxido de oro(III)
+    \item \ch{AgOH}, hidróxido de plata
+    \item \ch{Mg(OH)2}, dihidróxido de magnesio
+    \item hidróxido de amonio, hidróxido de amonio
+    \item \ch{PdO2}, óxido de paladio(IV)
+    \item \ch{Rb2O2}, dióxido de dirubidio
+    \item monóxido de teluro, óxido de teluro(II)
+    \item \ch{Co2O3}, óxido de cobalto(III)
+  \end{enumerate}
+\end{solution}
+
+
+
 
 \begin{exercise}[
     tags    = {inorgánica,ácidos,ácidos binarios,ácidos ternarios,oxoácidos},
     topics  = {química inorgánica,formulación,nomenclatura},
     source  = {SAN Formulación, p28, e34},
   ]
-
   Nombra y formula los siguientes compuestos, indicando cuando proceda su nomenclatura de hidrógeno y su nombre tradicional:
 
   \begin{enumerate}
@@ -220,13 +324,29 @@
   \end{enumerate}
 \end{exercise}
 
+\begin{solution}
+  \begin{enumerate}
+    \item ácido fluorhídrico, hidrogeno(fluoruro)
+    \item \ch{H2Se}, dihidrogeno(selenuro)
+    \item \ch{HClO}, ácido hipocloroso
+    \item \ch{H2SO4}, ácido sulfúrico
+    \item ácido permangánico,  hidrogeno(tetraoxidomanganato)
+    \item ácido yodhídrico, hidrogeno(yoduro)
+    \item \ch{H2Te}, ácido telurhídrico
+    \item \ch{H2Cr2O7}, dihidrogeno(heptaoxidodicromato)
+    \item \ch{H2CrO4}, ácido crómico
+    \item \ch{HBrO4}, ácido perbrómico
+  \end{enumerate}
+\end{solution}
+
+
+
 
 \begin{exercise}[
   tags    = {inorgánica,ácidos,ácidos binarios,ácidos ternarios,oxoácidos},
   topics  = {química inorgánica,formulación,nomenclatura},
   source  = {SAN Formulación, p28, e35},
   ]
-
   Nombra y formula los siguientes compuestos, indicando cuando proceda su nomenclatura de hidrógeno y su nombre tradicional:
 
   \begin{enumerate}
@@ -243,13 +363,29 @@
   \end{enumerate}
 \end{exercise}
 
+\begin{solution}
+  \begin{enumerate}
+    \item \ch{HCL}, cloruro de hidrógeno
+    \item \ch{H2MnO4}, dihidrogeno(tetraoxidomanganato)
+    \item ácido sulfhídrico, sulfuro de dihidrógeno
+    \item \ch{H3AsO4}, trihidrogeno(tetraoxidoarsenato)
+    \item \ch{H3PO4}, ácido fosfórico
+    \item ácido fosforoso, trihidrogeno(trioxidofosfato)
+    \item \ch{HNO}, hidrogeno(óxidonitrato)
+    \item \ch{H3AsO3}, ácido arsenoso
+    \item ácido hipoteluroso, dihidrogeno(dióxidotelurato)
+    \item \ch{HBr}, ácido bromhídrico
+  \end{enumerate}
+\end{solution}
+
+
+
 
 \begin{exercise}[
     tags    = {inorgánica,ácidos,ácidos binarios,ácidos ternarios,oxoácidos},
     topics  = {química inorgánica,formulación,nomenclatura},
     source  = {SAN Formulación, p28, e36},
   ]
-
   Nombra y formula los siguientes compuestos, indicando cuando proceda su nomenclatura de hidrógeno y su nombre tradicional:
 
   \begin{enumerate}
@@ -266,13 +402,29 @@
   \end{enumerate}
 \end{exercise}
 
+\begin{solution}
+  \begin{enumerate}
+    \item ácido bórico, trihidrogeno(trioxidoborato)
+    \item ácido nitroso, hidrogeno(dioxidonitrato)
+    \item \ch{H2SeO3}, dihidrogeno(trioxidoselenato)
+    \item \ch{HNO3}, hidrogeno(trioxidonitrato)
+    \item ácido sulfuroso, dihidrogeno(trioxidosulfato)
+    \item \ch{H2CO3}, dihidrogeno(trioxidocarbonato)
+    \item \ch{HClO2}, ácido cloroso
+    \item ácido selénico, dihidrogeno(tetraoxidoselenato)
+    \item \ch{HBrO}, hidrogeno(oxidobromato)
+    \item \ch{HCLO3}, ácido clórico
+  \end{enumerate}
+\end{solution}
+
+
+
 
 \begin{exercise}[
     tags    = {inorgánica,sales, sales binarias,sales ternarias},
     topics  = {química inorgánica,formulación,nomenclatura},
     source  = {SAN Formulación, p29, e37},
   ]
-
   Nombra y formula las siguientes sales, indicando cuando proceda su nomenclatura de composición (sistemática) y su nombre de Stock:
 
   \begin{enumerate}
@@ -289,13 +441,29 @@
   \end{enumerate}
 \end{exercise}
 
+\begin{solution}
+  \begin{enumerate}
+    \item cloruro de berilio, dicloruro de berilio
+    \item \ch{Ca(HS)2}, bis(hidrogenosulfuro) de calcio
+    \item \ch{Na2SO4}, sulfato de sodio
+    \item permanganato de potasio, tetraoxidomanganato de potasio
+    \item \ch{(NH4)2CO3}, trioxidocarbonato de bis(amonio)
+    \item \ch{Ni(HSe)3}, hidrogenoselenuro de níquel(III)
+    \item sulfito de cobalto(II), trioxidosulfato de cobalto
+    \item \ch{Zn(HSO3)2}, bis[hidrogeno(trioxidosulfato)] de zinc
+    \item \ch{Li2Cr2O7}, dicromato de litio
+    \item cianuro de calcio, dicianuro de calcio
+  \end{enumerate}
+\end{solution}
+
+
+
 
 \begin{exercise}[
     tags    = {inorgánica,sales, sales binarias,sales ternarias},
     topics  = {química inorgánica,formulación,nomenclatura},
     source  = {SAN Formulación, p29, e38},
   ]
-
   Nombra y formula las siguientes sales, indicando cuando proceda su nomenclatura de composición (sistemática) y su nombre de Stock:
 
   \begin{enumerate}
@@ -312,13 +480,29 @@
   \end{enumerate}
 \end{exercise}
 
+\begin{solution}
+  \begin{enumerate}
+    \item \ch{Cr(NO3)3}, tris(trioxidocromato) de cromo
+    \item \ch{Ga(IO4)3}, peryodato de galio
+    \item hipoclorito de estaño(IV), tetrakis(oxidoclorato) de estaño
+    \item \ch{Ca3(PO4)2}, bis(tetraoxidofosfato) de tricalcio
+    \item \ch{Al2(SO4)3}, sulfato de aluminio
+    \item nitrito de plomo(IV), tetrakis(dioxidonitrato) de plomo
+    \item \ch{Cs2CrO4}, tetraoxidocromato de dicesio
+    \item \ch{NiBO3}, borato de níquel(III)
+    \item sulfato de manganeso(II), tetraoxidosulfato de manganeso
+    \item \ch{BaF2}, difluoruro de bario
+  \end{enumerate}
+\end{solution}
+
+
+
 
 \begin{exercise}[
     tags    = {inorgánica,sales,sales binarias,sales ternarias},
     topics  = {química inorgánica,formulación,nomenclatura},
     source  = {SAN Formulación, p29, e39},
   ]
-
   Nombra y formula las siguientes sales, indicando cuando proceda su nomenclatura de composición (sistemática) y su nombre de Stock:
 
   \begin{enumerate}
@@ -335,13 +519,29 @@
   \end{enumerate}
 \end{exercise}
 
+\begin{solution}
+  \begin{enumerate}
+    \item \ch{RbHTe}, hidrogenotelururo de rubidio
+    \item clorita de potasio, dioxidoclorato de potasio
+    \item \ch{Ti2(SO3)3}, tris(trioxidosulfato) de dititanio
+    \item \ch{Cu2TeO2}, hipotelurito de cobre(I)
+    \item hidrogenohiposulfito de amonio, hidrogeno(dioxidosulfato) de amonio
+    \item \ch{AgClO}, oxidoclorato de plata
+    \item \ch{Li2MnO4}, manganato de litio
+    \item arsenito de calcio, bis(trioxidoarsenato) de tricalcio
+    \item \ch{Mg(IO3)2}, bis(trioxidoyodato) de magnesio
+    \item \ch{NH4NO3}, nitrato de amonio
+  \end{enumerate}
+\end{solution}
+
+
+
 
 \begin{exercise}[
     tags    = {inorgánica,óxidos,compuestos binarios,2B},
     topics  = {química inorgánica,formulación,nomenclatura},
     source  = {Química 2B OXF 2016, p342, e5},
   ]
-
   A continuación se indica la fórmula o el nombre de una serie de compuestos. Completa la información mostrando la fórmula y el nombre de cada uno tanto con prefijos multiplicadores como con número de oxidación o número de carga.
 
   \begin{enumerate}
@@ -359,13 +559,14 @@
 \end{exercise}
 
 
+
+
 \begin{exercise}[
     tags    = {inorgánica,compuestos ternarios,oxoácidos,2B},
     topics  = {química inorgánica,formulación,nomenclatura},
     source  = {Química 2B OXF 2016, p344, e8 y p345, e9},
     print   = false,
   ]
-
   Completa la tabla siguiente indicando la fórmula o el nombre de hidrógeno de cada compuesto:
 
   \begin{tabular}{cll}
@@ -393,18 +594,19 @@
 \end{exercise}
 
 
+
+
 \begin{exercise}[
     tags    = {inorgánica,sales, sales ternarias, oxosales,2B},
     topics  = {química inorgánica,formulación,nomenclatura},
     source  = {Química 2B OXF 2016, p347, e12},
   ]
-
   Formula los siguientes compuestos
 
   \begin{enumerate}
     \item Hiposulfito de oro(III)
     \item Carbonato de sodio
-    \item Dicromato de cinc
+    \item Dicromato de zinc
     \item Fosfato de aluminio
     \item Bromuro de amonio
     \item Perclorato de cromo(II)
@@ -426,8 +628,24 @@
 \end{exercise}
 
 
+\end{multicols*}
 
-\begin{multicols}{2}[
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{multicols*}{2}[
   \section{Ejercicios de nomenclatura}
   ]
 
@@ -436,24 +654,42 @@
     topics  = {química inorgánica,formulación,nomenclatura},
     source  = {Química 2B SAN 2016, p372, e6},
   ]
+  Nombra las siguientes sustancias
 
-  Nombra las siguientes sustancias dadas por su fórmula
-
-  \begin{tasks}(2)
-    \task \ch{PCl3}
-    \task \ch{Fe(OH)2}
-    \task \ch{Sr(OH)2}
-    \task \ch{SO2}
-    \task \ch{Al2(SO4)3}
-    \task \ch{H2SO4}
-    \task \ch{H3PO4}
-    \task \ch{Fe(HSO4)2}
-    \task \ch{PbO2}
-    \task \ch{N2O5}
-    \task \ch{Fe(NO3)3}
-    \task \ch{CsH}
-  \end{tasks}
+  \begin{enumerate}\begin{multicols}{3}
+    \item \ch{PCl3}
+    \item \ch{Fe(OH)2}
+    \item \ch{Sr(OH)2}
+    \item \ch{SO2}
+    \item \ch{Al2(SO4)3}
+    \item \ch{H2SO4}
+    \item \ch{H3PO4}
+    \item \ch{Fe(HSO4)2}
+    \item \ch{PbO2}
+    \item \ch{N2O5}
+    \item \ch{Fe(NO3)3}
+    \item \ch{CsH}
+  \end{multicols}\end{enumerate}
 \end{exercise}
+
+\begin{solution}
+  \begin{enumerate}
+    \item tricloruro de fósforo / cloruro de fósforo(III)
+    \item dihidróxido de hierro / hidróxido de hierro(II)
+    \item dihidróxido de estroncio / hidróxido de estroncio
+    \item dióxido de azufre / óxido de azufre((IV)
+    \item sulfato de aluminio
+    \item ácido sulfuroso
+    \item ácido fosfórico
+    \item hidrogenosulfato de hierro(II)
+    \item dióxido de plomo / óxido de plomo(IV)
+    \item pentaóxido de dinitrógeno / óxido de nitrógeno(V)
+    \item nitrato de hierro(III)
+    \item hidruro de cesio
+  \end{enumerate}
+\end{solution}
+
+
 
 
 \begin{exercise}[
@@ -461,72 +697,128 @@
     topics  = {química inorgánica,formulación,nomenclatura},
     source  = {Química 2B SAN 2016, p372, e7},
   ]
+  Nombra las siguientes sustancias
 
-  Nombra las siguientes sustancias dadas por su fórmula
-
-  \begin{tasks}(2)
-    \task \ch{KMnO4}
-    \task \ch{HgS}
-    \task \ch{NaHSO4}
-    \task \ch{Ag2O}
-    \task \ch{NaHCO3}
-    \task \ch{Ar}
-    \task \ch{Ni(OH)2}
-    \task \ch{Fe2S3}
-    \task \ch{Ca(OH)2}
-    \task \ch{NH4Cl}
-    \task \ch{Na2O2}
-    \task \ch{HClO4}
-  \end{tasks}
+  \begin{enumerate}\begin{multicols}{3}
+    \item \ch{KMnO4}
+    \item \ch{HgS}
+    \item \ch{NaHSO4}
+    \item \ch{Ag2O}
+    \item \ch{NaHCO3}
+    \item \ch{Ar}
+    \item \ch{Ni(OH)2}
+    \item \ch{Fe2S3}
+    \item \ch{Ca(OH)2}
+    \item \ch{NH4Cl}
+    \item \ch{Na2O2}
+    \item \ch{HClO4}
+  \end{multicols}\end{enumerate}
 \end{exercise}
+
+\begin{solution}
+  \begin{enumerate}
+    \item permanganato de potasio
+    \item sulfuro de mercurio / sulfuro de mercurio(II)
+    \item hidrogenosulfato de sodio
+    \item monóxido de diplata / óxido de plata
+    \item hidrogenocarbonato de sodio
+    \item argón
+    \item dihidróxido de níquel / hidróxido de níquel(II)
+    \item trisulfuro de dihierro / sulfuro de hierro(III)
+    \item dihidróxido de calcio / hidróxido de calcio
+    \item monocloruro de amonio / cloruro de amonio
+    \item dióxido de disodio / peróxido de sodio
+    \item ácido perclórico
+  \end{enumerate}
+\end{solution}
+
+
+
 
 \begin{exercise}[
     tags    = {inorgánica,nomenclatura,múltiple,2B},
     topics  = {química inorgánica,formulación,nomenclatura},
     source  = {Química 2B SAN 2016, p372, e8},
   ]
+  Nombra las siguientes sustancias
 
-  Nombra las siguientes sustancias dadas por su fórmula
-
-  \begin{tasks}(2)
-    \task \ch{PH3}
-    \task \ch{HgSO3}
-    \task \ch{SiH4}
-    \task \ch{As2O5}
-    \task \ch{B2O3}
-    \task \ch{CaO}
-    \task \ch{As2O3}
-    \task \ch{NO3-}
-    \task \ch{HBrO3}
-    \task \ch{HIO3}
-    \task \ch{Co(OH)3}
-    \task \ch{H4P2O7}
-  \end{tasks}
+  \begin{enumerate}\begin{multicols}{3}
+    \item \ch{PH3}
+    \item \ch{HgSO3}
+    \item \ch{SiH4}
+    \item \ch{As2O5}
+    \item \ch{B2O3}
+    \item \ch{CaO}
+    \item \ch{As2O3}
+    \item \ch{NO3-}
+    \item \ch{HBrO3}
+    \item \ch{HIO3}
+    \item \ch{Co(OH)3}
+    \item \ch{H4P2O7}
+  \end{multicols}\end{enumerate}
 \end{exercise}
+
+\begin{solution}
+  \begin{enumerate}
+    \item trihidruro de fósforo / fosfano
+    \item sulfito de mercurio(II)
+    \item tetrahidruro de silicio / silano
+    \item pentaóxido de diarsénico / óxido de arsénico(V)
+    \item trióxido de diboro / óxido de boro
+    \item monóxido de calcio / óxido de calcio
+    \item trióxido de diarsénico / óxido de arsénico(III)
+    \item nitrato
+    \item ácido brómico
+    \item ácido yódico
+    \item trihidróxido de cobalto / hidróxido de cobalto(III)
+    \item ácido difosfórico
+  \end{enumerate}
+\end{solution}
+
+
+
 
 \begin{exercise}[
     tags    = {inorgánica,nomenclatura,múltiple,2B},
     topics  = {química inorgánica,formulación,nomenclatura},
     source  = {Química 2B SAN 2016, p372, e9},
   ]
+  Nombra las siguientes sustancias
 
-  Nombra las siguientes sustancias dadas por su fórmula
-
-  \begin{tasks}(2)
-    \task \ch{HCO3-}
-    \task \ch{H2O2}
-    \task \ch{Sn(IO3)2}
-    \task \ch{HgCl2}
-    \task \ch{Au2O3}
-    \task \ch{BeH2}
-    \task \ch{V2O5}
-    \task \ch{BeO}
-    \task \ch{Pt(OH)2}
-    \task \ch{Ag3AsO4}
-    \task \ch{Sn(OH)2}
-    \task \ch{Ba3(PO4)2}
-  \end{tasks}
+  \begin{enumerate}\begin{multicols}{3}
+    \item \ch{HCO3-}
+    \item \ch{H2O2}
+    \item \ch{Sn(IO3)2}
+    \item \ch{HgCl2}
+    \item \ch{Au2O3}
+    \item \ch{BeH2}
+    \item \ch{V2O5}
+    \item \ch{BeO}
+    \item \ch{Pt(OH)2}
+    \item \ch{Ag3AsO4}
+    \item \ch{Sn(OH)2}
+    \item \ch{Ba3(PO4)2}
+  \end{multicols}\end{enumerate}
 \end{exercise}
+
+\begin{solution}
+  \begin{enumerate}
+    \item hidrogenocarbonato
+    \item dióxido de dihidrógeno / peróxido de hidrógeno
+    \item yodato de estaño(II)
+    \item dicloruro de mercurio / cloruro de mercurio(II)
+    \item trióxido de dioro / óxido de oro(III)
+    \item dihidruro de berilio / hidruro de berilio
+    \item pentaóxido de divanadio / óxido de vanadio(V)
+    \item monóxido de berilio / óxido de berilio
+    \item dihidróxido de platino / óxido de platino(II)
+    \item arseniato de plata
+    \item dihidróxido de estaño / hidróxido de estaño(II)
+    \item fosfato de bario
+  \end{enumerate}
+\end{solution}
+
+
 
 
 \begin{exercise}[
@@ -534,231 +826,404 @@
     topics  = {química inorgánica,formulación,nomenclatura},
     source  = {Química 2B SAN 2016, p372, e10},
   ]
+  Nombra las siguientes sustancias
 
-  Nombra las siguientes sustancias dadas por su fórmula
-
-  \begin{tasks}(2)
-    \task \ch{CrO3}
-    \task \ch{CaH2}
-    \task \ch{P2O5}
-    \task \ch{CO3^2-}
-    \task \ch{Hg(IO2)2}
-    \task \ch{Ag2CrO4}
-    \task \ch{H2S}
-    \task \ch{Hg(NO2)2}
-    \task \ch{NH4IO4}
-    \task \ch{NaClO4}
-    \task \ch{PbSO4}
-    \task \ch{H2SeO3}
-  \end{tasks}
+  \begin{enumerate}\begin{multicols}{3}
+    \item \ch{CrO3}
+    \item \ch{CaH2}
+    \item \ch{P2O5}
+    \item \ch{CO3^2-}
+    \item \ch{Hg(IO2)2}
+    \item \ch{Ag2CrO4}
+    \item \ch{H2S}
+    \item \ch{Hg(NO2)2}
+    \item \ch{NH4IO4}
+    \item \ch{NaClO4}
+    \item \ch{PbSO4}
+    \item \ch{H2SeO3}
+  \end{multicols}\end{enumerate}
 \end{exercise}
+
+\begin{solution}
+  \begin{enumerate}
+    \item trióxido de cromo / óxido de cromo(VI)
+    \item dihidruro de calcio / hidruro de calcio
+    \item pentaóxido de difósforo / óxido de fósforo(V)
+    \item carbonato
+    \item yodito de mercurio(II)
+    \item cromato de plata
+    \item sulfuro de hidrógeno / ácido sulfhídrico
+    \item nitrito de mercurio(II)
+    \item peryodato de amonio
+    \item perclorato de sodio
+    \item sulfato de plomo
+    \item ácido selenioso
+  \end{enumerate}
+\end{solution}
+
+
+
 
 \begin{exercise}[
     tags    = {inorgánica,nomenclatura,múltiple,2B},
     topics  = {química inorgánica,formulación,nomenclatura},
     source  = {Química 2B SAN 2016, p372, e11},
   ]
+  Nombra las siguientes sustancias
 
-  Nombra las siguientes sustancias dadas por su fórmula
-
-  \begin{tasks}(2)
-    \task \ch{Sc2S3}
-    \task \ch{Bi2O3}
-    \task \ch{Cr2O3}
-    \task \ch{Cl4}
-    \task \ch{SrO2}
-    \task \ch{WO3}
-    \task \ch{Ba(MnO4)2}
-    \task \ch{NaClO}
-  \end{tasks}
+  \begin{enumerate}\begin{multicols}{3}
+    \item \ch{Sc2S3}
+    \item \ch{Bi2O3}
+    \item \ch{Cr2O3}
+    \item \ch{Cl4}
+    \item \ch{SrO2}
+    \item \ch{WO3}
+    \item \ch{Ba(MnO4)2}
+    \item \ch{NaClO}
+  \end{multicols}\end{enumerate}
 \end{exercise}
 
-\end{multicols}
+\begin{solution}
+  \begin{enumerate}
+    \item trisulfuro de diescandio / sulfuro de escandio
+    \item trióxido de dibismuto / óxido de bismuto(III)
+    \item trióxido de dicromo / óxido de cromo(III)
+    \item tetracloruro de carbono / cloruro de carbono(IV)
+    \item dióxido de estroncio / peróxido de estroncio
+    \item trióxido de wolframio / óxido de wolframio(III)
+    \item permanganato de bario
+    \item hipoclorito de sodio
+  \end{enumerate}
+\end{solution}
 
-\begin{multicols}{2}[
+\end{multicols*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{multicols*}{2}[
   \section{Ejercicios de formulación}
   ]
 
-  \begin{exercise}[
-      tags    = {inorgánica,formulación,múltiple,2B},
-      topics  = {química inorgánica,formulación,nomenclatura},
-      source  = {Química 2B SAN 2016, p372, e12},
-    ]
+\begin{exercise}[
+    tags    = {inorgánica,formulación,múltiple,2B},
+    topics  = {química inorgánica,formulación,nomenclatura},
+    source  = {Química 2B SAN 2016, p372, e12},
+  ]
+  Nombra las siguientes sustancias
 
-    Nombra las siguientes sustancias dadas por su nombre
+  \begin{enumerate}
+    \item tetracloruro de estaño
+    \item hidrogenocarbonato de potasio
+    \item cromato de cobre(II)
+    \item hidrogenosulfuro de bario
+    \item hidróxido de aluminio
+    \item óxido de plata
+    \item hidróxido de zinc
+    \item bromato de calcio
+    \item hidruro de berilio
+    \item nitrito de plata
+  \end{enumerate}
+\end{exercise}
 
-    \begin{tasks}(1)
-      \task tetracloruro de estaño
-      \task hidrogenocarbonato de potasio
-      \task cromato de cobre(II)
-      \task hidrogenosulfuro de bario
-      \task hidróxido de aluminio
-      \task óxido de plata
-      \task hidróxido de zinc
-      \task bromato de calcio
-      \task hidruro de berilio
-      \task nitrito de plata
-    \end{tasks}
-  \end{exercise}
-
-
-  \begin{exercise}[
-      tags    = {inorgánica,formulación,múltiple,2B},
-      topics  = {química inorgánica,formulación,nomenclatura},
-      source  = {Química 2B SAN 2016, p372, e13},
-    ]
-
-    Nombra las siguientes sustancias dadas por su nombre
-
-    \begin{tasks}(1)
-      \task perbromato de hierro(II)
-      \task pentasulfuro de diarsénico
-      \task sulfuro de arsénico(V)
-      \task monóxido de níquel
-      \task pentaóxido de difósforo
-      \task bromuro de litio
-      \task óxido de níquel(II)
-      \task ácido sulfuroso
-      \task óxido de fósforo(V)
-      \task ácido yodoso
-    \end{tasks}
-  \end{exercise}
-
-  \begin{exercise}[
-      tags    = {inorgánica,formulación,múltiple,2B},
-      topics  = {química inorgánica,formulación,nomenclatura},
-      source  = {Química 2B SAN 2016, p372, e14},
-    ]
-
-    Nombra las siguientes sustancias dadas por su nombre
-
-    \begin{tasks}(1)
-      \task disulfuro de carbono
-      \task sulfuro de carbono(IV)
-      \task seleniuro de hidrógeno
-      \task hidrogenosulfato de sodio
-      \task dihidrogenofosfato de calcio
-      \task clorita de sodio
-      \task arsano
-      \task yodato de potasio
-      \task ácido fosforoso
-      \task sulfato de plata
-    \end{tasks}
-  \end{exercise}
+\begin{solution}
+  \begin{enumerate}\begin{multicols}{3}
+    \item \ch{SnCl4}
+    \item \ch{KHCO3}
+    \item \ch{CuCrO4}
+    \item \ch{Ba(HS)2}
+    \item \ch{Al(OH)3}
+    \item \ch{Ag2O}
+    \item \ch{Zn(OH)2}
+    \item \ch{CaBrO3}
+    \item \ch{BeH2}
+    \item \ch{AgNO3}
+  \end{multicols}\end{enumerate}
+\end{solution}
 
 
-  \begin{exercise}[
-      tags    = {inorgánica,formulación,múltiple,2B},
-      topics  = {química inorgánica,formulación,nomenclatura},
-      source  = {Química 2B SAN 2016, p372, e15},
-    ]
-
-    Nombra las siguientes sustancias dadas por su nombre
-
-    \begin{tasks}(1)
-      \task manganato de potasio
-      \task hidrogenosulfato de hierro(II)
-      \task tricloruro de bismuto
-      \task carbonato de bario
-      \task peróxido de potasio
-      \task sulfuro de cinc
-      \task sulfito de sodio
-      \task ácido cloroso
-      \task peróxido de sodio
-      \task óxido de cobre(II)
-    \end{tasks}
-  \end{exercise}
 
 
-  \begin{exercise}[
-      tags    = {inorgánica,formulación,múltiple,2B},
-      topics  = {química inorgánica,formulación,nomenclatura},
-      source  = {Química 2B SAN 2016, p372, e16},
-    ]
+\begin{exercise}[
+    tags    = {inorgánica,formulación,múltiple,2B},
+    topics  = {química inorgánica,formulación,nomenclatura},
+    source  = {Química 2B SAN 2016, p372, e13},
+  ]
+  Nombra las siguientes sustancias
 
-    Nombra las siguientes sustancias dadas por su nombre
+  \begin{enumerate}
+    \item perbromato de hierro(II)
+    \item pentasulfuro de diarsénico
+    \item sulfuro de arsénico(V)
+    \item monóxido de níquel
+    \item pentaóxido de difósforo
+    \item bromuro de litio
+    \item óxido de níquel(II)
+    \item ácido sulfuroso
+    \item óxido de fósforo(V)
+    \item ácido yodoso
+  \end{enumerate}
+\end{exercise}
 
-    \begin{tasks}(1)
-      \task perclorato de potasio
-      \task tetrafluoruro de estaño
-      \task permanganato de litio
-      \task permanganato de sodio
-      \task tetrabromuro de carbono
-      \task cloruro de amonio
-      \task nitrato de hierro(II)
-      \task nitrato de rubidio
-      \task nitrato de cinc(II)
-      \task cloruro de hierro(II)
-    \end{tasks}
-  \end{exercise}
-
-
-  \begin{exercise}[
-      tags    = {inorgánica,formulación,múltiple,2B},
-      topics  = {química inorgánica,formulación,nomenclatura},
-      source  = {Química 2B SAN 2016, p372, e17},
-    ]
-
-    Nombra las siguientes sustancias dadas por su nombre
-
-    \begin{tasks}(1)
-      \task clorato de cobalto(III)
-      \task fosfato de níquel(II)
-      \task hidróxido de paladio(II)
-      \task hidróxido de magnesio
-      \task hidróxido de plomo(IV)
-      \task dióxido de titanio
-      \task amoniaco
-      \task ácido perclórico
-      \task sulfuro de cadmio
-      \task óxido de cromo(III)
-    \end{tasks}
-  \end{exercise}
-
-  \begin{exercise}[
-      tags    = {inorgánica,formulación,múltiple,2B},
-      topics  = {química inorgánica,formulación,nomenclatura},
-      source  = {Química 2B SAN 2016, p372, e18},
-    ]
-
-    Nombra las siguientes sustancias dadas por su nombre
-
-    \begin{tasks}(1)
-      \task hidróxido de hierro(III)
-      \task carbonato de rubidio
-      \task nitrato de magnesio
-      \task hidruro de níquel(III)
-      \task óxido de molibdeno(IV)
-      \task ácido crómico
-      \task sulfito de hierro(II)
-      \task ácido bromoso
-      \task sulfato de hierro(III)
-      \task cromato férrico
-    \end{tasks}
-  \end{exercise}
-
-  \begin{exercise}[
-      tags    = {inorgánica,formulación,múltiple,2B},
-      topics  = {química inorgánica,formulación,nomenclatura},
-      source  = {Química 2B SAN 2016, p372, e19},
-    ]
-
-    Nombra las siguientes sustancias dadas por su nombre
-
-    \begin{tasks}(1)
-      \task trihidruro de níquel
-      \task sulfuro de plomo(IV)
-      \task óxido de arsénico(V)
-      \task dihidróxido de hierro
-      \task carbonato de calcio
-      \task nitrato de amonio
-      \task disulfuro de plomo
-      \task cromato de potasio
-    \end{tasks}
-  \end{exercise}
+\begin{solution}
+  \begin{enumerate}\begin{multicols}{3}
+    \item \ch{Fe(BrO4)2}
+    \item \ch{As2S5}
+    \item \ch{As2S5}
+    \item \ch{NiO}
+    \item \ch{P2O5}
+    \item \ch{LiBr}
+    \item \ch{NiO}
+    \item \ch{H2SO3}
+    \item \ch{P2O5}
+    \item \ch{HIO2}
+  \end{multicols}\end{enumerate}
+\end{solution}
 
 
-\end{multicols}
+
+
+\begin{exercise}[
+    tags    = {inorgánica,formulación,múltiple,2B},
+    topics  = {química inorgánica,formulación,nomenclatura},
+    source  = {Química 2B SAN 2016, p372, e14},
+  ]
+  Nombra las siguientes sustancias
+
+  \begin{enumerate}
+    \item disulfuro de carbono
+    \item sulfuro de carbono(IV)
+    \item seleniuro de hidrógeno
+    \item hidrogenosulfato de sodio
+    \item dihidrogenofosfato de calcio
+    \item clorita de sodio
+    \item arsano
+    \item yodato de potasio
+    \item ácido fosforoso
+    \item sulfato de plata
+  \end{enumerate}
+\end{exercise}
+
+\begin{solution}
+  \begin{enumerate}\begin{multicols}{3}
+    \item \ch{CS2}
+    \item \ch{CS2}
+    \item \ch{H2S}
+    \item \ch{NaHSO4}
+    \item \ch{Ca(H2PO4)2}
+    \item \ch{NaClO2}
+    \item \ch{AsH3}
+    \item \ch{KIO3}
+    \item \ch{H3PO3}
+    \item \ch{Ag2SO4}
+  \end{multicols}\end{enumerate}
+\end{solution}
+
+
+
+
+\begin{exercise}[
+    tags    = {inorgánica,formulación,múltiple,2B},
+    topics  = {química inorgánica,formulación,nomenclatura},
+    source  = {Química 2B SAN 2016, p372, e15},
+  ]
+  Nombra las siguientes sustancias
+
+  \begin{enumerate}
+    \item manganato de potasio
+    \item hidrogenosulfato de hierro(II)
+    \item tricloruro de bismuto
+    \item carbonato de bario
+    \item peróxido de potasio
+    \item sulfuro de zinc
+    \item sulfito de sodio
+    \item ácido cloroso
+    \item peróxido de sodio
+    \item óxido de cobre(II)
+  \end{enumerate}
+\end{exercise}
+
+\begin{solution}
+  \begin{enumerate}\begin{multicols}{3}
+    \item \ch{K2MnO4}
+    \item \ch{Fe(HSO4)2}
+    \item \ch{BiCl3}
+    \item \ch{BaCO3}
+    \item \ch{K2O2}
+    \item \ch{ZnS}
+    \item \ch{Na2SO3}
+    \item \ch{HClO2}
+    \item \ch{Na2O2}
+    \item \ch{CuO}
+  \end{multicols}\end{enumerate}
+\end{solution}
+
+
+
+
+\begin{exercise}[
+    tags    = {inorgánica,formulación,múltiple,2B},
+    topics  = {química inorgánica,formulación,nomenclatura},
+    source  = {Química 2B SAN 2016, p372, e16},
+  ]
+  Nombra las siguientes sustancias
+
+  \begin{enumerate}
+    \item perclorato de potasio
+    \item tetrafluoruro de estaño
+    \item permanganato de litio
+    \item permanganato de sodio
+    \item tetrabromuro de carbono
+    \item cloruro de amonio
+    \item nitrato de hierro(II)
+    \item nitrato de rubidio
+    \item nitrato de zinc(II)
+    \item cloruro de hierro(II)
+  \end{enumerate}
+\end{exercise}
+
+\begin{solution}
+  \begin{enumerate}\begin{multicols}{3}
+    \item \ch{KClO4}
+    \item \ch{SnF4}
+    \item \ch{LiMnO4}
+    \item \ch{NaMnO4}
+    \item \ch{CBr4}
+    \item \ch{NH4Cl}
+    \item \ch{Fe(NO3)2}
+    \item \ch{RbNO3}
+    \item \ch{Zn(NO3)2}
+    \item \ch{FeCl2}
+  \end{multicols}\end{enumerate}
+\end{solution}
+
+
+
+
+\begin{exercise}[
+    tags    = {inorgánica,formulación,múltiple,2B},
+    topics  = {química inorgánica,formulación,nomenclatura},
+    source  = {Química 2B SAN 2016, p372, e17},
+  ]
+  Nombra las siguientes sustancias
+
+  \begin{enumerate}
+    \item clorato de cobalto(III)
+    \item fosfato de níquel(II)
+    \item hidróxido de paladio(II)
+    \item hidróxido de magnesio
+    \item hidróxido de plomo(IV)
+    \item dióxido de titanio
+    \item amoniaco
+    \item ácido perclórico
+    \item sulfuro de cadmio
+    \item óxido de cromo(III)
+  \end{enumerate}
+\end{exercise}
+
+\begin{solution}
+  \begin{enumerate}\begin{multicols}{3}
+    \item \ch{Co(ClO3)3}
+    \item \ch{Ni3(PO4)2}
+    \item \ch{Pd(OH)2}
+    \item \ch{Mg(OH)2}
+    \item \ch{Pb(OH)4}
+    \item \ch{TiO2}
+    \item \ch{NH3}
+    \item \ch{HClO4}
+    \item \ch{CdS}
+    \item \ch{Cr2O3}
+  \end{multicols}\end{enumerate}
+\end{solution}
+
+
+
+
+\begin{exercise}[
+    tags    = {inorgánica,formulación,múltiple,2B},
+    topics  = {química inorgánica,formulación,nomenclatura},
+    source  = {Química 2B SAN 2016, p372, e18},
+  ]
+  Nombra las siguientes sustancias
+
+  \begin{enumerate}
+    \item hidróxido de hierro(III)
+    \item carbonato de rubidio
+    \item nitrato de magnesio
+    \item hidruro de níquel(III)
+    \item óxido de molibdeno(IV)
+    \item ácido crómico
+    \item sulfito de hierro(II)
+    \item ácido bromoso
+    \item sulfato de hierro(III)
+    \item cromato férrico
+  \end{enumerate}
+\end{exercise}
+
+\begin{solution}
+  \begin{enumerate}\begin{multicols}{3}
+    \item \ch{Fe(OH)3}
+    \item \ch{Rb2CO3}
+    \item \ch{Mg(NO3)2}
+    \item \ch{NiH3}
+    \item \ch{MbO2}
+    \item \ch{H2CrO4}
+    \item \ch{FeSO3}
+    \item \ch{HBrO2}
+    \item \ch{Fe2(SO4)3}
+    \item \ch{Fe2(CrO4)3}
+  \end{multicols}\end{enumerate}
+\end{solution}
+
+
+
+
+\begin{exercise}[
+    tags    = {inorgánica,formulación,múltiple,2B},
+    topics  = {química inorgánica,formulación,nomenclatura},
+    source  = {Química 2B SAN 2016, p372, e19},
+  ]
+  Nombra las siguientes sustancias
+
+  \begin{enumerate}
+    \item trihidruro de níquel
+    \item sulfuro de plomo(IV)
+    \item óxido de arsénico(V)
+    \item dihidróxido de hierro
+    \item carbonato de calcio
+    \item nitrato de amonio
+    \item disulfuro de plomo
+    \item cromato de potasio
+  \end{enumerate}
+\end{exercise}
+
+\begin{solution}
+  \begin{enumerate}\begin{multicols}{3}
+    \item \ch{NiH3}
+    \item \ch{PbS2}
+    \item \ch{As2O5}
+    \item \ch{Fe(OH)2}
+    \item \ch{CaCO3}
+    \item \ch{NH4NO3}
+    \item \ch{PbS2}
+    \item \ch{K2CrO4}
+  \end{multicols}\end{enumerate}
+\end{solution}
+
+\end{multicols*}
 
 \end{document}
 
