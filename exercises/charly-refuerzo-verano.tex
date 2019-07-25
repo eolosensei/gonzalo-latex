@@ -4,10 +4,8 @@
 
 \usepackage{polyglossia}
     \setdefaultlanguage{spanish}
-
 \usepackage{fontspec}
     \setmainfont{Fira Sans}
-
 \usepackage{amsmath, amsthm, amssymb}
 \usepackage{unicode-math}
   \unimathsetup{
@@ -15,14 +13,9 @@
     bold-style  = ISO
   }
   \setmathfont{Fira Math}
-
-
 \usepackage{multicol}
   \setlength{\columnsep}{1cm}
-
 \usepackage[top=2cm, bottom=3cm, left=2.5cm, right=2cm]{geometry}
-
-
 \usepackage{xsim}
 % Configuración general de xsim
   \loadxsimstyle{layouts}
@@ -38,7 +31,6 @@
   exercise/the-counter  = \thesection.\arabic{exercise}
   }
   \DeclareExerciseProperty{source}
-
 \usepackage{siunitx}
 % Exponent symbol options: \times for the typical cross
   \sisetup{
@@ -51,8 +43,6 @@
     list-pair-separator     = { y },
     range-phrase            = { \translate{to (numerical range)} }
   }
-
-
 \usepackage[inline]{enumitem}
 % Configuración general de enumitem
 % Establece la configuración por defecto en a), b), c)
@@ -60,11 +50,10 @@
     label   = \alph*),
     itemsep = 0.3\itemsep,
   }
-
 \usepackage{chemformula}
 \usepackage{chemfig}
   \setchemfig{atom sep=2em}
-
+\usepackage{booktabs}
 \usepackage{fancyhdr}
   \pagestyle{fancy}
   \lhead{\textbf{Ejercicios química}}
@@ -81,8 +70,8 @@
 
 
   \newenvironment{gexdatos}{
-  \noindent\makebox[0pt][r]{\textit{Datos:}}
-  }{\vspace{5pt}}
+      \noindent\makebox[0pt][r]{\textit{Datos:}}
+    }{\vspace{5pt}}
 
 
 
@@ -94,7 +83,6 @@
 \begin{document}
 
 \maketitle
-
 
 \begin{multicols}{2}[
     \section{Bloque 2. Aspectos cualitativos de la Química (tema 3 del libro)}
@@ -605,8 +593,8 @@
 
 
 
-\subsubsection{Composición centesimal. Fórmulas moleculares y empíricas}
 
+\subsubsection{Composición centesimal. Fórmulas moleculares y empíricas}
 
 \begin{exercise}[
     tags    = {},
@@ -655,10 +643,9 @@
 
 
 
+
+
 \subsubsection{Disoluciones y propiedades coligativas}
-
-
-
 
 \begin{exercise}[
     tags    = {},
@@ -804,15 +791,11 @@
 \begin{exercise}[
     tags    = {},
     topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    source  = {FQ 1B MGH 2016, p85, e36},
   ]
+  (36) Cuando llega el invierno y bajan las temperaturas decidimos fabricar nuestro propio anticongelante añadiendo \SI{3}{\liter} de etilenglicol (\ch{C2H6O2}), cuya densidad es de \SI{1.12}{\gram\per\cubic\centi\meter} a \SI{8}{\liter} de agua que vertemos al radiador del coche. ¿A qué temperatura podrá llegar la disolución del radiador sin que se congele?
 
-  (36) Cuando llega el invierno y bajan las temperaturas decidimos
-  fabricar nuestro propio anticongelante añadiendo \SI{3}{\liter} de
-  etilenglicol (\ch{C2H6O2}), cuya densidad es de \SI{1.12}{\gram\per\cubic\centi\meter} a \SI{8}{\liter}
-  de agua que vertemos al radiador del coche. ¿A qué temperatura
-  podrá llegar la disolución del radiador sin que se congele?
-  Dato: constante crioscópica molal del agua \( K_c = \SI{1.86}{\celsius\kilo\gram\per\mole} \).
+    Dato: constante crioscópica molal del agua \( K_c = \SI{1.86}{\celsius\kilo\gram\per\mole} \).
 \end{exercise}
 
 \begin{solution}
@@ -821,17 +804,15 @@
 
 
 
+
+
 \subsubsection{Aplica lo aprendido}
-
-
-
 
 \begin{exercise}[
     tags    = {},
     topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    source  = {FQ 1B MGH 2016, p85, e38},
   ]
-
   (38) Razona en cuál de las siguientes cantidades habrá un mayor número de átomos:
 
   \begin{enumerate}
@@ -849,13 +830,11 @@
 
 
 
-
 \begin{exercise}[
     tags    = {},
     topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    source  = {FQ 1B MGH 2016, p85, e39},
   ]
-
   (39) Una determinada cantidad de aire a la presión de \SI{2}{atm} y
   temperatura de \SI{298}{\kelvin} ocupa un volumen de \SI{10}{\liter}. Calcula la masa molecular media del aire, sabiendo que el contenido del
   mismo en el matraz tiene una masa de \SI{23.6}{\gram}.
@@ -868,13 +847,11 @@
 
 
 
-
 \begin{exercise}[
     tags    = {},
     topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    source  = {FQ 1B MGH 2016, p86, e43},
   ]
-
   (43) Si tenemos encerrado aire en un recipiente de cristal, al
   calentarlo a \SI{20}{\celsius} la presión se eleva a \SI{1.2}{atm}. ¿Cuánto marcará el barómetro si elevamos la temperatura \SI{10}{\celsius}?
 \end{exercise}
@@ -886,13 +863,11 @@
 
 
 
-
 \begin{exercise}[
     tags    = {},
     topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    source  = {FQ 1B MGH 2016, p86, e44},
   ]
-
   (44) Se queman completamente \SI{1.50}{\gram}1,50 g de un compuesto orgánico
   formado por carbono, hidrógeno y oxígeno. En la combustión
   se obtuvieron \SI{0.71}{\gram} de agua y \SI{1.74}{\gram} de \ch{CO2}. Determina las fórmulas empírica y molecular del compuesto si
@@ -906,13 +881,11 @@
 
 
 
-
 \begin{exercise}[
     tags    = {},
     topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    source  = {FQ 1B MGH 2016, p86, e45},
   ]
-
   (45) Sabiendo que la densidad del aire en c.n. es de \SI{1.293}{\gram\per\liter}, calcula la masa de aire que contiene un recipiente de \SI{25}{\liter}, si hemos medido que la presión interior, cuando la temperatura es de \SI{77}{\celsius}, es de \SI{1.5}{atm}. Calcula, asimismo, el número de moles de aire que tenemos.
 \end{exercise}
 
@@ -923,13 +896,11 @@
 
 
 
-
 \begin{exercise}[
     tags    = {},
     topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    source  = {FQ 1B MGH 2016, p86, e46},
   ]
-
   (46) A partir de los siguientes datos, determina la fórmula empírica y molecular de:
 
   \begin{enumerate}
@@ -952,13 +923,11 @@
 
 
 
-
 \begin{exercise}[
     tags    = {},
     topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    source  = {FQ 1B MGH 2016, p86, e49},
   ]
-
   (49) Se dispone de tres recipientes que contienen \SI{1}{\liter} de \ch{CH4} gas, \SI{2}{\liter} de \ch{N2} gas y \SI{15}{\liter} de \ch{O2} gas, respectivamente, en condiciones normales de presión y temperatura. Indica razonadamente:
 
   \begin{enumerate}
@@ -987,9 +956,8 @@
 \begin{exercise}[
     tags    = {},
     topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    source  = {FQ 1B MGH 2016, p86, e50},
   ]
-
   (50) Un frasco de \SI{1.0}{\liter} de capacidad está lleno de dióxido de carbono gaseoso a \SI{27}{\celsius}. Se hace vacío hasta que la presión del
   gas es \SI{10}{\mmHg}. Indica razonadamente:
 
@@ -1014,19 +982,18 @@
 
 
 
+
+
+
 \begin{multicols}{2}[
   \section{BLOQUE 5. QUÍMICA DEL CARBONO (tema 5 del libro)}
   ]
 
-
-
-
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p126, e7},
   ]
-
   (7) Formula los siguientes alcanos:
   \begin{enumerate}
     \item n-pentano
@@ -1047,10 +1014,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p129, e9},
   ]
-
   (9) Formula los siguientes hidrocarburos insaturados:
   \begin{enumerate}
     \item But-1-eno
@@ -1075,10 +1041,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p131, e11},
   ]
-
   (11) Formula los siguientes hidrocarburos cíclicos:
   \begin{enumerate}
     \item Etilciclohexano
@@ -1103,10 +1068,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p131, e12},
   ]
-
   (12) Nombra los siguientes hidrocarburos cíclicos:
   \begin{enumerate}
     \item \chemfig{*4(----)}
@@ -1128,10 +1092,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p132, e13},
   ]
-
   (13) Formula los siguientes hidrocarburos aromáticos:
   \begin{enumerate}
     \item Metilbenceno (tolueno)
@@ -1154,10 +1117,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p133, e15},
   ]
-
   (15) Formula los siguientes derivados halogenados:
   \begin{enumerate}
     \item 2-cloropropano
@@ -1182,10 +1144,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p135, e17},
   ]
-
   (17) Formula los siguientes alcoholes y éteres:
   \begin{enumerate}
     \item 3-metilpentan-1-ol
@@ -1212,10 +1173,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p135, e18},
   ]
-
   (18) Nombra los siguientes alcoholes y éteres:
   \begin{enumerate}
     \item \ch{CH3OH}
@@ -1237,13 +1197,11 @@
 
 
 
-
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p136, e19},
   ]
-
   (19) Formula los siguientes aldehídos y cetonas:
   \begin{enumerate}
     \item Etanal (acetaldehído)
@@ -1272,13 +1230,11 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p136, e20},
   ]
-
   (20) Nombra los siguientes aldehídos y cetonas:
 
-  VER EN EL LIBRO, PÁGINA 136
   \begin{enumerate}
     \item HCHO
     \item \ch{CH3-CH2-CH2-CHO}
@@ -1304,10 +1260,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p138, e21},
   ]
-
   (21) Formula los siguientes ácidos y ésteres:
   \begin{enumerate}
     \item Ácido etanoico (ácido acético)
@@ -1336,10 +1291,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p140, e23},
   ]
-
   (23) Formula los siguientes compuest os con funciones nitrogenadas:
   \begin{enumerate}
     \item Isopropilamina
@@ -1366,10 +1320,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p140, e24},
   ]
-
   (24) Nombra los siguientes compuestos nitrogenados:
   \begin{enumerate}
     \item \chemfig{CH_3-CH(-[6]NH_2)-CH_2-CH_3}
@@ -1392,10 +1345,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p140, e25},
   ]
-
   (25) Formula los siguientes compuestos orgánicos:
   \begin{enumerate}
     \item 2,2-dimetilpentano
@@ -1426,10 +1378,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p143, e27},
   ]
-
   (27) Formula y nombra:
   \begin{enumerate}
     \item Dos hidrocarburos alifáticos que presenten isomería de cadena.
@@ -1447,10 +1398,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p143, e28},
   ]
-
   (28) Escribe y nombra:
   \begin{enumerate}
     \item Todos los isómeros de cadena de fórmula \ch{C5H12}.
@@ -1468,11 +1418,10 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p143, e29},
   ]
-
-  Dados los siguientes compuestos, formúlalos y justifica cuáles
+  (29) Dados los siguientes compuestos, formúlalos y justifica cuáles
   de ellos presentan isomería geométrica y cuáles isomería
   óptica:
   \begin{enumerate}
@@ -1488,19 +1437,19 @@
 \end{solution}
 
 
+
+
+
+
 \subsection{Problemas propuestos}
 
 \subsubsection{Grupos funcionales y series homólogas}
 
-
-
-
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p150, e7},
   ]
-
   (7) Escribe el número de carbonos y el grupo funcional al que
   corresponden los siguientes compuestos:
   \begin{enumerate}
@@ -1526,10 +1475,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p150, e8},
   ]
-
   (8) Indica si la estructura de cada pareja representa el mismo
   compuesto o compuestos diferentes, identificando los grupos
   funcionales presentes:
@@ -1549,10 +1497,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p150, e9},
   ]
-
   (9) Contesta a cada uno de los siguientes apartados referidos a
   compuestos de cadena abierta:
   \begin{enumerate}
@@ -1571,10 +1518,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p150, e10},
   ]
-
   (10) Nombra y formula los siguientes compuestos orgánicos:
   \begin{enumerate}
     \item \ch{CH3-CH2-COOH}
@@ -1599,10 +1545,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p150, e13},
   ]
-
   (13) Formula las siguientes especies químicas:
   \begin{enumerate}
     \item 1-bromo-2,2-diclorobutano
@@ -1625,10 +1570,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p151, e14},
   ]
-
   (14) Nombra las siguientes especies químicas:
   \begin{enumerate}
     \item \ch{H2C=CH-CH=CH-CHO}
@@ -1650,10 +1594,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p151, e15},
   ]
-
   (15) Nombra y/o formula los siguientes compuestos:
   \begin{enumerate}
     \item \ch{CHCl3}
@@ -1676,10 +1619,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p151, e16},
   ]
-
   (16) Formula o nombra, según corresponda:
   \begin{enumerate}
     \item 1-etil-3-metilbenceno
@@ -1702,10 +1644,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p151, e20},
   ]
-
   (20) Formula o nombra los siguientes compuestos:
   \begin{enumerate}
     \item Cromato de cobre(II)
@@ -1730,10 +1671,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p151, e21},
   ]
-
   (21) Formula o nombra los siguientes compuestos orgánicos:
   \begin{enumerate}
     \item 3-etil-2-metilhexano
@@ -1751,17 +1691,18 @@
   Todavía sin solución
 \end{solution}
 
+
+
+
+
+
 \subsubsection{Isomería estructural y espacial}
-
-
-
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p152, e23},
   ]
-
   (23) Formula los siguientes compuestos orgánicos:
   \begin{enumerate}
     \item But-3-en-2-ona
@@ -1780,10 +1721,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p152, e24},
   ]
-
   (24) Escribe y nombra cinco isómeros de cadena de fórmula molecular \ch{C6H14}.
 \end{exercise}
 
@@ -1796,10 +1736,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p152, e25},
   ]
-
   (25) Escribe y nombra cuatro isómeros de función de fórmula molecular \ch{C4H8O}.
 \end{exercise}
 
@@ -1812,10 +1751,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p152, e28},
   ]
-
   (28) Escribe y nombra todos los isómeros estructurales de fórmula C5H10
 \end{exercise}
 
@@ -1828,11 +1766,10 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p152, e30},
   ]
-
-  Formula y nombra:
+  (30) Formula y nombra:
   \begin{enumerate}
     \item Dos isómeros de posición de fórmula \ch{C3H8O}
     \item Dos isómeros de función de fórmula \ch{C3H8O}
@@ -1850,13 +1787,10 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p152, e31},
   ]
-
-  (31) Un derivado halogenado etilénico que presenta isomería cis-trans
-  está formado en un 22,4\% de C, un 2,8\% de H y un
-  74,8\% de bromo. Además, a \SI{130}{\celsius} y \SI{1}{atm} de presión, una muestra de \SI{12,9}{\gram} ocupa un volumen de \SI{2}{\liter}. Halla su fórmula molecular y escribe los posibles isómeros.
+  (31) Un derivado halogenado etilénico que presenta isomería cis-trans está formado en un 22,4\% de C, un 2,8\% de H y un 74,8\% de bromo. Además, a \SI{130}{\celsius} y \SI{1}{atm} de presión, una muestra de \SI{12,9}{\gram} ocupa un volumen de \SI{2}{\liter}. Halla su fórmula molecular y escribe los posibles isómeros.
 \end{exercise}
 
 \begin{solution}
@@ -1868,10 +1802,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p152, e32},
   ]
-
   (32) Un alcohol monoclorado está formado en un 38,1\% de C,
   un 7,4\% de H, un 37,6\% de Cl y el resto es oxígeno. Escribe
   su fórmula semidesarrollada sabiendo que tiene un carbono
@@ -1888,10 +1821,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, química orgánica, orgánica},
+    source  = {FQ 1B MGH 2016, p152, e33},
   ]
-
   (33) Un hidrocarburo monoinsaturado tiene un 87,8\% de carbono.
   Si su densidad en condiciones normales es \SI{3,66}{\gram\per\liter}, determina sus fórmulas empírica y molecular.
 \end{exercise}
@@ -1905,22 +1837,18 @@
 
 
 
-\section{BLOQUE 4. Transformaciones energéticas y espontaneidad (tema 6 del libro)}
 
+
+\section{BLOQUE 4. Transformaciones energéticas y espontaneidad (tema 6 del libro)}
 
 \begin{multicols}{2}
 
 
-
-
-
-
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, termodinámica, termoquímica},
+    source  = {FQ 1B MGH 2016, p159, e5},
   ]
-
   (5) Determina la variación de energía interna que sufre un sistema
   cuando:
   \begin{enumerate}
@@ -1940,10 +1868,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, termodinámica, termoquímica},
+    source  = {FQ 1B MGH 2016, p165, e13},
   ]
-
   (13) La descomposición térmica del clorato de potasio (\ch{KClO3})
   origina cloruro de potasio (\ch{KCl}) y oxígeno molecular. Calcula
   el calor que se desprende cuando se obtienen \SI{150}{\liter} de
@@ -1963,10 +1890,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, termodinámica, termoquímica},
+    source  = {FQ 1B MGH 2016, p165, e6},
   ]
-
   (14) Las entalpías estándar de formación del propano (g),
   dióxido de carbono (g) y agua (l), son respectivamente:
   \SIlist{-103,8;-393,5;-285,8}{kJ/mol}. Calcula:
@@ -1988,10 +1914,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, termodinámica, termoquímica},
+    source  = {FQ 1B MGH 2016, p165, e15},
   ]
-
   (15) En la reacción del oxígeno molecular con el cobre para formar
   óxido de cobre(II) se desprenden \SI{2.30}{kJ} por cada gramo de
   cobre que reacciona, a \SI{298}{\kelvin} y \SI{760}{\mmHg}. Calcula:
@@ -2013,10 +1938,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, termodinámica, termoquímica},
+    source  = {FQ 1B MGH 2016, p165, e16},
   ]
-
   (16) En la combustión completa de \SI{1.00}{\gram} de etanol (\ch{CH3-CH2OH}) se desprenden \SI{29.8}{kJ} y en la combustión de \SI{1.00}{\gram}
   de ácido etanoico (\ch{CH3-COOH}) se desprenden \SI{14.5}{kJ}.
   Determina numéricamente:
@@ -2040,10 +1964,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, termodinámica, termoquímica},
+    source  = {FQ 1B MGH 2016, p168, e24},
   ]
-
   (24) Calcula la entalpía de la reacción:
   \ch{CH4_{(g)} + Cl2_{(g)} -> CH3Cl_{(g)} + HCl_{(g)}} a partir de:
   \begin{enumerate}
@@ -2073,10 +1996,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, termodinámica, termoquímica},
+    source  = {FQ 1B MGH 2016, p168, e25},
   ]
-
   (25) El eteno se hidrogena para dar etano, según:
   \ch{CH2=CH2_{(g)} + H2_{(g)} -> CH3-CH3_{(g)}} \( \Delta H^0_R = \SI{-130}{kJ} \)
   Calcula la energía del enlace \ch{C=C}, si las energías de los
@@ -2093,10 +2015,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, termodinámica, termoquímica},
+    source  = {FQ 1B MGH 2016, p168, e26},
   ]
-
   (26) A partir de los siguientes datos:
   \begin{itemize}
     \item Entalpía estándar de sublimación del \( \ch{C_{(s)}} = \SI{717}{kJ/mol} \).
@@ -2104,7 +2025,7 @@
     \item Entalpía media del enlace \( \ch{H-H} = \SI{436}{kJ/mol} \).
     \item Entalpía media del enlace \( \ch{C-C} = \SI{347}{kJ/mol} \).
   \end{itemize}
-  Responde a las siguientes cuestiones:
+  Responde a las siguientes cuestiones: % REVIEW comportamiento del espaciado
   \begin{enumerate}
     \item Calcula la variación de entalpía de la reacción:
     \ch{2 C_{(g)} + 3 H2_{(s)} -> CH3-CH3_{(g)}} e indica si es exotérmica
@@ -2122,20 +2043,17 @@
 
 
 
+
+
 \subsection{Problemas resueltos}
 
 \subsubsection{Entalpias de formación, de reacción y de combustión}
 
-
-
-
-
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, termodinámica, termoquímica},
+    source  = {FQ 1B MGH 2016, p179, e4},
   ]
-
   (4) El sulfuro de carbono reacciona con el oxígeno según:
 
   \ch{CS2_{(l)} + 3 O2_{(g)} -> CO2_{(g)} + 2 SO2_{(g)}} \( \Delta H_R = \SI{-1072}{kJ} \)
@@ -2160,13 +2078,11 @@
 
 
 
-
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, termodinámica, termoquímica},
+    source  = {FQ 1B MGH 2016, p179, e5},
   ]
-
   (5) El dióxido de manganeso se reduce a manganeso metal reaccionando
   con el aluminio según:
 
@@ -2191,13 +2107,11 @@
 
 
 
-
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, termodinámica, termoquímica},
+    source  = {FQ 1B MGH 2016, p179, e6},
   ]
-
   (6) Durante la fotosíntesis, las plantas verdes sintetizan la glucosa
   según la siguiente reacción:
 
@@ -2212,7 +2126,6 @@
   \begin{gexdatos}
     \( \Delta H^0_f (\si{kJ/mol}) \): \( \ch{H2O_{(l)}} = -285,8 \); \( \ch    {CO2_{(g)}} = -393,5 \)
   \end{gexdatos}
-
 \end{exercise}
 
 \begin{solution}
@@ -2228,11 +2141,10 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, termodinámica, termoquímica},
+    source  = {FQ 1B MGH 2016, p179, e7},
   ]
-
-  Las entalpías de combustión del etano y del eteno son
+  (7) Las entalpías de combustión del etano y del eteno son
   \SIlist{-1560;1410}{kJ/mol}, respectivamente. Determina:
   \begin{enumerate}
     \item El valor de \( \Delta H^0_f \) para el etano y el eteno.
@@ -2245,7 +2157,6 @@
   \begin{gexdatos}
     \( \Delta H^0_f (\si{kJ/mol}) \): \( \ch{CO2_{(g)}} = -393,5 \); \( \ch{H2O_{(l)}} = -285,9 \)
   \end{gexdatos}
-
 \end{exercise}
 
 \begin{solution}
@@ -2259,10 +2170,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, termodinámica, termoquímica},
+    source  = {FQ 1B MGH 2016, p179, e8},
   ]
-
   (8) La gasolina es una mezcla compleja de hidrocarburos que
   vamos a considerar como si estuviera formada únicamente
   por hidrocarburos saturados de fórmula (\ch{C8H18})
@@ -2278,7 +2188,6 @@
   \begin{gexdatos}
     \( \Delta H^0_f (\si{kJ/mol}) \): \( \ch{CO2_{(g)}} = -394 \); \( \ch{H2O_{(l)}} = -286 \); \( \ch{C8H18_{(l)}} = -250 \)
   \end{gexdatos}
-
 \end{exercise}
 
 \begin{solution}
@@ -2290,14 +2199,12 @@
 
 
 
-
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, termodinámica, termoquímica},
+    source  = {FQ 1B MGH 2016, p179, e10},
   ]
-
-  Se quema benceno (\ch{C6H6}) en exceso de oxígeno, liberando energía.
+  (10) Se quema benceno (\ch{C6H6}) en exceso de oxígeno, liberando energía.
 
   \begin{enumerate}
     \item Formula la reacción de combustión del benceno.
@@ -2313,9 +2220,8 @@
     \( \ch{C6H6_{(v)}}  = +83 \);
     \( \ch{H2O_{(l)}}   = -286 \);
     \( \ch{CO2_{(g)}}   = -393 \)
+    Densidad \( \textrm{benceno}_{(l)} = \SI{0.879}{\gram\per\cubic\centi\meter} \)
   \end{gexdatos}
-
-  Densidad \( benceno(l) = \SI{0.879}{\gram\per\cubic\centi\meter} \)
 \end{exercise}
 
 \begin{solution}
@@ -2326,17 +2232,15 @@
 
 
 
+
+
 \subsubsection{Ley de Hess}
-
-
-
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, termodinámica, termoquímica},
+    source  = {FQ 1B MGH 2016, p180, e11},
   ]
-
   (11) El motor de una máquina cortacésped funciona con una gasolina que podemos considerar de composición única octano (\ch{C8H18}). Calcula:
 
   \begin{enumerate}
@@ -2350,7 +2254,6 @@
     \( \ch{C8H18_{(l)}} = -264,0 \)
     \( \ch{H2O_{(l)}}   = -285,8 \)
   \end{gexdatos}
-
 \end{exercise}
 
 \begin{solution}
@@ -2362,14 +2265,11 @@
 
 
 
-
-
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, termodinámica, termoquímica},
+    source  = {FQ 1B MGH 2016, p180, e12},
   ]
-
   (12) Sabiendo que las entalpías estándar de combustión del
   hexano (l), del carbono (s) y del hidrógeno (g) son respectivamente:
   \SIlist{-4192;-393,5;-285,8}{kJ/mol}, halla:
@@ -2377,7 +2277,6 @@
   \begin{enumerate}
     \item La entalpía de formación del hexano líquido en esas condiciones.
     \item Los gramos de carbono consumidos en la formación del hexano cuando se han intercambiado \SI{50.0}{kJ}.
-
   \end{enumerate}
 \end{exercise}
 
@@ -2390,13 +2289,11 @@
 
 
 
-
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, termodinámica, termoquímica},
+    source  = {FQ 1B MGH 2016, p180, e14},
   ]
-
   (14) El calor desprendido en el proceso de obtención del benceno a partir de etino es:
 
   \ch{3 C2H2_{(g)} -> C6H6_{(l)}} \( \Delta H^0_R = \SI{-631}{kJ} \)
@@ -2409,7 +2306,6 @@
   \begin{gexdatos}
     \( \textrm(densidad del benceno) = \SI{880}{\gram\per\liter} \)
   \end{gexdatos}
-
 \end{exercise}
 
 \begin{solution}
@@ -2421,17 +2317,15 @@
 
 
 
+
+
 \subsubsection{Entalpías de enlace}
-
-
-
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, termodinámica, termoquímica},
+    source  = {FQ 1B MGH 2016, p180, e18},
   ]
-
   (18) Calcula la variación de entalpía estándar de la hidrogenación del etino a etano:
 
   \begin{enumerate}
@@ -2444,29 +2338,27 @@
 
     \( \Delta H^0_f (\si{kJ/mol}) \): \( \textrm{etino} = 227 \); \( \textrm{etano} = -85,0 \)
   \end{gexdatos}
-
-
 \end{exercise}
 
 \begin{solution}
   \begin{enumerate*}
-    \item \( \Delta H_R = \SI{-313}{kJ/mol} \); \item \( \Delta H_R = \SI{-312}{kJ/mol} \)
+    \item \( \Delta H_R = \SI{-313}{kJ/mol} \);
+    \item \( \Delta H_R = \SI{-312}{kJ/mol} \)
   \end{enumerate*}
 \end{solution}
 
 
 
+
+
+
 \subsubsection{Entropía y espontaneidad}
-
-
-
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, termodinámica, termoquímica},
+    source  = {FQ 1B MGH 2016, p181, e20},
   ]
-
   (20) Dadas las siguientes ecuaciones termoquímicas:
 
   \( \ch{2 H2O2_{(l)} -> 2 H2O_{(l)} + O2_{(g)}} \Delta H = \SI{-196}{kJ} \)
@@ -2489,10 +2381,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, termodinámica, termoquímica},
+    source  = {FQ 1B MGH 2016, p181, e21},
   ]
-
   (21) Dada la reacción: \ch{N2O_{(g)} --> N2_{(g)} + 1/2 O2_{(g)}}
   siendo \( \Delta H^0 = \SI{43.0}{kJ/mol} \) y \( \Delta S^0 = \SI{80.0}{\joule\per\mole\kelvin} \) % REVIEW unidades de entropía
 
@@ -2514,10 +2405,9 @@
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, termodinámica, termoquímica},
+    source  = {FQ 1B MGH 2016, p181, e23},
   ]
-
   (23) Se pretende obtener etileno (eteno) a partir de grafito e
   hidrógeno, a \SI{25}{\celsius} y \SI{1}{atm}, según la reacción:
 
@@ -2540,7 +2430,6 @@
     \( \Delta H^0_f (\si{kJ/mol}) \):
     \( \ch{C2H4_{(g)}} = +52,5 \)
   \end{gexdatos}
-
 \end{exercise}
 
 \begin{solution}
@@ -2552,19 +2441,17 @@
 
 
 
+
+
+
 \subsubsection{Aplica lo aprendido}
-
-
-
-
 
 \begin{exercise}[
     tags    = {},
-    topics  = {química,química básica},
-    source  = {FQ 1B MGH 2016, p85, e26},
+    topics  = {química, termodinámica, termoquímica},
+    source  = {FQ 1B MGH 2016, p182, e35},
   ]
-
-  El acetileno o etino (\ch{C2H2}) se hidrogena para producir etano. Calcula a \SI{298}{\kelvin}:
+  (35) El acetileno o etino (\ch{C2H2}) se hidrogena para producir etano. Calcula a \SI{298}{\kelvin}:
 
   \begin{enumerate}
     \item La entalpía estándar de reacción.
@@ -2573,10 +2460,13 @@
     \item La entropía molar del hidrógeno.
   \end{enumerate}
 
-  \begin{tabular}{rrrr}
-    Comp. & \( \Delta H^0_f \) (\si{\kilo\joule\per\mole}) & \( \Delta G^0_f \) (\si{\kilo\joule\per\mole}) & \( S^0 \) (\si{\kilo\joule\per\mole\kelvin}) \\
+  \begin{tabular}{rccc}
+    Comp. & \( \Delta H^0_f \) & \( \Delta G^0_f \) & \( S^0 \) \\
+       & (\si{\kilo\joule\per\mole}) & (\si{\kilo\joule\per\mole}) & (\si{\kilo\joule\per\mole\kelvin}) \\
+    \toprule
     \ch{C2H2} & 227 & 209 & 200 \\
     \ch{C2H6} & -85 & -33 & 230 \\
+    \bottomrule
   \end{tabular}
 \end{exercise}
 
