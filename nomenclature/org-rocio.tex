@@ -1,4 +1,7 @@
 \documentclass[10pt]{article}
+  \title{Formulación orgánica}
+  \author{\textit{Gonzalo Esteban}}
+
 \usepackage{polyglossia}
     \setdefaultlanguage{spanish}
 \usepackage{fontspec}
@@ -24,6 +27,8 @@
     solution/template = {runin},
     solution/name     = {S},
     solution/print    = {false},
+    exercise/within       = section,
+    exercise/the-counter  = \thesection.\arabic{exercise}
   }
   \DeclareExerciseProperty{source}
 \usepackage{siunitx}
@@ -54,6 +59,17 @@
 \usepackage{tasks}
 \usepackage{fancyhdr}
   \pagestyle{fancy}
+  \lhead{\textbf{Formulación orgánica}}
+  \chead{}
+  \rhead{1 BACH}
+  \lfoot{}
+  \cfoot{\thepage}
+  \rfoot{}
+  \renewcommand{\headrulewidth}{0.2pt}
+  \renewcommand{\footrulewidth}{0pt}
+
+
+
 
 
 
@@ -66,7 +82,17 @@
 }
 
 
+
+
+
+
+
+
+
+
 \begin{document}
+
+\maketitle
 
 \begin{multicols*}{2}[
   \section{Ejercicios de nomenclatura}

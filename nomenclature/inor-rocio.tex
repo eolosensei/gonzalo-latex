@@ -1,4 +1,7 @@
 \documentclass[10pt]{article}
+  \title{Formulación inorgánica}
+  \author{\textit{Gonzalo Esteban}}
+
 \usepackage{polyglossia}
     \setdefaultlanguage{spanish}
 \usepackage{fontspec}
@@ -17,13 +20,15 @@
 % Configuración general de xsim
   \loadxsimstyle{layouts}
   \xsimsetup{
-    path              = {xsim-files},
-    exercise/template = {runin},
-    exercise/name     = {E},
-    exercise/print    = {true},
-    solution/template = {runin},
-    solution/name     = {S},
-    solution/print    = {false},
+    path                  = {xsim-files},
+    exercise/template     = {runin},
+    exercise/name         = {},
+    exercise/print        = {true},
+    solution/template     = {runin},
+    solution/name         = {S},
+    solution/print        = {false},
+    exercise/within       = section,
+    exercise/the-counter  = \thesection.\arabic{exercise}
   }
   \DeclareExerciseProperty{source}
 \usepackage{siunitx}
@@ -54,6 +59,16 @@
 \usepackage{tasks}
 \usepackage{fancyhdr}
   \pagestyle{fancy}
+  \lhead{\textbf{Formulación inorgánica}}
+  \chead{}
+  \rhead{1 BACH}
+  \lfoot{}
+  \cfoot{\thepage}
+  \rfoot{}
+  \renewcommand{\headrulewidth}{0.2pt}
+  \renewcommand{\footrulewidth}{0pt}
+
+
 
 
 \newenvironment{gexdatos}{
@@ -65,8 +80,21 @@
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 \begin{document}
 
+\maketitle
 
 \begin{multicols*}{2}[
   \section{Ejercicios variados}
@@ -419,7 +447,7 @@
   \end{enumerate}
 \end{solution}
 
-
+\newpage
 
 
 \begin{exercise}[
