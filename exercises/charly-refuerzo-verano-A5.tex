@@ -1,5 +1,5 @@
-\documentclass[10pt]{article}
-\title{Ejercicios verano }
+\documentclass[10pt,a5paper,twoside]{article}
+\title{Ejercicios verano}
 \author{Gonzalo Esteban}
 
 \usepackage{polyglossia}
@@ -13,22 +13,20 @@
     bold-style  = ISO
   }
   \setmathfont{Fira Math}
-\usepackage{multicol}
-  \setlength{\columnsep}{1cm}
-\usepackage[top=3cm, bottom=3cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage[top=3cm, bottom=2.5cm, inner=2.2cm, outer=2.2cm]{geometry}
 \usepackage{xsim}
 % Configuración general de xsim
   \loadxsimstyle{layouts}
   \xsimsetup{
-  path                  = {xsim-files},
-  exercise/template     = {runin},
-  exercise/name         = {},
-  exercise/print        = {true},
-  solution/template     = {runin},
-  solution/name         = {S},
-  solution/print        = {false},
-  exercise/within       = section,
-  exercise/the-counter  = \thesection.\arabic{exercise}
+    path                  = {xsim-files},
+    exercise/template     = {margin},
+    exercise/name         = {},
+    exercise/print        = {false},
+    solution/template     = {runin},
+    solution/name         = {S},
+    solution/print        = {true},
+    exercise/within       = section,
+    exercise/the-counter  = \thesection.\arabic{exercise}
   }
   \DeclareExerciseProperty{source}
 \usepackage{siunitx}
@@ -58,12 +56,11 @@
 \usepackage{icomma}    % resuelve el problema de espaciado excesivo en la coma decimal
 \usepackage{fancyhdr}
   \pagestyle{fancy}
-  \lhead{\textbf{Ejercicios verano (Charly)}}
-  \chead{}
-  \rhead{1 BACH}
-  \lfoot{}
-  \cfoot{\thepage}
-  \rfoot{}
+  \fancyhead{}
+  \fancyhead[LE]{\textbf{Ejercicios verano (Charly)}}
+  \fancyhead[RO]{1 BACH}
+  \fancyfoot{}
+  \fancyfoot[C]{\thepage}
   \renewcommand{\headrulewidth}{0.2pt}
   \renewcommand{\footrulewidth}{0pt}
 
@@ -72,8 +69,8 @@
 
 
   \newenvironment{gexdatos}{
-      \vspace{2pt}
-      \noindent\textit{Datos:}
+      \vspace{4pt}
+      \noindent\small\textit{Datos:}
     }{\vspace{5pt}}
 
 
@@ -87,518 +84,519 @@
 
 \maketitle
 
-\begin{multicols*}{2}[
-    \section{Bloque 2. Aspectos cualitativos de la Química (tema 3 del libro)}
-  ]
-
-  \begin{exercise}[
-      tags    = {},
-      topics  = {química,química básica},
-      source  = {FQ 1B MGH 2016, p66, e4},
-    ]
-    (4) Sabemos que \SI{40}{uma} es la masa del átomo de calcio. Calcula:
-
-    \begin{enumerate}
-      \item La masa en gramos de \SI{1}{átomo} de Ca.
-      \item ¿Cuál de las siguientes cantidades tienen mayor número de átomos? \SI{40}{g} de Ca; \SI{0,20}{moles} de Ca; \SI{5e23}{átomos} de Ca.
-    \end{enumerate}
-  \end{exercise}
-
-  \begin{solution}
-    \begin{enumerate*}
-      \item \( m = \SI{6,6E-23}{\gram} \);
-      \item \SI{40}{\gram} de Ca.
-    \end{enumerate*}
-  \end{solution}
-
-
-
-
-  \begin{exercise}[
-      tags    = {},
-      topics  = {química,química básica},
-      source  = {FQ 1B MGH 2016, p66, e5},
-    ]
-    (5) Si tenemos en cuenta que \SI{56}{uma} es la masa del átomo de hierro, calcula:
-    \begin{enumerate}
-      \item La masa atómica en gramos de \SI{1}{átomo} de~Fe.
-      \item Cuál de las siguientes cantidades tiene mayor número de átomos de Fe: \SI{56}{\gram}, \SI{0,20}{moles} o \SI{5e23}{átomos}.
-    \end{enumerate}
-  \end{exercise}
-
-  \begin{solution}
-    \begin{enumerate*}
-      \item \( m = \SI{9,3E-23}{\gram} \);
-      \item \SI{56}{\gram} de Fe.
-    \end{enumerate*}
-  \end{solution}
-
-
-
-
-  \begin{exercise}[
-      tags    = {},
-      topics  = {química,química básica},
-      source  = {FQ 1B MGH 2016, p66, e6},
-    ]
-    (6) Responde a las siguientes cuestiones:
-    \begin{enumerate}
-      \item ¿En cuál de las siguientes cantidades de los elementos que se enumeran a continuación existe un mayor número de moles: \SI{100}{\gram} de hierro, \SI{100}{\gram} de oxígeno molecular, \SI{100}{\gram} de cinc o \SI{100}{\gram} de níquel?
-      \item ¿Y un mayor número de átomos?
-    \end{enumerate}
-  \end{exercise}
-
-  \begin{solution}
-    \begin{enumerate*}
-      \item En los \SI{100}{\gram} de oxígeno molecular;
-      \item En los \SI{100}{\gram} de oxígeno molecular.
-    \end{enumerate*}
-  \end{solution}
-
-
-
-
-  \begin{exercise}[
-      tags    = {},
-      topics  = {química,química básica},
-      source  = {FQ 1B MGH 2016, p71, e10},
-    ]
-    (10) Sabiendo que un gas a \SI{1,5}{atm} y \SI{290}{\kelvin} tiene una densidad de \SI{1,178}{\gram\per\liter}, calcula su masa molecular.
-  \end{exercise}
-
-  \begin{solution}
-    \( M = \SI{18,7}{\gram\per\mole} \)
-  \end{solution}
-
-
-
-
-  \begin{exercise}[
-      tags    = {},
-      topics  = {química,química básica},
-      source  = {FQ 1B MGH 2016, p71, e11},
-    ]
-    (11) Calcula la densidad del metano (\ch{CH4}) a \SI{700}{\mmHg} y \SI{75}{\celsius}.
-  \end{exercise}
-
-  \begin{solution}
-    \( d = \SI{0,52}{\gram\per\liter} \)
-  \end{solution}
-
-
-
-  \begin{exercise}[
-      tags    = {},
-      topics  = {química,química básica},
-      source  = {FQ 1B MGH 2016, p71, e12},
-    ]
-    (12) Calcula el número de moléculas de \ch{CO2} que habrá en \SI{10}{\liter} del mismo gas medidos en condiciones normales.
-  \end{exercise}
-
-  \begin{solution}
-    \( M = \SI{2,7e23}{moléculas} \).
-  \end{solution}
-
-
-
-
-  \begin{exercise}[
-      tags    = {},
-      topics  = {química,química básica},
-      source  = {FQ 1B MGH 2016, p71, e13},
-    ]
-    (13) Calcula la masa en gramos de un mol de \ch{SO2} sabiendo que
-    exactamente \SI{5}{\cubic\centi\meter} de dicho gas, medidos en condiciones
-    normales, tienen una masa de \SI{0,01428}{\gram}.
-  \end{exercise}
-
-  \begin{solution}
-    \( M = \SI{64}{\gram\per\mole} \)
-  \end{solution}
-
-
-
-
-  \begin{exercise}[
-      tags    = {},
-      topics  = {química,química básica},
-      source  = {FQ 1B MGH 2016, p71, e14},
-    ]
-    (14) La masa de \SI{1,20}{\milli\gram} de una sustancia gaseosa pura equivale
-    a \SI{1,2e19}{moléculas}. Calcula la masa en gramos de \SI{1}{\mole} de dicha sustancia.
-  \end{exercise}
-
-  \begin{solution}
-    \( M = \SI{60,2}{\gram\per\mole} \)
-  \end{solution}
-
-
-
-
-  \begin{exercise}[
-      tags    = {},
-      topics  = {química,química básica},
-      source  = {FQ 1B MGH 2016, p72, e15},
-    ]
-    (15) Se introducen, en un recipiente de \SI{5.0}{\liter}, \SI{10}{\gram} de alcohol etílico (\ch{C2H5OH}) y \SI{10}{\gram} de acetona (\ch{C3H6O}) y posteriormente se calienta el reactor a \SI{200}{\celsius}, con lo cual ambos líquidos pasan a la fase gaseosa. Calcula la presión en el interior del reactor, suponiendo comportamiento ideal, y la presión parcial de cada componente.
-  \end{exercise}
-
-  \begin{solution}
-    \( p_\textrm{alcohol} = \SI{1.7}{atm} \);
-    \( p_\textrm{acetona} = \SI{1.3}{atm} \);
-    \( P_T = \SI{3.0}{atm} \).
-  \end{solution}
-
-
-
-
-  \begin{exercise}[
-      tags    = {},
-      topics  = {química,química básica},
-      source  = {FQ 1B MGH 2016, p74, e16},
-    ]
-    (16) Calcula la composición centesimal de la molécula de propano (\ch{C3H8}).
-  \end{exercise}
-
-  \begin{solution}
-    \num{81,8}\% de carbono; \num{18,2}\% de hidrógeno.
-  \end{solution}
-
-
-
-
-  \begin{exercise}[
-      tags    = {},
-      topics  = {química,química básica},
-      source  = {FQ 1B MGH 2016, p77, e18},
-    ]
-    (18) Calcula la fracción molar de cada uno de los componentes
-    de una disolución que se ha preparado mezclando \SI{90}{\gram} de alcohol etílico (\ch{C2H50H}) y \SI{110}{\gram} de agua.
-  \end{exercise}
-
-  \begin{solution}
-    \( X_\textrm{alcohol} = 0,24 \),
-    \( X_\textrm{agua} = 0,76 \).
-  \end{solution}
-
-
-
-
-  \begin{exercise}[
-      tags    = {},
-      topics  = {química,química básica},
-      source  = {FQ 1B MGH 2016, p77, e20},
-    ]
-    (20) Una disolución de hidróxido de sodio en agua que contiene un 25\% de hidróxido tiene una densidad de \SI{1.25}{\gram\per\milli\liter}. Calcula
-    su molaridad y su normalidad.
-  \end{exercise}
-
-  \begin{solution}
-    \( M = \SI{7.8}{M} \)  y  \( N = \SI{7.8}{N} \).
-  \end{solution}
-
-
-
-
-  \begin{exercise}[
-      tags    = {},
-      topics  = {química,química básica},
-      source  = {FQ 1B MGH 2016, p77, e22},
-    ]
-    (22) ¿Cuál es la molaridad de una disolución de ácido sulfúrico
-    del 26\% de riqueza y densidad \SI{1.19}{\gram\per\milli\liter}?
-  \end{exercise}
-
-  \begin{solution}
-    \( M = \SI{3.2}{M} \).
-  \end{solution}
-
-  \columnbreak
-
-
-  \begin{exercise}[
-      tags    = {},
-      topics  = {química,química básica},
-      source  = {FQ 1B MGH 2016, p80, e23},
-    ]
-    (23) El alcanfor puro tiene un punto de fusión de \SI{178}{\celsius} y una constante crioscópica de \SI{40}{\celsius\kilo\gram\per\mole}. La disolución resultante de añadir \SI{2}{\gram} de un soluto no volátil a
-    \SI{10}{\gram} de alcanfor congela a \SI{158}{\celsius}. Calcula la masa molecular del soluto añadido.
-  \end{exercise}
-
-  \begin{solution}
-    \( M = \SI{400}{\gram\per\mole} \).
-  \end{solution}
-
-
-
-
-  \begin{exercise}[
-      tags    = {},
-      topics  = {química,química básica},
-      source  = {FQ 1B MGH 2016, p80, e24},
-    ]
-    (24) Tenemos \SI{100}{\milli\liter} de una disolución acuosa que contiene \SI{0.25}{\gram} de un polisacárido. Dicha disolución a \SI{25}{\celsius}, ejerce una presión osmótica de \SI{23.9}{\mmHg}. El polisacárido tiene la siguiente fórmula empírica \ch{(C6H10O5)_{n}}. Calcula el valor de la masa molecular del polisacárido.
-  \end{exercise}
-
-  \begin{solution}
-    \( M = \SI{1938}{\gram\per\mole} \).
-  \end{solution}
-
-
-
-
-
-
-
-  \subsection{Problemas propuestos}
-
-  \subsubsection{Leyes de los volúmenes de combinación. Hipótesis de Avogadro. Concepto de molécula. Mol}
-
-  \begin{exercise}[
-      tags    = {},
-      topics  = {química,química básica},
-      source  = {FQ 1B MGH 2016, p83, e8},
-    ]
-    (8) Determina la masa, \( M \), de un mol de un gas en los siguientes
-    casos:
-    \begin{enumerate}
-      \item Su densidad en CN es de \SI{3.17}{\gram\per\liter}.
-      \item Su densidad es de \SI{2.4}{g/L} a \SI{20}{\celsius} y \SI{1}{atm} de presión.
-      \item Dos gramos de dicho gas ocupan un volumen de \SI{600}{\milli\liter}, medido a \SI{17}{\celsius} y \SI{1.8}{atm} de presión.
-    \end{enumerate}
-  \end{exercise}
-
-  \begin{solution}
-    \begin{enumerate*}
-      \item \( M = \SI{71}{g/mol} \);
-      \item \( M = \SI{58}{g/mol} \);
-      \item \( M = \SI{44}{g/mol} \).
+En cada ejercicio, se indica entre paréntesis la página del libro y el número de ejercicio al que corresponde.
+
+\section{Bloque 2. Aspectos cualitativos de la Química (tema 3 del libro)}
+
+  \subsection*{Ejercicios del tema}
+
+    \begin{exercise}[
+        tags    = {},
+        topics  = {química,química básica},
+        source  = {FQ 1B MGH 2016, p66, e4},
+      ]
+      (66.4) Sabemos que \SI{40}{uma} es la masa del átomo de calcio. Calcula:
+      \begin{enumerate}
+        \item La masa en gramos de \SI{1}{átomo} de Ca.
+        \item ¿Cuál de las siguientes cantidades tienen mayor número de átomos? \SI{40}{g} de Ca; \SI{0,20}{moles} de Ca; \SI{5e23}{átomos} de Ca.
+      \end{enumerate}
+    \end{exercise}
+
+    \begin{solution}
+      \begin{enumerate*}
+        \item \( m = \SI{6,6E-23}{\gram} \);
+        \item \SI{40}{\gram} de Ca.
       \end{enumerate*}
-  \end{solution}
+    \end{solution}
 
 
 
 
-  \begin{exercise}[
-      tags    = {},
-      topics  = {química,química básica},
-      source  = {FQ 1B MGH 2016, p83, e9},
-    ]
-    (9) Realiza los siguientes cálculos numéricos:
-    \begin{enumerate}
-      \item Los átomos de oxígeno que hay en \SI{0.25}{moles} de sulfato de potasio (\ch{K2SO4}).
-      \item Las moléculas de gasolina (\ch{C8H18}) que hay en un depósito de \SI{40}{\liter} (\( d = \SI{0.76}{g/mL} \)).
-      \item Los gramos de calcio que hay en \SI{60}{g} de un carbonato de calcio (\ch{CaCO3}) del 80\% de riqueza.
-      \item De una sustancia pura, sabemos que \SI{1.75e19}{moléculas} corresponden a una masa de \SI{2.73}{mg}. ¿Cuál será la masa de \SI{1}{mol}?
-    \end{enumerate}
-  \end{exercise}
+    \begin{exercise}[
+        tags    = {},
+        topics  = {química,química básica},
+        source  = {FQ 1B MGH 2016, p66, e5},
+      ]
+      (66.5) Si tenemos en cuenta que \SI{56}{uma} es la masa del átomo de hierro, calcula:
+      \begin{enumerate}
+        \item La masa atómica en gramos de \SI{1}{átomo} de~Fe.
+        \item Cuál de las siguientes cantidades tiene mayor número de átomos de Fe: \SI{56}{\gram}, \SI{0,20}{moles} o \SI{5e23}{átomos}.
+      \end{enumerate}
+    \end{exercise}
 
-  \begin{solution}
-    \begin{enumerate*}
-      \item \SI{6e23}{átomos}; \item \SI{1.6e26}{moléculas}; \item \SI{19}{g}; \item \( M = \SI{93}{g/mol} \).
-    \end{enumerate*}
-  \end{solution}
-
-
-
-
-  \begin{exercise}[
-      tags    = {},
-      topics  = {química,química básica},
-      source  = {FQ 1B MGH 2016, p83, e10},
-    ]
-    (10) Disponemos de \SI{3}{moles} de sulfuro de hidrógeno. Calcula,
-    sabiendo que las masas atómicas son \( \ch{S} = 32 \) y \( \ch{H} = 1 \):
-    \begin{enumerate}
-      \item Cuántos gramos de \ch{H2S} hay en esos \SI{3}{moles}.
-      \item El número de moléculas de \ch{H2S} que forman los \SI{3}{moles}.
-      \item Los moles de \ch{H2} y de \ch{S} que tenemos en los \SI{3}{moles} de \ch{H2S}.
-    \end{enumerate}
-  \end{exercise}
-
-  \begin{solution}
-    \begin{enumerate*}
-      \item \( m_{\ch{H2S}} = \SI{102}{\gram} \);
-      \item \SI{1.8e24}{moléculas};
-      \item \SI{3}{moles} de \ch{H2} y \SI{3}{moles} de \ch{S}.
-    \end{enumerate*}
-  \end{solution}
+    \begin{solution}
+      \begin{enumerate*}
+        \item \( m = \SI{9,3E-23}{\gram} \);
+        \item \SI{56}{\gram} de Fe.
+      \end{enumerate*}
+    \end{solution}
 
 
 
 
-  \begin{exercise}[
-      tags    = {},
-      topics  = {química,química básica},
-      source  = {FQ 1B MGH 2016, p84, e12},
-    ]
-    (12) ¿Dónde crees que habrá más moléculas, en \SI{15}{g} de \ch{H2} o en
-    \SI{15}{g} de \ch{O2}? Justifica la respuesta.
-  \end{exercise}
+    \begin{exercise}[
+        tags    = {},
+        topics  = {química,química básica},
+        source  = {FQ 1B MGH 2016, p66, e6},
+      ]
+      (66.6) Responde a las siguientes cuestiones:
+      \begin{enumerate}
+        \item ¿En cuál de las siguientes cantidades de los elementos que se enumeran a continuación existe un mayor número de moles: \SI{100}{\gram} de hierro, \SI{100}{\gram} de oxígeno molecular, \SI{100}{\gram} de zinc o \SI{100}{\gram} de níquel?
+        \item ¿Y un mayor número de átomos?
+      \end{enumerate}
+    \end{exercise}
 
-  \begin{solution}
-    En \SI{15}{g} de \ch{H2}.
-  \end{solution}
-
-
-
-
-  \begin{exercise}[
-      tags    = {},
-      topics  = {química,química básica},
-      source  = {FQ 1B MGH 2016, p84, e13},
-    ]
-    (13) ¿Cuál será el volumen de \ch{HCl}, medido en CN, que podremos
-    obtener con \SI{6e22}{moléculas} de cloro?
-  \end{exercise}
-
-  \begin{solution}
-    \( V = \SI{4.5}{\liter} \) de \ch{HCl}.
-  \end{solution}
+    \begin{solution}
+      \begin{enumerate*}
+        \item En los \SI{100}{\gram} de oxígeno molecular;
+        \item En los \SI{100}{\gram} de oxígeno molecular.
+      \end{enumerate*}
+    \end{solution}
 
 
 
 
-  \begin{exercise}[
-      tags    = {},
-      topics  = {química,química básica},
-      source  = {FQ 1B MGH 2016, p84, e14},
-    ]
-    (14) Calcula los gramos de amoniaco que podrías obtener con \SI{10}{\liter}
-    de \ch{N2}, medidos en CN.
-  \end{exercise}
+    \begin{exercise}[
+        tags    = {},
+        topics  = {química,química básica},
+        source  = {FQ 1B MGH 2016, p71, e10},
+      ]
+      (71.10) Sabiendo que un gas a \SI{1,5}{atm} y \SI{290}{\kelvin} tiene una densidad de \SI{1,178}{\gram\per\liter}, calcula su masa molecular.
+    \end{exercise}
 
-  \begin{solution}
-    \( m_{\ch{NH3}} = \SI{15}{g} \).
-  \end{solution}
-
-
-
-
-  \begin{exercise}[
-      tags    = {},
-      topics  = {química,química básica},
-      source  = {FQ 1B MGH 2016, p84, e15},
-    ]
-    (15) A \SI{20}{\celsius} la presión de un gas encerrado en un volumen V constante es de \SI{850}{\mmHg}. ¿Cuál será el valor de la presión si bajamos la temperatura a \SI{0}{\celsius}?
-  \end{exercise}
-
-  \begin{solution}
-    \( p = \SI{792}{\mmHg} \).
-  \end{solution}
-
-
-
-  \subsubsection{Leyes de los gases}
-
-  \begin{exercise}[
-      tags    = {},
-      topics  = {química,química básica},
-      source  = {FQ 1B MGH 2016, p84, e17},
-    ]
-    (17) Diez litros de un gas medidos en CN, ¿qué volumen ocuparán
-    si cambiamos las condiciones a \SI{50}{\celsius} y \SI{4}{atm} de presión?
-  \end{exercise}
-
-  \begin{solution}
-    \( V = \SI{2.76}{\liter}\).
-  \end{solution}
+    \begin{solution}
+      \( M = \SI{18,7}{\gram\per\mole} \)
+    \end{solution}
 
 
 
 
-  \begin{exercise}[
-      tags    = {},
-      topics  = {química,química básica},
-      source  = {FQ 1B MGH 2016, p84, e18},
-    ]
-    (18) En un matraz de \SI{5}{\liter} hay \SI{42}{\gram} de \ch{N2} a \SI{27}{\celsius}. Se abre el recipiente hasta que su presión se iguala con la presión atmosférica, que es de \SI{1}{atm}.
-    \begin{enumerate}
-      \item ¿Cuántos gramos de \ch{N2} han salido a la atmósfera?
-      \item ¿A qué \( T \) deberíamos poner el recipiente para igualar la presión inicial?
-    \end{enumerate}
-  \end{exercise}
+    \begin{exercise}[
+        tags    = {},
+        topics  = {química,química básica},
+        source  = {FQ 1B MGH 2016, p71, e11},
+      ]
+      (71.11) Calcula la densidad del metano (\ch{CH4}) a \SI{700}{\mmHg} y \SI{75}{\celsius}.
+    \end{exercise}
 
-  \begin{solution}
-    \begin{enumerate*}
-      \item \SI{36.3}{\gram} de \ch{N2} han salido;
-      \item \( T' = \SI{2214}{\kelvin} \).
-    \end{enumerate*}
-  \end{solution}
+    \begin{solution}
+      \( d = \SI{0,52}{\gram\per\liter} \)
+    \end{solution}
 
 
 
+    \begin{exercise}[
+        tags    = {},
+        topics  = {química,química básica},
+        source  = {FQ 1B MGH 2016, p71, e12},
+      ]
+      (71.12) Calcula el número de moléculas de \ch{CO2} que habrá en \SI{10}{\liter} del mismo gas medidos en condiciones normales.
+    \end{exercise}
 
-  \begin{exercise}[
-      tags    = {},
-      topics  = {química,química básica},
-      source  = {FQ 1B MGH 2016, p84, e20},
-    ]
-    (20) En una bombona se introducen \SI{0.21}{moles} de \ch{N2}, \SI{0.12}{moles}
-    de \ch{H2} y \SI{2.32}{moles} de \ch{NH3}. Si la presión total es de \SI{12.4}{atm}, ¿cuál es la presión parcial de cada componente?
-  \end{exercise}
-
-  \begin{solution}
-    \( p_{\ch{N2}} = \SI{0.98}{atm} \); \( p_{\ch{H2}} = \SI{0.56}{atm} \); \( p_{\ch{NH3}} = \SI{10.9}{atm} \).
-  \end{solution}
+    \begin{solution}
+      \( M = \SI{2,7e23}{moléculas} \).
+    \end{solution}
 
 
 
 
-  \begin{exercise}[
-      tags    = {},
-      topics  = {química,química básica},
-      source  = {FQ 1B MGH 2016, p84, e21},
-    ]
-    (21) En CNTP, \SI{1}{mol} de \ch{NH3} ocupa \SI{22.4}{\liter} y contiene \SI{6.02e23}{moléculas}. Calcula:
-    \begin{enumerate}
-      \item ¿Cuántas moléculas habrá en \SI{37}{\gram} de amoniaco a \SI{142}{\celsius} y \SI{748}{\mmHg}?
-      \item ¿Cuál es la densidad del amoniaco a \SI{142}{\celsius} y \SI{748}{\mmHg}?
-    \end{enumerate}
-  \end{exercise}
+    \begin{exercise}[
+        tags    = {},
+        topics  = {química,química básica},
+        source  = {FQ 1B MGH 2016, p71, e13},
+      ]
+      (71.13) Calcula la masa en gramos de un mol de \ch{SO2} sabiendo que
+      exactamente \SI{5}{\cubic\centi\meter} de dicho gas, medidos en condiciones
+      normales, tienen una masa de \SI{0,01428}{\gram}.
+    \end{exercise}
 
-  \begin{solution}
-    \begin{enumerate*}
-      \item \SI{1.31e24}{moléculas} de \ch{NH3}; \item \( d = \SI{0.49}{\gram\per\liter} \).
-    \end{enumerate*}
-  \end{solution}
+    \begin{solution}
+      \( M = \SI{64}{\gram\per\mole} \)
+    \end{solution}
 
 
 
 
-  \begin{exercise}[
-      tags    = {},
-      topics  = {química,química básica},
-      source  = {FQ 1B MGH 2016, p84, e22},
-    ]
-    (22) Resuelve los siguientes ejercicios referidos a la ecuación de Clapeyron:
-    \begin{enumerate}
-      \item Un gas ocupa un volumen de \SI{15}{\liter} a \SI{60}{\celsius} y \SI{900}{\mmHg}. ¿Qué volumen ocuparía en CN?
-      \item En una bombona de \SI{15.0}{\liter} hay gas helio a \SI{20}{\celsius}. Si el manómetro marca \SI{5.2}{atm}, ¿cuántos gramos de helio hay en la bombona? ¿A qué \( T \) estaría el gas si la presión fuera la atmosférica?
-      \item Una cierta cantidad de aire ocupa un volumen de \SI{10}{\liter} a \SI{47}{\celsius} y \SI{900}{\mmHg}. Si la densidad del aire es de \SI{1.293}{g/L}, ¿qué masa de aire hay en el recipiente?
-    \end{enumerate}
-  \end{exercise}
+    \begin{exercise}[
+        tags    = {},
+        topics  = {química,química básica},
+        source  = {FQ 1B MGH 2016, p71, e14},
+      ]
+      (71.14) La masa de \SI{1,20}{\milli\gram} de una sustancia gaseosa pura equivale
+      a \SI{1,2e19}{moléculas}. Calcula la masa en gramos de \SI{1}{\mole} de dicha sustancia.
+    \end{exercise}
 
-  \begin{solution}
-    \begin{enumerate*}
-      \item \( V = \SI{14.6}{\liter} \);
-      \item \( m = \SI{16}{\gram} \) de \ch{He}, \( T = \SI{56}{\kelvin} \); \item \( m = \SI{13}{\gram} \) de aire.
-    \end{enumerate*}
-  \end{solution}
+    \begin{solution}
+      \( M = \SI{60,2}{\gram\per\mole} \)
+    \end{solution}
 
 
 
 
+    \begin{exercise}[
+        tags    = {},
+        topics  = {química,química básica},
+        source  = {FQ 1B MGH 2016, p72, e15},
+      ]
+      (72.15) Se introducen, en un recipiente de \SI{5.0}{\liter}, \SI{10}{\gram} de alcohol etílico (\ch{C2H5OH}) y \SI{10}{\gram} de acetona (\ch{C3H6O}) y posteriormente se calienta el reactor a \SI{200}{\celsius}, con lo cual ambos líquidos pasan a la fase gaseosa. Calcula la presión en el interior del reactor, suponiendo comportamiento ideal, y la presión parcial de cada componente.
+    \end{exercise}
+
+    \begin{solution}
+      \( p_\textrm{alcohol} = \SI{1.7}{atm} \);
+      \( p_\textrm{acetona} = \SI{1.3}{atm} \);
+      \( P_T = \SI{3.0}{atm} \).
+    \end{solution}
 
 
-  \subsubsection{Composición centesimal. Fórmulas moleculares y empíricas}
+
+
+    \begin{exercise}[
+        tags    = {},
+        topics  = {química,química básica},
+        source  = {FQ 1B MGH 2016, p74, e16},
+      ]
+      (74.16) Calcula la composición centesimal de la molécula de propano (\ch{C3H8}).
+    \end{exercise}
+
+    \begin{solution}
+      \num{81,8}\% de carbono; \num{18,2}\% de hidrógeno.
+    \end{solution}
+
+
+
+
+    \begin{exercise}[
+        tags    = {},
+        topics  = {química,química básica},
+        source  = {FQ 1B MGH 2016, p77, e18},
+      ]
+      (77.18) Calcula la fracción molar de cada uno de los componentes
+      de una disolución que se ha preparado mezclando \SI{90}{\gram} de alcohol etílico (\ch{C2H50H}) y \SI{110}{\gram} de agua.
+    \end{exercise}
+
+    \begin{solution}
+      \( X_\textrm{alcohol} = 0,24 \),
+      \( X_\textrm{agua} = 0,76 \).
+    \end{solution}
+
+
+
+
+    \begin{exercise}[
+        tags    = {},
+        topics  = {química,química básica},
+        source  = {FQ 1B MGH 2016, p77, e20},
+      ]
+      (77.20) Una disolución de hidróxido de sodio en agua que contiene un 25\% de hidróxido tiene una densidad de \SI{1.25}{\gram\per\milli\liter}. Calcula
+      su molaridad y su normalidad.
+    \end{exercise}
+
+    \begin{solution}
+      \( M = \SI{7.8}{M} \)  y  \( N = \SI{7.8}{N} \).
+    \end{solution}
+
+
+
+
+    \begin{exercise}[
+        tags    = {},
+        topics  = {química,química básica},
+        source  = {FQ 1B MGH 2016, p77, e22},
+      ]
+      (77.22) ¿Cuál es la molaridad de una disolución de ácido sulfúrico
+      del 26\% de riqueza y densidad \SI{1.19}{\gram\per\milli\liter}?
+    \end{exercise}
+
+    \begin{solution}
+      \( M = \SI{3.2}{M} \).
+    \end{solution}
+
+
+
+
+    \begin{exercise}[
+        tags    = {},
+        topics  = {química,química básica},
+        source  = {FQ 1B MGH 2016, p80, e23},
+      ]
+      (80.23) El alcanfor puro tiene un punto de fusión de \SI{178}{\celsius} y una constante crioscópica de \SI{40}{\celsius\kilo\gram\per\mole}. La disolución resultante de añadir \SI{2}{\gram} de un soluto no volátil a
+      \SI{10}{\gram} de alcanfor congela a \SI{158}{\celsius}. Calcula la masa molecular del soluto añadido.
+    \end{exercise}
+
+    \begin{solution}
+      \( M = \SI{400}{\gram\per\mole} \).
+    \end{solution}
+
+
+
+
+    \begin{exercise}[
+        tags    = {},
+        topics  = {química,química básica},
+        source  = {FQ 1B MGH 2016, p80, e24},
+      ]
+      (80.24) Tenemos \SI{100}{\milli\liter} de una disolución acuosa que contiene \SI{0.25}{\gram} de un polisacárido. Dicha disolución a \SI{25}{\celsius}, ejerce una presión osmótica de \SI{23.9}{\mmHg}. El polisacárido tiene la siguiente fórmula empírica \ch{(C6H10O5)_{n}}. Calcula el valor de la masa molecular del polisacárido.
+    \end{exercise}
+
+    \begin{solution}
+      \( M = \SI{1938}{\gram\per\mole} \).
+    \end{solution}
+
+
+
+
+
+
+
+  \subsection*{Problemas propuestos}
+
+    \subsubsection*{Leyes de los volúmenes de combinación. Hipótesis de Avogadro. Concepto de molécula. Mol}
+
+      \begin{exercise}[
+          tags    = {},
+          topics  = {química,química básica},
+          source  = {FQ 1B MGH 2016, p83, e8},
+        ]
+        (83.8) Determina la masa, \( M \), de un mol de un gas en los siguientes
+        casos:
+        \begin{enumerate}
+          \item Su densidad en CN es de \SI{3.17}{\gram\per\liter}.
+          \item Su densidad es de \SI{2.4}{g/L} a \SI{20}{\celsius} y \SI{1}{atm} de presión.
+          \item Dos gramos de dicho gas ocupan un volumen de \SI{600}{\milli\liter}, medido a \SI{17}{\celsius} y \SI{1.8}{atm} de presión.
+        \end{enumerate}
+      \end{exercise}
+
+      \begin{solution}
+        \begin{enumerate*}
+          \item \( M = \SI{71}{g/mol} \);
+          \item \( M = \SI{58}{g/mol} \);
+          \item \( M = \SI{44}{g/mol} \).
+          \end{enumerate*}
+      \end{solution}
+
+
+
+
+      \begin{exercise}[
+          tags    = {},
+          topics  = {química,química básica},
+          source  = {FQ 1B MGH 2016, p83, e9},
+        ]
+        (83.9) Realiza los siguientes cálculos numéricos:
+        \begin{enumerate}
+          \item Los átomos de oxígeno que hay en \SI{0.25}{moles} de sulfato de potasio (\ch{K2SO4}).
+          \item Las moléculas de gasolina (\ch{C8H18}) que hay en un depósito de \SI{40}{\liter} (\( d = \SI{0.76}{g/mL} \)).
+          \item Los gramos de calcio que hay en \SI{60}{g} de un carbonato de calcio (\ch{CaCO3}) del 80\% de riqueza.
+          \item De una sustancia pura, sabemos que \SI{1.75e19}{moléculas} corresponden a una masa de \SI{2.73}{mg}. ¿Cuál será la masa de \SI{1}{mol}?
+        \end{enumerate}
+      \end{exercise}
+
+      \begin{solution}
+        \begin{enumerate*}
+          \item \SI{6e23}{átomos}; \item \SI{1.6e26}{moléculas}; \item \SI{19}{g}; \item \( M = \SI{93}{g/mol} \).
+        \end{enumerate*}
+      \end{solution}
+
+
+
+
+      \begin{exercise}[
+          tags    = {},
+          topics  = {química,química básica},
+          source  = {FQ 1B MGH 2016, p83, e10},
+        ]
+        (83.10) Disponemos de \SI{3}{moles} de sulfuro de hidrógeno. Calcula,
+        sabiendo que las masas atómicas son \( \ch{S} = 32 \) y \( \ch{H} = 1 \):
+        \begin{enumerate}
+          \item Cuántos gramos de \ch{H2S} hay en esos \SI{3}{moles}.
+          \item El número de moléculas de \ch{H2S} que forman los \SI{3}{moles}.
+          \item Los moles de \ch{H2} y de \ch{S} que tenemos en los \SI{3}{moles} de \ch{H2S}.
+        \end{enumerate}
+      \end{exercise}
+
+      \begin{solution}
+        \begin{enumerate*}
+          \item \( m_{\ch{H2S}} = \SI{102}{\gram} \);
+          \item \SI{1.8e24}{moléculas};
+          \item \SI{3}{moles} de \ch{H2} y \SI{3}{moles} de \ch{S}.
+        \end{enumerate*}
+      \end{solution}
+
+
+
+
+      \begin{exercise}[
+          tags    = {},
+          topics  = {química,química básica},
+          source  = {FQ 1B MGH 2016, p84, e12},
+        ]
+        (84.12) ¿Dónde crees que habrá más moléculas, en \SI{15}{g} de \ch{H2} o en
+        \SI{15}{g} de \ch{O2}? Justifica la respuesta.
+      \end{exercise}
+
+      \begin{solution}
+        En \SI{15}{g} de \ch{H2}.
+      \end{solution}
+
+
+
+
+      \begin{exercise}[
+          tags    = {},
+          topics  = {química,química básica},
+          source  = {FQ 1B MGH 2016, p84, e13},
+        ]
+        (84.13) ¿Cuál será el volumen de \ch{HCl}, medido en CN, que podremos
+        obtener con \SI{6e22}{moléculas} de cloro?
+      \end{exercise}
+
+      \begin{solution}
+        \( V = \SI{4.5}{\liter} \) de \ch{HCl}.
+      \end{solution}
+
+
+
+
+      \begin{exercise}[
+          tags    = {},
+          topics  = {química,química básica},
+          source  = {FQ 1B MGH 2016, p84, e14},
+        ]
+        (84.14) Calcula los gramos de amoniaco que podrías obtener con \SI{10}{\liter}
+        de \ch{N2}, medidos en CN.
+      \end{exercise}
+
+      \begin{solution}
+        \( m_{\ch{NH3}} = \SI{15}{g} \).
+      \end{solution}
+
+
+
+
+      \begin{exercise}[
+          tags    = {},
+          topics  = {química,química básica},
+          source  = {FQ 1B MGH 2016, p84, e15},
+        ]
+        (84.15) A \SI{20}{\celsius} la presión de un gas encerrado en un volumen V constante es de \SI{850}{\mmHg}. ¿Cuál será el valor de la presión si bajamos la temperatura a \SI{0}{\celsius}?
+      \end{exercise}
+
+      \begin{solution}
+        \( p = \SI{792}{\mmHg} \).
+      \end{solution}
+
+
+
+    \subsubsection*{Leyes de los gases}
+
+      \begin{exercise}[
+          tags    = {},
+          topics  = {química,química básica},
+          source  = {FQ 1B MGH 2016, p84, e17},
+        ]
+        (84.17) Diez litros de un gas medidos en CN, ¿qué volumen ocuparán
+        si cambiamos las condiciones a \SI{50}{\celsius} y \SI{4}{atm} de presión?
+      \end{exercise}
+
+      \begin{solution}
+        \( V = \SI{2.76}{\liter}\).
+      \end{solution}
+
+
+
+
+      \begin{exercise}[
+          tags    = {},
+          topics  = {química,química básica},
+          source  = {FQ 1B MGH 2016, p84, e18},
+        ]
+        (84.18) En un matraz de \SI{5}{\liter} hay \SI{42}{\gram} de \ch{N2} a \SI{27}{\celsius}. Se abre el recipiente hasta que su presión se iguala con la presión atmosférica, que es de \SI{1}{atm}.
+        \begin{enumerate}
+          \item ¿Cuántos gramos de \ch{N2} han salido a la atmósfera?
+          \item ¿A qué \( T \) deberíamos poner el recipiente para igualar la presión inicial?
+        \end{enumerate}
+      \end{exercise}
+
+      \begin{solution}
+        \begin{enumerate*}
+          \item \SI{36.3}{\gram} de \ch{N2} han salido;
+          \item \( T' = \SI{2214}{\kelvin} \).
+        \end{enumerate*}
+      \end{solution}
+
+
+
+
+      \begin{exercise}[
+          tags    = {},
+          topics  = {química,química básica},
+          source  = {FQ 1B MGH 2016, p84, e20},
+        ]
+        (84.20) En una bombona se introducen \SI{0.21}{moles} de \ch{N2}, \SI{0.12}{moles}
+        de \ch{H2} y \SI{2.32}{moles} de \ch{NH3}. Si la presión total es de \SI{12.4}{atm}, ¿cuál es la presión parcial de cada componente?
+      \end{exercise}
+
+      \begin{solution}
+        \( p_{\ch{N2}} = \SI{0.98}{atm} \); \( p_{\ch{H2}} = \SI{0.56}{atm} \); \( p_{\ch{NH3}} = \SI{10.9}{atm} \).
+      \end{solution}
+
+
+
+
+      \begin{exercise}[
+          tags    = {},
+          topics  = {química,química básica},
+          source  = {FQ 1B MGH 2016, p84, e21},
+        ]
+        (84.21) En CNTP, \SI{1}{mol} de \ch{NH3} ocupa \SI{22.4}{\liter} y contiene \SI{6.02e23}{moléculas}. Calcula:
+        \begin{enumerate}
+          \item ¿Cuántas moléculas habrá en \SI{37}{\gram} de amoniaco a \SI{142}{\celsius} y \SI{748}{\mmHg}?
+          \item ¿Cuál es la densidad del amoniaco a \SI{142}{\celsius} y \SI{748}{\mmHg}?
+        \end{enumerate}
+      \end{exercise}
+
+      \begin{solution}
+        \begin{enumerate*}
+          \item \SI{1.31e24}{moléculas} de \ch{NH3}; \item \( d = \SI{0.49}{\gram\per\liter} \).
+        \end{enumerate*}
+      \end{solution}
+
+
+
+
+      \begin{exercise}[
+          tags    = {},
+          topics  = {química,química básica},
+          source  = {FQ 1B MGH 2016, p84, e22},
+        ]
+        (84.22) Resuelve los siguientes ejercicios referidos a la ecuación de Clapeyron:
+        \begin{enumerate}
+          \item Un gas ocupa un volumen de \SI{15}{\liter} a \SI{60}{\celsius} y \SI{900}{\mmHg}. ¿Qué volumen ocuparía en CN?
+          \item En una bombona de \SI{15.0}{\liter} hay gas helio a \SI{20}{\celsius}. Si el manómetro marca \SI{5.2}{atm}, ¿cuántos gramos de helio hay en la bombona? ¿A qué \( T \) estaría el gas si la presión fuera la atmosférica?
+          \item Una cierta cantidad de aire ocupa un volumen de \SI{10}{\liter} a \SI{47}{\celsius} y \SI{900}{\mmHg}. Si la densidad del aire es de \SI{1.293}{g/L}, ¿qué masa de aire hay en el recipiente?
+        \end{enumerate}
+      \end{exercise}
+
+      \begin{solution}
+        \begin{enumerate*}
+          \item \( V = \SI{14.6}{\liter} \);
+          \item \( m = \SI{16}{\gram} \) de \ch{He}, \( T = \SI{56}{\kelvin} \); \item \( m = \SI{13}{\gram} \) de aire.
+        \end{enumerate*}
+      \end{solution}
+
+
+
+
+
+
+  \subsubsection*{Composición centesimal. Fórmulas moleculares y empíricas}
 
   \begin{exercise}[
       tags    = {},
       topics  = {química,química básica},
       source  = {FQ 1B MGH 2016, p84, e23},
     ]
-    (23) Un compuesto orgánico tiene la siguiente composición centesimal: \( \ch{C} = 24,24\% \), \( \ch{H} = 4,05\% \), \( \ch{Cl} = 71,71\% \). Calcula: % REVIEW revisar como reacciona el chemformula aquí
+    (84.23) Un compuesto orgánico tiene la siguiente composición centesimal: \( \ch{C} = 24,24\% \), \( \ch{H} = 4,05\% \), \( \ch{Cl} = 71,71\% \). Calcula: % REVIEW revisar como reacciona el chemformula aquí
     \begin{enumerate}
       \item La fórmula empírica.
       \item Su fórmula molecular, sabiendo que \SI{0.942}{\gram} de dicho compuesto ocupan un volumen de \SI{213}{\milli\liter} medidos a \SI{1}{atm} y \SI{0}{\celsius}.
@@ -620,7 +618,7 @@
       topics  = {química,química básica},
       source  = {FQ 1B MGH 2016, p84, e24},
     ]
-    (24) Resuelve los siguientes ejercicios:
+    (84.24) Resuelve los siguientes ejercicios:
     \begin{enumerate}
       \item Entre dos minerales de fórmulas \ch{Cu5FeS4} y \ch{Cu2S}, ¿cuál es más rico en cobre?
       \item De los siguientes fertilizantes indica cuál es más rico en nitrógeno: \ch{NH4NO3} o \ch{(NH4)3PO3}.
@@ -642,14 +640,13 @@
 
 
 
-  \subsubsection{Disoluciones y propiedades coligativas}
-
+  \subsubsection*{Disoluciones y propiedades coligativas}
   \begin{exercise}[
       tags    = {},
       topics  = {química,química básica},
       source  = {FQ 1B MGH 2016, p85, e26},
     ]
-    (26) Calcula la fracción molar de agua y alcohol etílico en una
+    (85.26) Calcula la fracción molar de agua y alcohol etílico en una
     disolución preparada agregando \SI{50}{\gram} de alcohol etílico y \SI{100}{\gram} de agua.
   \end{exercise}
 
@@ -665,7 +662,7 @@
       topics  = {química,química básica},
       source  = {FQ 1B MGH 2016, p85, e29},
     ]
-    (29) Un ácido sulfúrico diluido tiene una densidad de \SI{1.10}{\gram\per\milli\liter} y una riqueza del 65\% en masa. Calcula la molaridad y la normalidad de la disolución.
+    (85.29) Un ácido sulfúrico diluido tiene una densidad de \SI{1.10}{\gram\per\milli\liter} y una riqueza del 65\% en masa. Calcula la molaridad y la normalidad de la disolución.
   \end{exercise}
 
   \begin{solution}
@@ -680,12 +677,12 @@
       topics  = {química,química básica},
       source  = {FQ 1B MGH 2016, p85, e30},
     ]
-    (30) Calcula los gramos de hidróxido de sodio comercial de un
+    (85.30) Calcula los gramos de hidróxido de sodio comercial de un
     85\% de riqueza en masa que harán falta para preparar \SI{250}{\milli\liter} de una disolución de \ch{NaOH} \SI{0.5}{M}.
   \end{exercise}
 
   \begin{solution}
-  \SI{5.9}{\gram}
+    \SI{5.9}{\gram}
   \end{solution}
 
 
@@ -696,7 +693,7 @@
       topics  = {química,química básica},
       source  = {FQ 1B MGH 2016, p85, e31},
     ]
-    (31) Una disolución de ácido sulfúrico está formada por \SI{12.0}{\gram} de
+    (85.31) Una disolución de ácido sulfúrico está formada por \SI{12.0}{\gram} de
     ácido, \SI{19.2}{\gram} de agua y ocupa un volumen de \SI{27}{\milli\liter}. Calcula la densidad de la disolución, la concentración centesimal, la molaridad y la molalidad.
   \end{exercise}
 
@@ -712,7 +709,7 @@
       topics  = {química,química básica},
       source  = {FQ 1B MGH 2016, p85, e32},
     ]
-    (32) En la etiqueta de un frasco de \ch{HCl} dice: densidad \SI{1.19}{\gram\per\milli\liter}, riqueza 37,1\% en peso. Calcula:
+    (85.32) En la etiqueta de un frasco de \ch{HCl} dice: densidad \SI{1.19}{\gram\per\milli\liter}, riqueza 37,1\% en peso. Calcula:
     \begin{enumerate}
       \item Masa de \SI{1}{\liter} de esta disolución.
       \item Concentración del ácido en \si{\gram\per\liter}.
@@ -736,7 +733,7 @@
       topics  = {química,química básica},
       source  = {FQ 1B MGH 2016, p85, e33},
     ]
-    (33) Cuando se agrega \SI{27.8}{\gram} de una sustancia a \SI{200}{\cubic\centi\meter} de agua, la presión de vapor baja de \SI{23.7}{\mmHg} a \SI{22.9}{\mmHg}. Calcula la masa molecular de la sustancia.
+    (85.33) Cuando se agrega \SI{27.8}{\gram} de una sustancia a \SI{200}{\cubic\centi\meter} de agua, la presión de vapor baja de \SI{23.7}{\mmHg} a \SI{22.9}{\mmHg}. Calcula la masa molecular de la sustancia.
   \end{exercise}
 
   \begin{solution}
@@ -751,7 +748,7 @@
       topics  = {química,química básica},
       source  = {FQ 1B MGH 2016, p85, e34},
     ]
-    (34) Una disolución compuesta por \SI{24}{\gram} de azúcar en \SI{75}{\cubic\centi\meter} de agua, congela a \SI{-1.8}{\celsius}. Calcula:
+    (85.34) Una disolución compuesta por \SI{24}{\gram} de azúcar en \SI{75}{\cubic\centi\meter} de agua, congela a \SI{-1.8}{\celsius}. Calcula:
     \begin{enumerate}
       \item La masa molecular del azúcar.
       \item Si su fórmula empírica es \ch{CH2O}, ¿cuál es su fórmula molecular? Dato: \( K_c = \SI{1.86}{\celsius\kilo\gram\per\mole} \).
@@ -773,7 +770,7 @@
       topics  = {química,química básica},
       source  = {FQ 1B MGH 2016, p85, e35},
     ]
-    (35) Una disolución que contiene \SI{25}{\gram} de albúmina de
+    (85.35) Una disolución que contiene \SI{25}{\gram} de albúmina de
     huevo por litro ejerce una presión osmótica de \SI{13.5}{\mmHg} a
     \SI{25}{\celsius}. Determina la masa molecular de esa proteína.
   \end{exercise}
@@ -789,7 +786,7 @@
       topics  = {química,química básica},
       source  = {FQ 1B MGH 2016, p85, e36},
     ]
-    (36) Cuando llega el invierno y bajan las temperaturas decidimos fabricar nuestro propio anticongelante añadiendo \SI{3}{\liter} de etilenglicol (\ch{C2H6O2}), cuya densidad es de \SI{1.12}{\gram\per\cubic\centi\meter} a \SI{8}{\liter} de agua que vertemos al radiador del coche. ¿A qué temperatura podrá llegar la disolución del radiador sin que se congele?
+    (85.36) Cuando llega el invierno y bajan las temperaturas decidimos fabricar nuestro propio anticongelante añadiendo \SI{3}{\liter} de etilenglicol (\ch{C2H6O2}), cuya densidad es de \SI{1.12}{\gram\per\cubic\centi\meter} a \SI{8}{\liter} de agua que vertemos al radiador del coche. ¿A qué temperatura podrá llegar la disolución del radiador sin que se congele?
 
     \begin{gexdatos}
       constante crioscópica molal del agua \( K_c = \SI{1.86}{\celsius\kilo\gram\per\mole} \).
@@ -803,14 +800,15 @@
 
 
 
-  \subsubsection{Aplica lo aprendido}
+
+  \subsubsection*{Aplica lo aprendido}
 
   \begin{exercise}[
       tags    = {},
       topics  = {química,química básica},
       source  = {FQ 1B MGH 2016, p85, e38},
     ]
-    (38) Razona en cuál de las siguientes cantidades habrá un mayor número de átomos:
+    (85.38) Razona en cuál de las siguientes cantidades habrá un mayor número de átomos:
 
     \begin{enumerate}
       \item \SI{20}{\gram} de hierro.
@@ -832,7 +830,7 @@
       topics  = {química,química básica},
       source  = {FQ 1B MGH 2016, p85, e39},
     ]
-    (39) Una determinada cantidad de aire a la presión de \SI{2}{atm} y
+    (85.39) Una determinada cantidad de aire a la presión de \SI{2}{atm} y
     temperatura de \SI{298}{\kelvin} ocupa un volumen de \SI{10}{\liter}. Calcula la masa molecular media del aire, sabiendo que el contenido del
     mismo en el matraz tiene una masa de \SI{23.6}{\gram}.
   \end{exercise}
@@ -849,7 +847,7 @@
       topics  = {química,química básica},
       source  = {FQ 1B MGH 2016, p86, e43},
     ]
-    (43) Si tenemos encerrado aire en un recipiente de cristal, al
+    (86.43) Si tenemos encerrado aire en un recipiente de cristal, al
     calentarlo a \SI{20}{\celsius} la presión se eleva a \SI{1.2}{atm}. ¿Cuánto marcará el barómetro si elevamos la temperatura \SI{10}{\celsius}?
   \end{exercise}
 
@@ -865,7 +863,7 @@
       topics  = {química,química básica},
       source  = {FQ 1B MGH 2016, p86, e44},
     ]
-    (44) Se queman completamente \SI{1.50}{\gram} de un compuesto orgánico
+    (86.44) Se queman completamente \SI{1.50}{\gram} de un compuesto orgánico
     formado por carbono, hidrógeno y oxígeno. En la combustión
     se obtuvieron \SI{0.71}{\gram} de agua y \SI{1.74}{\gram} de \ch{CO2}. Determina las fórmulas empírica y molecular del compuesto si
     \SI{1.03}{\gram} del mismo ocupan un volumen de \SI{350}{\milli\liter} a \SI{20}{\celsius} y \SI{750}{\mmHg}.
@@ -883,7 +881,7 @@
       topics  = {química,química básica},
       source  = {FQ 1B MGH 2016, p86, e45},
     ]
-    (45) Sabiendo que la densidad del aire en CN es de \SI{1.293}{\gram\per\liter}, calcula la masa de aire que contiene un recipiente de \SI{25}{\liter}, si hemos medido que la presión interior, cuando la temperatura es de \SI{77}{\celsius}, es de \SI{1.5}{atm}. Calcula, asimismo, el número de moles de aire que tenemos.
+    (86.45) Sabiendo que la densidad del aire en CN es de \SI{1.293}{\gram\per\liter}, calcula la masa de aire que contiene un recipiente de \SI{25}{\liter}, si hemos medido que la presión interior, cuando la temperatura es de \SI{77}{\celsius}, es de \SI{1.5}{atm}. Calcula, asimismo, el número de moles de aire que tenemos.
   \end{exercise}
 
   \begin{solution}
@@ -898,7 +896,7 @@
       topics  = {química,química básica},
       source  = {FQ 1B MGH 2016, p86, e46},
     ]
-    (46) A partir de los siguientes datos, determina la fórmula empírica y molecular de:
+    (86.46) A partir de los siguientes datos, determina la fórmula empírica y molecular de:
 
     \begin{enumerate}
       \item Un hidrocarburo con 82,76\% de C; si su densidad en CN es de \SI{2.59}{\gram\per\liter}.
@@ -925,7 +923,7 @@
       topics  = {química,química básica},
       source  = {FQ 1B MGH 2016, p86, e49},
     ]
-    (49) Se dispone de tres recipientes que contienen \SI{1}{\liter} de \ch{CH4} gas, \SI{2}{\liter} de \ch{N2} gas y \SI{15}{\liter} de \ch{O2} gas, respectivamente, en condiciones normales de presión y temperatura. Indica razonadamente:
+    (86.49) Se dispone de tres recipientes que contienen \SI{1}{\liter} de \ch{CH4} gas, \SI{2}{\liter} de \ch{N2} gas y \SI{15}{\liter} de \ch{O2} gas, respectivamente, en condiciones normales de presión y temperatura. Indica razonadamente:
 
     \begin{enumerate}
       \item Cuál contiene mayor número de moléculas.
@@ -955,7 +953,7 @@
       topics  = {química,química básica},
       source  = {FQ 1B MGH 2016, p86, e50},
     ]
-    (50) Un frasco de \SI{1.0}{\liter} de capacidad está lleno de dióxido de carbono gaseoso a \SI{27}{\celsius}. Se hace vacío hasta que la presión del
+    (86.50) Un frasco de \SI{1.0}{\liter} de capacidad está lleno de dióxido de carbono gaseoso a \SI{27}{\celsius}. Se hace vacío hasta que la presión del
     gas es \SI{10}{\mmHg}. Indica razonadamente:
 
     \begin{enumerate}
@@ -974,23 +972,22 @@
       \item \SI{3.2e20}{moléculas} de \ch{CO2}
     \end{enumerate*}
   \end{solution}
-\end{multicols*}
 
 
 
 
 
 
-\begin{multicols*}{2}[
-  \section{BLOQUE 5. QUÍMICA DEL CARBONO (tema 5 del libro)}
-  ]
+\section{BLOQUE 5. QUÍMICA DEL CARBONO (tema 5 del libro)}
+
+\subsection*{Ejercicios del tema}
 
   \begin{exercise}[
       tags    = {},
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p126, e7},
     ]
-    (7) Formula los siguientes alcanos:
+    (126.7) Formula los siguientes alcanos:
     \begin{enumerate}
       \item n-pentano
       \item 2,3,5-trimetilheptano
@@ -1001,8 +998,15 @@
     \end{enumerate}
   \end{exercise}
 
-  \begin{solution}[print=false]
-    Todavía sin solución
+  \begin{solution}
+    \begin{enumerate}
+      \item \ch{CH3-CH2-CH2-CH2-CH3}
+      \item \chemfig{CH_3-CH(-[6]CH_3)-CH(-[6]CH_3)-CH_2-CH(-[6]CH_3)-CH_2-CH_3}
+      \item \chemfig{CH_3-CH(-[6]CH_3)-CH_2-CH(-[6]CH_2-[6]CH_3)-CH_2-CH(-[6]CH_3)-CH_2-CH_3}
+      \item \chemfig{CH_3-C(-[2]CH_3)(-[6]CH_2-[6]CH_3)-CH_2-CH(-[6]CH_3)-CH_2-CH(-[6]CH_2-[6]CH_3)-CH_2-CH(-[6]CH_3)-CH_3}
+      \item \chemfig{CH_3-C(-[2]CH_3)(-[6]CH_3)-CH_2-CH(-[6]CH_2-[6]CH_3)-CH(-[6]CH_3)-CH(-[6]CH_2-[6]CH_3)-CH_2-CH(-[6]CH_3)-CH_3}
+      \item \chemfig{CH_3-CH_2-CH(-[6]CH_2-[6]CH_3)-CH_2-CH(-[6]C(-[4]CH_3)-[0]CH_3)-CH_2-CH(-[6]CH_2-[6]CH_3)-CH_2-CH_2-CH_3}
+    \end{enumerate}
   \end{solution}
 
 
@@ -1013,7 +1017,7 @@
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p129, e9},
     ]
-    (9) Formula los siguientes hidrocarburos insaturados:
+    (129.9) Formula los siguientes hidrocarburos insaturados:
     \begin{enumerate}
       \item But-1-eno
       \item Pent-2-eno
@@ -1028,8 +1032,19 @@
     \end{enumerate}
   \end{exercise}
 
-  \begin{solution}[print=false]
-    Todavía sin solución
+  \begin{solution}
+    \begin{enumerate}
+      \item \ch{CH2=CH-CH2-CH3}
+      \item \ch{CH3-CH=CH-CH2-CH3}
+      \item \ch{CH3-CH=CH-CH=CH-CH3}
+      \item \ch{CH2=CH-CH(C4H9)-CH=CH-CH3}
+      \item \ch{CH3-C+C-CH3}
+      \item \ch{CH+C-CH(CH3)-CH(CH3)-CH3}
+      \item \ch{CH+C-CH(CH3)-C+C-CH(CH3)-C+C-CH3}
+      \item \ch{CH2=CH-C+C-CH3}
+      \item \ch{CH+C-CH=CH-CH2-C+CH}
+      \item \ch{CH2=CH-CH=C(C2H5)-C+CH}
+    \end{enumerate}
   \end{solution}
 
 
@@ -1040,7 +1055,7 @@
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p131, e11},
     ]
-    (11) Formula los siguientes hidrocarburos cíclicos:
+    (131.11) Formula los siguientes hidrocarburos cíclicos:
     \begin{enumerate}
       \item Etilciclohexano
       \item Ciclopenteno
@@ -1055,8 +1070,19 @@
     \end{enumerate}
   \end{exercise}
 
-  \begin{solution}[print=false]
-    Todavía sin solución
+  \begin{solution}
+    \begin{enumerate}
+      \item \chemfig{[:-90]*6(----(-CH_2-CH_3)--)}
+      \item \chemfig{[:-126]*5(--=--)}
+      \item \chemfig{[:-120]*6(-~----)}
+      \item \chemfig{[:-90]*6(-(-[3]CH_3)(-[5]CH_3)---(-[1]CH_3)(-[7]CH_3)--)}
+      \item \chemfig{[:-126]*5(--=-(-CH_2-[0]CH_3)-)}
+      \item \chemfig{[:-120]*6(---(-CH_3)-(-CH_3)=-)}
+      \item \chemfig{CH~C-CH_2-CH(-[6]*4(----))-CH_3}
+      \item \chemfig{CH_3-CH=C(-[6]*6(------))-CH_2-CH(-[6]CH_3)-CH_3}
+      \item \chemfig{[:-120]*6(-=-=--)}
+      \item \chemfig{CH_2=CH-CH_2-*5(-----)}
+    \end{enumerate}
   \end{solution}
 
 
@@ -1067,7 +1093,7 @@
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p131, e12},
     ]
-    (12) Nombra los siguientes hidrocarburos cíclicos:
+    (131.12) Nombra los siguientes hidrocarburos cíclicos:
     \begin{enumerate}
       \item \chemfig{[:-90]*4(----)}
       \item \chemfig{[:-120]*6(----=-)}
@@ -1079,8 +1105,16 @@
     \end{enumerate}
   \end{exercise}
 
-  \begin{solution}[print=false]
-    Todavía sin solución
+  \begin{solution}
+    \begin{enumerate}
+      \item Ciclobutano
+      \item Ciclohexeno
+      \item 1-etil-3-metilciclohexano
+      \item Ciclohexa-1,3-dieno
+      \item Isopropil-ciclohexano
+      \item 2-ciclohexil-4,4-dimetilhexano
+      \item 3-ciclopentilbut-1-eno
+    \end{enumerate}
   \end{solution}
 
 
@@ -1091,7 +1125,7 @@
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p132, e13},
     ]
-    (13) Formula los siguientes hidrocarburos aromáticos:
+    (132.13) Formula los siguientes hidrocarburos aromáticos:
     \begin{enumerate}
       \item Metilbenceno (tolueno)
       \item Etenilbenceno
@@ -1104,8 +1138,17 @@
     \end{enumerate}
   \end{exercise}
 
-  \begin{solution}[print=false]
-    Todavía sin solución
+  \begin{solution}
+    \begin{enumerate}
+      \item \chemfig{[:-120]**6(-----(-CH_3)-)}
+      \item \chemfig{[:-120]**6(-----(-CH=[0]CH_2)-)}
+      \item \chemfig{CH_3-CH_2-**6(--(-CH_2-[0]CH_3)----)}
+      \item \chemfig{CH_3-CH_2-CH_2-CH_2-**6(---(-CH_2(-[2]CH_3)-[6]CH_3)---)}
+      \item \chemfig{CH_3-**6(---(-CH_2-CH_2-CH_3)---)}
+      \item \chemfig{CH_3-CH_2-CH(-[6]**6(------))-CH_2-CH(-[6]CH_3)-CH_2-CH_3}
+      \item \chemfig{CH_2=CH-CH_2-CH(-[6]**6(------))-CH_3}
+      \item \chemfig{CH_3-CH(-[6]**6(------))-CH(-[2]CH_3)-CH(-[6]**6(------))-CH_2-CH_3}
+    \end{enumerate}
   \end{solution}
 
 
@@ -1116,7 +1159,7 @@
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p133, e15},
     ]
-    (15) Formula los siguientes derivados halogenados:
+    (133.15) Formula los siguientes derivados halogenados:
     \begin{enumerate}
       \item 2-cloropropano
       \item 1,3-dibromobenceno
@@ -1131,8 +1174,19 @@
     \end{enumerate}
   \end{exercise}
 
-  \begin{solution}[print=false]
-    Todavía sin solución
+  \begin{solution}
+    \begin{enumerate}
+      \item \ch{CH3-CHCl-CH3}
+      \item \chemfig{[:-90]**6(-(-Br)--(-Br)---)}
+      \item \ch{F2HC-CHF2}
+      \item \chemfig{Cl-*6(---(-Cl)---)}
+      \item \ch{CH+C-CH2-CHBr-CH3}
+      \item \ch{CH3-CH=CHF-CH2-CH(CH3)-CH3}
+      \item \chemfig{CH_2Br-CH=CH-CHBr-CH_2-CH(-[6]*5(-----))-CH_2-CH_3}
+      \item \chemfig{CH~C-CH(-[6]**6(------))-CH(-[6]I)-CH_2-[6]**6(------)}
+      \item \ch{CH2=CH-CH2-CH2Cl}
+      \item \chemfig{Br-[6]**6(-----(-Br)-)}
+    \end{enumerate}
   \end{solution}
 
 
@@ -1143,7 +1197,7 @@
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p135, e17},
     ]
-    (17) Formula los siguientes alcoholes y éteres:
+    (135.17) Formula los siguientes alcoholes y éteres:
     \begin{enumerate}
       \item 3-metilpentan-1-ol
       \item Butano-1,2,3-triol
@@ -1172,7 +1226,7 @@
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p135, e18},
     ]
-    (18) Nombra los siguientes alcoholes y éteres:
+    (135.18) Nombra los siguientes alcoholes y éteres:
     \begin{enumerate}
       \item \ch{CH3OH}
       \item \chemfig{CH_2OH-CH_2-CH(-[6]CH_2-[::0]CH_3)-CH=CH_2}
@@ -1197,7 +1251,7 @@
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p136, e19},
     ]
-    (19) Formula los siguientes aldehídos y cetonas:
+    (136.19) Formula los siguientes aldehídos y cetonas:
     \begin{enumerate}
       \item Etanal (acetaldehído)
       \item Benzaldehído
@@ -1228,7 +1282,7 @@
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p136, e20},
     ]
-    (20) Nombra los siguientes aldehídos y cetonas:
+    (136.20) Nombra los siguientes aldehídos y cetonas:
 
     \begin{enumerate}
       \item \ch{HCHO}
@@ -1258,7 +1312,7 @@
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p138, e21},
     ]
-    (21) Formula los siguientes ácidos y ésteres:
+    (138.21) Formula los siguientes ácidos y ésteres:
     \begin{enumerate}
       \item Ácido etanoico (ácido acético)
       \item Ácido 3-metilhexanoico
@@ -1289,7 +1343,7 @@
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p140, e23},
     ]
-    (23) Formula los siguientes compuest os con funciones nitrogenadas:
+    (140.23) Formula los siguientes compuest os con funciones nitrogenadas:
     \begin{enumerate}
       \item Isopropilamina
       \item Pentan-3-amina
@@ -1318,7 +1372,7 @@
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p140, e24},
     ]
-    (24) Nombra los siguientes compuestos nitrogenados:
+    (140.24) Nombra los siguientes compuestos nitrogenados:
     \begin{enumerate}
       \item \chemfig{CH_3-CH(-[6]NH_2)-CH_2-CH_3}
       \item \ch{CH3-CH2-CH2-NH2}
@@ -1343,7 +1397,7 @@
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p140, e25},
     ]
-    (25) Formula los siguientes compuestos orgánicos:
+    (140.25) Formula los siguientes compuestos orgánicos:
     \begin{enumerate}
       \item 2,2-dimetilpentano
       \item Hepta-1,5-dieno
@@ -1376,7 +1430,7 @@
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p143, e27},
     ]
-    (27) Formula y nombra:
+    (143.27) Formula y nombra:
     \begin{enumerate}
       \item Dos hidrocarburos alifáticos que presenten isomería de cadena.
       \item Dos aminas con isomería de posición.
@@ -1396,7 +1450,7 @@
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p143, e28},
     ]
-    (28) Escribe y nombra:
+    (143.28) Escribe y nombra:
     \begin{enumerate}
       \item Todos los isómeros de cadena de fórmula \ch{C5H12}.
       \item Cuatro isómeros de función de fórmula \ch{C4H80}.
@@ -1416,7 +1470,7 @@
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p143, e29},
     ]
-    (29) Dados los siguientes compuestos, formúlalos y justifica cuáles
+    (143.29) Dados los siguientes compuestos, formúlalos y justifica cuáles
     de ellos presentan isomería geométrica y cuáles isomería
     óptica:
     \begin{enumerate}
@@ -1436,16 +1490,16 @@
 
 
 
-  \subsection{Problemas propuestos}
+  \subsection*{Problemas propuestos}
 
-  \subsubsection{Grupos funcionales y series homólogas}
+  \subsubsection*{Grupos funcionales y series homólogas}
 
   \begin{exercise}[
       tags    = {},
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p150, e7},
     ]
-    (7) Escribe el número de carbonos y el grupo funcional al que
+    (150.7) Escribe el número de carbonos y el grupo funcional al que
     corresponden los siguientes compuestos:
     \begin{enumerate}
       \item Octano
@@ -1473,7 +1527,7 @@
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p150, e8},
     ]
-    (8) Indica si la estructura de cada pareja representa el mismo
+    (150.8) Indica si la estructura de cada pareja representa el mismo
     compuesto o compuestos diferentes, identificando los grupos
     funcionales presentes:
     \begin{enumerate}
@@ -1495,7 +1549,7 @@
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p150, e9},
     ]
-    (9) Contesta a cada uno de los siguientes apartados referidos a
+    (150.9) Contesta a cada uno de los siguientes apartados referidos a
     compuestos de cadena abierta:
     \begin{enumerate}
       \item ¿Qué grupos funcionales pueden tener los compuestos de
@@ -1516,7 +1570,7 @@
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p150, e10},
     ]
-    (10) Nombra y formula los siguientes compuestos orgánicos:
+    (150.10) Nombra y formula los siguientes compuestos orgánicos:
     \begin{enumerate}
       \item \ch{CH3-CH2-COOH}
       \item \ch{CH3-CH2-C+CH}
@@ -1543,7 +1597,7 @@
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p150, e13},
     ]
-    (13) Formula las siguientes especies químicas:
+    (150.13) Formula las siguientes especies químicas:
     \begin{enumerate}
       \item 1-bromo-2,2-diclorobutano
       \item Trimetilamina
@@ -1568,7 +1622,7 @@
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p151, e14},
     ]
-    (14) Nombra las siguientes especies químicas:
+    (151.14) Nombra las siguientes especies químicas:
     \begin{enumerate}
       \item \ch{H2C=CH-CH=CH-CHO}
       \item \ch{H3C-CO-CO-CH3}
@@ -1592,7 +1646,7 @@
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p151, e15},
     ]
-    (15) Nombra y/o formula los siguientes compuestos:
+    (151.15) Nombra y/o formula los siguientes compuestos:
     \begin{enumerate}
       \item \ch{CHCl3}
       \item \ch{CH3-CH2-CHO}
@@ -1617,7 +1671,7 @@
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p151, e16},
     ]
-    (16) Formula o nombra, según corresponda:
+    (151.16) Formula o nombra, según corresponda:
     \begin{enumerate}
       \item 1-etil-3-metilbenceno
       \item 2-metilpropan-2-ol
@@ -1642,7 +1696,7 @@
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p151, e20},
     ]
-    (20) Formula o nombra los siguientes compuestos:
+    (151.20) Formula o nombra los siguientes compuestos:
     \begin{enumerate}
       \item Cromato de cobre(II)
       \item Hidruro de magnesio
@@ -1669,7 +1723,7 @@
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p151, e21},
     ]
-    (21) Formula o nombra los siguientes compuestos orgánicos:
+    (151.21) Formula o nombra los siguientes compuestos orgánicos:
     \begin{enumerate}
       \item 3-etil-2-metilhexano
       \item 1-bromopent-2-ino
@@ -1691,14 +1745,14 @@
 
 
 
-  \subsubsection{Isomería estructural y espacial}
+  \subsubsection*{Isomería estructural y espacial}
 
   \begin{exercise}[
       tags    = {},
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p152, e23},
     ]
-    (23) Formula los siguientes compuestos orgánicos:
+    (152.23) Formula los siguientes compuestos orgánicos:
     \begin{enumerate}
       \item But-3-en-2-ona
       \item Buta-1,3-dien-2-ol
@@ -1719,7 +1773,7 @@
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p152, e24},
     ]
-    (24) Escribe y nombra cinco isómeros de cadena de fórmula molecular \ch{C6H14}.
+    (152.24) Escribe y nombra cinco isómeros de cadena de fórmula molecular \ch{C6H14}.
   \end{exercise}
 
   \begin{solution}[print=false]
@@ -1734,7 +1788,7 @@
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p152, e25},
     ]
-    (25) Escribe y nombra cuatro isómeros de función de fórmula molecular \ch{C4H8O}.
+    (152.25) Escribe y nombra cuatro isómeros de función de fórmula molecular \ch{C4H8O}.
   \end{exercise}
 
   \begin{solution}[print=false]
@@ -1749,7 +1803,7 @@
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p152, e28},
     ]
-    (28) Escribe y nombra todos los isómeros estructurales de fórmula \ch{C5H10}
+    (152.28) Escribe y nombra todos los isómeros estructurales de fórmula \ch{C5H10}
   \end{exercise}
 
   \begin{solution}[print=false]
@@ -1764,7 +1818,7 @@
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p152, e30},
     ]
-    (30) Formula y nombra:
+    (152.30) Formula y nombra:
     \begin{enumerate}
       \item Dos isómeros de posición de fórmula \ch{C3H8O}
       \item Dos isómeros de función de fórmula \ch{C3H8O}
@@ -1785,7 +1839,7 @@
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p152, e31},
     ]
-    (31) Un derivado halogenado etilénico que presenta isomería cis-trans está formado en un 22,4\% de C, un 2,8\% de H y un 74,8\% de bromo. Además, a \SI{130}{\celsius} y \SI{1}{atm} de presión, una muestra de \SI{12,9}{\gram} ocupa un volumen de \SI{2}{\liter}. Halla su fórmula molecular y escribe los posibles isómeros.
+    (152.31) Un derivado halogenado etilénico que presenta isomería cis-trans está formado en un 22,4\% de C, un 2,8\% de H y un 74,8\% de bromo. Además, a \SI{130}{\celsius} y \SI{1}{atm} de presión, una muestra de \SI{12,9}{\gram} ocupa un volumen de \SI{2}{\liter}. Halla su fórmula molecular y escribe los posibles isómeros.
   \end{exercise}
 
   \begin{solution}
@@ -1800,7 +1854,7 @@
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p152, e32},
     ]
-    (32) Un alcohol monoclorado está formado en un 38,1\% de C,
+    (152.32) Un alcohol monoclorado está formado en un 38,1\% de C,
     un 7,4\% de H, un 37,6\% de Cl y el resto es oxígeno. Escribe
     su fórmula semidesarrollada sabiendo que tiene un carbono
     asimétrico y que su fórmula molecular y su fórmula empírica
@@ -1819,14 +1873,13 @@
       topics  = {química, química orgánica, orgánica},
       source  = {FQ 1B MGH 2016, p152, e33},
     ]
-    (33) Un hidrocarburo monoinsaturado tiene un 87,8\% de carbono.
+    (152.33) Un hidrocarburo monoinsaturado tiene un 87,8\% de carbono.
     Si su densidad en condiciones normales es \SI{3,66}{\gram\per\liter}, determina sus fórmulas empírica y molecular.
   \end{exercise}
 
   \begin{solution}
     Formula empírica: \ch{C3H5}; Fórmula molecular: \ch{C6H10}.
   \end{solution}
-\end{multicols*}
 
 
 
@@ -1834,17 +1887,16 @@
 
 
 
-\begin{multicols*}{2}[
-  \section{BLOQUE 4. Transformaciones energéticas y espontaneidad (tema 6 del libro)}
-  ]
+\section{Bloque 4. Transformaciones energéticas y espontaneidad (tema 6 del libro)}
 
+\subsection*{Ejercicios del tema}
 
   \begin{exercise}[
       tags    = {},
       topics  = {química, termodinámica, termoquímica},
       source  = {FQ 1B MGH 2016, p159, e5},
     ]
-    (5) Determina la variación de energía interna que sufre un sistema
+    (159.5) Determina la variación de energía interna que sufre un sistema
     cuando:
     \begin{enumerate}
       \item Realiza un trabajo de \SI{600}{\joule} y cede \SI{40}{cal} al entorno.
@@ -1866,7 +1918,7 @@
       topics  = {química, termodinámica, termoquímica},
       source  = {FQ 1B MGH 2016, p165, e13},
     ]
-    (13) La descomposición térmica del clorato de potasio (\ch{KClO3})
+    (165.13) La descomposición térmica del clorato de potasio (\ch{KClO3})
     origina cloruro de potasio (\ch{KCl}) y oxígeno molecular. Calcula
     el calor que se desprende cuando se obtienen \SI{150}{\liter} de
     oxígeno medidos a \SI{25}{\celsius} y \SI{1}{atm} de presión.
@@ -1888,7 +1940,7 @@
       topics  = {química, termodinámica, termoquímica},
       source  = {FQ 1B MGH 2016, p165, e6},
     ]
-    (14) Las entalpías estándar de formación del propano (g),
+    (165.14) Las entalpías estándar de formación del propano (g),
     dióxido de carbono (g) y agua (l), son respectivamente:
     \SIlist{-103,8;-393,5;-285,8}{kJ/mol}. Calcula:
     \begin{enumerate}
@@ -1912,7 +1964,7 @@
       topics  = {química, termodinámica, termoquímica},
       source  = {FQ 1B MGH 2016, p165, e15},
     ]
-    (15) En la reacción del oxígeno molecular con el cobre para formar
+    (165.15) En la reacción del oxígeno molecular con el cobre para formar
     óxido de cobre(II) se desprenden \SI{2.30}{kJ} por cada gramo de
     cobre que reacciona, a \SI{298}{\kelvin} y \SI{760}{\mmHg}. Calcula:
     \begin{enumerate}
@@ -1936,7 +1988,7 @@
       topics  = {química, termodinámica, termoquímica},
       source  = {FQ 1B MGH 2016, p165, e16},
     ]
-    (16) En la combustión completa de \SI{1.00}{\gram} de etanol (\ch{CH3-CH2OH}) se desprenden \SI{29.8}{kJ} y en la combustión de \SI{1.00}{\gram}
+    (165.16) En la combustión completa de \SI{1.00}{\gram} de etanol (\ch{CH3-CH2OH}) se desprenden \SI{29.8}{kJ} y en la combustión de \SI{1.00}{\gram}
     de ácido etanoico (\ch{CH3-COOH}) se desprenden \SI{14.5}{kJ}.
     Determina numéricamente:
     \begin{enumerate}
@@ -1962,7 +2014,7 @@
       topics  = {química, termodinámica, termoquímica},
       source  = {FQ 1B MGH 2016, p168, e24},
     ]
-    (24) Calcula la entalpía de la reacción:
+    (168.24) Calcula la entalpía de la reacción:
     \ch{CH4_{(g)} + Cl2_{(g)} -> CH3Cl_{(g)} + HCl_{(g)}} a partir de:
     \begin{enumerate}
       \item Las energías de enlace.
@@ -1972,9 +2024,12 @@
     \begin{gexdatos}
       \begin{itemize}
         \item \textit{Energías de enlace (\si{kJ/mol})}:
+
         \( \ch{C-H} = 414 \); \( \ch{Cl-Cl} = 244 \); \( \ch{C-Cl} = 330 \); \( \ch{H-Cl} = 430 \).
+
         \item \textit{Entalpías de formación (\si{kJ/mol})}:
-        \( (\ch{CH4}) = -74,9 \); \( (\ch{CH3Cl}) = -82,0 \); \( \Delta H^0_f\,(\ch{HCl}) = -92,3 \).
+
+        \( \Delta H^0_f\,(\ch{CH4}) = -74,9 \); \( \Delta H^0_f\,(\ch{CH3Cl}) = -82,0 \); \( \Delta H^0_f\,(\ch{HCl}) = -92,3 \).
       \end{itemize}
     \end{gexdatos}
 
@@ -1994,8 +2049,8 @@
       topics  = {química, termodinámica, termoquímica},
       source  = {FQ 1B MGH 2016, p168, e25},
     ]
-    (25) El eteno se hidrogena para dar etano, según:
-    \ch{CH2=CH2_{(g)} + H2_{(g)} -> CH3-CH3_{(g)}} \( \Delta H^0_R = \SI{-130}{kJ} \)
+    (168.25) El eteno se hidrogena para dar etano, según:
+    \[ \ch{CH2=CH2_{(g)} + H2_{(g)} -> CH3-CH3_{(g)}} \quad \Delta H^0_R = \SI{-130}{kJ} \]
     Calcula la energía del enlace \ch{C=C}, si las energías de los
     enlaces \ch{C-C}, \ch{H-H} y \ch{C-H} son, respectivamente, \SIlist{347;436;414}{kJ/mol}.
   \end{exercise}
@@ -2013,7 +2068,7 @@
       topics  = {química, termodinámica, termoquímica},
       source  = {FQ 1B MGH 2016, p168, e26},
     ]
-    (26) A partir de los siguientes datos:
+    (168.26) A partir de los siguientes datos:
     \begin{itemize}
       \item Entalpía estándar de sublimación del \( \ch{C_{(s)}} = \SI{717}{kJ/mol} \).
       \item Entalpía de formación del \( \ch{CH3-CH3_{(g)}} = \SI{-85,0}{kJ/mol} \).
@@ -2040,18 +2095,17 @@
 
 
 
-  \subsection{Problemas resueltos}
+  \subsection*{Problemas resueltos}
 
-  \subsubsection{Entalpias de formación, de reacción y de combustión}
+  \subsubsection*{Entalpias de formación, de reacción y de combustión}
 
   \begin{exercise}[
       tags    = {},
       topics  = {química, termodinámica, termoquímica},
       source  = {FQ 1B MGH 2016, p179, e4},
     ]
-    (4) El sulfuro de carbono reacciona con el oxígeno según:
+    (179.4) El sulfuro de carbono reacciona con el oxígeno según:
      \[ \ch{CS2_{(l)} + 3 O2_{(g)} -> CO2_{(g)} + 2 SO2_{(g)}} \quad \Delta H_R = \SI{-1072}{kJ} \]
-
     \begin{enumerate}
       \item Calcula la entalpía de formación del \ch{CS2}
       \item Halla el volumen de \ch{SO2} emitido a la atmósfera, a \SI{1}{atm} y \SI{25}{\celsius}, cuando se ha liberado una energía de \SI{6000}{kJ}
@@ -2077,7 +2131,7 @@
       topics  = {química, termodinámica, termoquímica},
       source  = {FQ 1B MGH 2016, p179, e5},
     ]
-    (5) El dióxido de manganeso se reduce a manganeso metal reaccionando con el aluminio según:
+    (179.5) El dióxido de manganeso se reduce a manganeso metal reaccionando con el aluminio según:
     \[ \ch{MnO2_{(s)} + Al_{(s)} -> Al2O3_{(s)} + Mn_{(s)}} \]
 
     \begin{enumerate}
@@ -2104,9 +2158,8 @@
       topics  = {química, termodinámica, termoquímica},
       source  = {FQ 1B MGH 2016, p179, e6},
     ]
-    (6) Durante la fotosíntesis, las plantas verdes sintetizan la glucosa según la siguiente reacción:
+    (179.6) Durante la fotosíntesis, las plantas verdes sintetizan la glucosa según la siguiente reacción:
     \[ \ch{6 CO2_{(g)} + 6 H2O_{(l)} -> C6H12O6_{(s)} + 6 O2_{(g)}} \quad \Delta H_R = \SI{2815}{kJ/mol} \]
-
     \begin{enumerate}
       \item ¿Cuál es la entalpía de formación de la glucosa?
       \item ¿Qué energía se requiere para obtener \SI{50.0}{\gram} de glucosa?
@@ -2134,7 +2187,7 @@
       topics  = {química, termodinámica, termoquímica},
       source  = {FQ 1B MGH 2016, p179, e7},
     ]
-    (7) Las entalpías de combustión del etano y del eteno son
+    (179.7) Las entalpías de combustión del etano y del eteno son
     \SIlist{-1560;1410}{kJ/mol}, respectivamente. Determina:
     \begin{enumerate}
       \item El valor de \( \Delta H^0_f \) para el etano y el eteno.
@@ -2163,7 +2216,7 @@
       topics  = {química, termodinámica, termoquímica},
       source  = {FQ 1B MGH 2016, p179, e8},
     ]
-    (8) La gasolina es una mezcla compleja de hidrocarburos que
+    (179.8) La gasolina es una mezcla compleja de hidrocarburos que
     vamos a considerar como si estuviera formada únicamente
     por hidrocarburos saturados de fórmula (\ch{C8H18})
     \begin{enumerate}
@@ -2194,7 +2247,7 @@
       topics  = {química, termodinámica, termoquímica},
       source  = {FQ 1B MGH 2016, p179, e10},
     ]
-    (10) Se quema benceno (\ch{C6H6}) en exceso de oxígeno, liberando energía.
+    (179.10) Se quema benceno (\ch{C6H6}) en exceso de oxígeno, liberando energía.
 
     \begin{enumerate}
       \item Formula la reacción de combustión del benceno.
@@ -2209,8 +2262,7 @@
       \( \ch{C6H6_{(l)}}  = +49 \);
       \( \ch{C6H6_{(v)}}  = +83 \);
       \( \ch{H2O_{(l)}}   = -286 \);
-      \( \ch{CO2_{(g)}}   = -393 \)
-
+      \( \ch{CO2_{(g)}}   = -393 \).
       Densidad \( \textrm{benceno}_{(l)} = \SI{0.879}{\gram\per\cubic\centi\meter} \)
     \end{gexdatos}
   \end{exercise}
@@ -2225,14 +2277,14 @@
 
 
 
-  \subsubsection{Ley de Hess}
+  \subsubsection*{Ley de Hess}
 
   \begin{exercise}[
       tags    = {},
       topics  = {química, termodinámica, termoquímica},
       source  = {FQ 1B MGH 2016, p180, e11},
     ]
-    (11) El motor de una máquina cortacésped funciona con una gasolina que podemos considerar de composición única octano (\ch{C8H18}). Calcula:
+    (180.11) El motor de una máquina cortacésped funciona con una gasolina que podemos considerar de composición única octano (\ch{C8H18}). Calcula:
 
     \begin{enumerate}
       \item La entalpía estándar de combustión del octano, aplicando la ley de Hess.
@@ -2261,7 +2313,7 @@
       topics  = {química, termodinámica, termoquímica},
       source  = {FQ 1B MGH 2016, p180, e12},
     ]
-    (12) Sabiendo que las entalpías estándar de combustión del
+    (180.12) Sabiendo que las entalpías estándar de combustión del
     hexano (l), del carbono (s) y del hidrógeno (g) son respectivamente:
     \SIlist{-4192;-393,5;-285,8}{kJ/mol}, halla:
 
@@ -2286,7 +2338,7 @@
       topics  = {química, termodinámica, termoquímica},
       source  = {FQ 1B MGH 2016, p180, e14},
     ]
-    (14) El calor desprendido en el proceso de obtención del benceno a partir de etino es:
+    (180.14) El calor desprendido en el proceso de obtención del benceno a partir de etino es:
 
     \ch{3 C2H2_{(g)} -> C6H6_{(l)}} \( \Delta H^0_R = \SI{-631}{kJ} \)
 
@@ -2311,14 +2363,14 @@
 
 
 
-  \subsubsection{Entalpías de enlace}
+  \subsubsection*{Entalpías de enlace}
 
   \begin{exercise}[
       tags    = {},
       topics  = {química, termodinámica, termoquímica},
       source  = {FQ 1B MGH 2016, p180, e18},
     ]
-    (18) Calcula la variación de entalpía estándar de la hidrogenación del etino a etano:
+    (180.18) Calcula la variación de entalpía estándar de la hidrogenación del etino a etano:
 
     \begin{enumerate}
       \item A partir de las energías de enlace.
@@ -2344,14 +2396,14 @@
 
 
 
-  \subsubsection{Entropía y espontaneidad}
+  \subsubsection*{Entropía y espontaneidad}
 
   \begin{exercise}[
       tags    = {},
       topics  = {química, termodinámica, termoquímica},
       source  = {FQ 1B MGH 2016, p181, e20},
     ]
-    (20) Dadas las siguientes ecuaciones termoquímicas:
+    (181.20) Dadas las siguientes ecuaciones termoquímicas:
     \[ \ch{2 H2O2_{(l)} -> 2 H2O_{(l)} + O2_{(g)}}\quad\Delta H = \SI{-196}{kJ} \]
     \[ \ch{N2_{(g)} + 3 H2_{(g)} -> 2 NH3 _{(g)}}\quad\Delta H = \SI{-92.4}{kJ} \]
 
@@ -2362,7 +2414,7 @@
     \end{enumerate}
   \end{exercise}
 
-  \begin{solution}[print=false]
+  \begin{solution}
     \begin{enumerate}
       \item Por \textit{entropía} se entiende la magnitud física que nos mide el grado de desorden de un sistema; es decir, a mayor desorden de las partículas del sistema, mayor entropía. Por lo tanto:
 
@@ -2387,9 +2439,8 @@
       topics  = {química, termodinámica, termoquímica},
       source  = {FQ 1B MGH 2016, p181, e21},
     ]
-    (21) Dada la reacción: \ch{N2O_{(g)} -> N2_{(g)} + 1/2 O2_{(g)}}
+    (181.21) Dada la reacción: \ch{N2O_{(g)} -> N2_{(g)} + 1/2 O2_{(g)}}
     siendo \( \Delta H^0 = \SI{43.0}{kJ/mol} \) y \( \Delta S^0 = \SI{80.0}{\joule\per\mole\per\kelvin} \)
-
     \begin{enumerate}
       \item Justifica el signo positivo de la variación de entropía.
       \item ¿Será espontánea a \SI{25}{\celsius}? ¿A qué temperatura estará en
@@ -2398,9 +2449,9 @@
   \end{exercise}
 
   \begin{solution}
-    \begin{enumerate*}
+    \begin{enumerate}
       \item Aumentan los moles de sustancias gaseosas; \item \( \Delta G^0_R = \SI{19.5}{kJ} \) (no es espontánea); \( T = \SI{538}{\kelvin} \)
-    \end{enumerate*}
+    \end{enumerate}
   \end{solution}
 
 
@@ -2411,12 +2462,11 @@
       topics  = {química, termodinámica, termoquímica},
       source  = {FQ 1B MGH 2016, p181, e23},
     ]
-    (23) Se pretende obtener etileno (eteno) a partir de grafito e
+    (181.23) Se pretende obtener etileno (eteno) a partir de grafito e
     hidrógeno, a \SI{25}{\celsius} y \SI{1}{atm}, según la reacción:
     \[  \ch{2 C_{(s)} + 2 H2_{(g)} -> C2H4_{(g)}} \]
 
     Calcula:
-
     \begin{enumerate}
       \item La entalpía de reacción en condiciones estándar. ¿La reacción es endotérmica o exotérmica?
       \item La variación de energía libre de Gibbs en condiciones
@@ -2435,10 +2485,10 @@
   \end{exercise}
 
   \begin{solution}
-    \begin{enumerate*}
+    \begin{enumerate}
       \item \( \Delta H^0_R = \SI{+52.5}{kJ} \) (endotérmica)
       \item \( \Delta G^0_R = \SI{+68.4}{kJ} \) (no es espontánea)
-    \end{enumerate*}
+    \end{enumerate}
   \end{solution}
 
 
@@ -2446,14 +2496,14 @@
 
 
 
-  \subsubsection{Aplica lo aprendido}
+  \subsubsection*{Aplica lo aprendido}
 
   \begin{exercise}[
       tags    = {},
       topics  = {química, termodinámica, termoquímica},
       source  = {FQ 1B MGH 2016, p182, e35},
     ]
-    (35) El acetileno o etino (\ch{C2H2}) se hidrogena para producir etano. Calcula a \SI{298}{\kelvin}:
+    (182.35) El acetileno o etino (\ch{C2H2}) se hidrogena para producir etano. Calcula a \SI{298}{\kelvin}:
 
     \begin{enumerate}
       \item La entalpía estándar de reacción.
@@ -2462,24 +2512,25 @@
       \item La entropía molar del hidrógeno.
     \end{enumerate}
 
-    \begin{tabular}{rccc}
-      Comp. & \( \Delta H^0_f \) & \( \Delta G^0_f \) & \( S^0 \) \\
-         & (\si{\kilo\joule\per\mole}) & (\si{\kilo\joule\per\mole}) & (\si{\kilo\joule\per\mole\kelvin}) \\
-      \toprule
-      \ch{C2H2} & 227 & 209 & 200 \\
-      \ch{C2H6} & -85 & -33 & 230 \\
-      \bottomrule
-    \end{tabular}
+    \begin{gexdatos}
+      \begin{tabular}{rccc}
+        Comp. & \( \Delta H^0_f \) & \( \Delta G^0_f \) & \( S^0 \) \\
+           & (\si{\kilo\joule\per\mole}) & (\si{\kilo\joule\per\mole}) & (\si{\joule\per\mole\kelvin}) \\
+        \toprule
+        \ch{C2H2} & 227 & 209 & 200 \\
+        \ch{C2H6} & -85 & -33 & 230 \\
+        \bottomrule
+      \end{tabular} 
+    \end{gexdatos}
   \end{exercise}
 
   \begin{solution}
-    \begin{enumerate*}
+    \begin{enumerate}
       \item \( \Delta H^0_R = \SI{-312}{kJ} \);
       \item \( \Delta G^0_R = \SI{-242}{kJ} \);
       \item \( \Delta S^0_R = \SI{-235}{J/K} \);
       \item \( S^0_{\ch{H2}}  = \SI{132}{\joule\per\mole\per\kelvin} \)
-    \end{enumerate*}
+    \end{enumerate}
   \end{solution}
-\end{multicols*}
 
 \end{document}

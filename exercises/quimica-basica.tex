@@ -1,0 +1,972 @@
+\documentclass[10pt]{article}
+\title{Ejercicios Química Básica}
+\author{Gonzalo Esteban}
+
+\usepackage{polyglossia}
+    \setdefaultlanguage{spanish}
+\usepackage{fontspec}
+    \setmainfont{Fira Sans}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{unicode-math}
+  \unimathsetup{
+    math-style  = ISO,
+    bold-style  = ISO
+  }
+  \setmathfont{Fira Math}
+\usepackage{multicol}
+  \setlength{\columnsep}{1cm}
+  % \setcounter{tracingmulticols}{4}
+\usepackage[top=3cm, bottom=3cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage{xsim}
+% Configuración general de xsim
+  \loadxsimstyle{layouts}
+  \xsimsetup{
+  path                  = {xsim-files},
+  exercise/template     = {runin},
+  exercise/name         = {},
+  exercise/print        = {false},
+  solution/template     = {runin},
+  solution/name         = {S},
+  solution/print        = {true},
+  exercise/within       = section,
+  exercise/the-counter  = \thesection.\arabic{exercise}
+  }
+  \DeclareExerciseProperty{source}
+\usepackage{siunitx}
+% Exponent symbol options: \times for the typical cross
+  \sisetup{
+    per-mode                = symbol,
+    output-decimal-marker   = {,},
+    group-digits            = decimal,
+    exponent-product        = \cdot,
+    text-celsius            = ^^b0\kern -\scriptspace C,  % soluciona problemas con el símbolo de grados
+    math-celsius            = ^^b0\kern -\scriptspace C,
+    list-final-separator    = { y },
+    list-pair-separator     = { y },
+    range-phrase            = { \translate{to (numerical range)} },
+    qualifier-mode          = brackets,
+  }
+\usepackage[inline]{enumitem}
+% Configuración general de enumitem
+% Establece la configuración por defecto en a), b), c)
+  \setlist[enumerate,1]{
+    label   = \alph*),
+    itemsep = 0.3\itemsep,
+  }
+\usepackage{chemformula}
+\usepackage{chemfig}
+  \setchemfig{atom sep=2em}
+\usepackage{booktabs}
+\usepackage{icomma}    % resuelve el problema de espaciado excesivo en la coma decimal
+\usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \lhead{\textbf{Química básica}}
+  \chead{}
+  \rhead{1 BACH}
+  \lfoot{}
+  \cfoot{\thepage}
+  \rfoot{}
+  \renewcommand{\headrulewidth}{0.2pt}
+  \renewcommand{\footrulewidth}{0pt}
+
+
+
+
+  \newenvironment{gexdatos}{
+      \vspace{2pt}
+      \noindent\textit{Datos:}
+    }{\vspace{5pt}}
+
+
+
+
+
+
+\begin{document}
+
+\maketitle
+
+% 1. Leyes ponderales
+\begin{multicols}{2}[
+  \section{Leyes ponderales}
+  ]
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B SAN 2015, p42, e24},
+    ]
+    El \ch{Mg} es un metal que se utiliza en la fabricación
+    de fuegos artificiales, pues al arder produce fuertes
+    destellos. En el proceso se forma \ch{MgO}, un compuesto
+    en el que se combinan \SI{2.21}{\gram} de \ch{Mg} por cada \SI{1.45}{\gram} de \ch{O}. En un cohete se han colocado \SI{7}{\gram} de cinta de \ch{Mg}, ¿qué cantidad de \ch{MgO} se formará cuando el cohete arda?
+  \end{exercise}
+
+  \begin{solution}
+    \SI{11.6}{\gram}
+  \end{solution}
+
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B OXF 2015, p42, e23},
+    ]
+    Se ha comprobado experimentalmente que \SI{4.7}{g} de elemento A reaccionan por completo con \SI{12.8}{\gram} del elemento B para dar \SI{17.5}{\gram} de un compuesto. ¿Qué cantidad de compuesto se formará si reaccionan \SI{4.7}{\gram} de A con \SI{11.5}{\gram} de B?
+  \end{exercise}
+
+  \begin{solution}
+    \SI{15.7}{\gram}
+  \end{solution}
+
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B SAN 2015, p43, e34},
+    ]
+    Tenemos \SI{3.999e22}{átomos} de un metal cuya masa es de \SI{13.32}{\gram}. Consulta en la tabla periódica para averiguar
+    qué metal es.
+
+    \begin{gexdatos}
+      \( N_A = \SI{6.022e23}{partículas}\)
+    \end{gexdatos}
+  \end{exercise}
+
+  \begin{solution}
+    PENDIENTE % FIXME pendiente
+  \end{solution}
+
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B OXF 2015, p43, e31},
+    ]
+    ¿Cuál de las siguientes muestras contiene mayor número de átomos?
+    \begin{enumerate}
+      \item \SI{10}{\gram} de \ch{Na};
+      \item \SI{10}{\gram} de \ch{CO2};
+      \item \SI{2}{\mole} de \ch{NH3};
+    \end{enumerate}
+  \end{exercise}
+
+  \begin{solution}
+    PENDIENTE % FIXME pendiente
+  \end{solution}
+
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B OXF 2015, p43, e34},
+    ]
+    Sabiendo que la densidad del \ch{H2O} es \SI{1}{\gram\per\cubic\centi\meter}, indica cuántos moles son:
+    \begin{enumerate}
+      \item \SI{3.42}{\gram} de \ch{H2O};
+      \item \SI{10}{\cubic\centi\meter} de \ch{H2O};
+      \item \SI{1.82e23}{moléculas} de \ch{H2O};
+    \end{enumerate}
+  \end{exercise}
+
+  \begin{solution}
+    \begin{enumerate*}
+      \item \SI{0.19}{\mole};
+      \item \SI{0.56}{\mole};
+      \item \SI{0.3}{\mole}.
+    \end{enumerate*}
+  \end{solution}
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B SAN 2015, p43, e37},
+    ]
+    La urea es un compuesto de fórmula \ch{CO(NH2)2}. Si tenemos \SI{5e24}{moléculas} de urea:
+    \begin{enumerate}
+      \item ¿Cuántos gramos de urea tenemos?
+      \item ¿Cuántos moles de oxígeno?
+      \item ¿Cuántos gramos de nitrógeno?
+      \item ¿Cuántos átomos de hidrógeno?
+    \end{enumerate}
+
+    \begin{gexdatos}
+      \( M(\ch{H}) = \SI{1.008}{\gram\per\mole} \),
+      \( M(\ch{C}) = \SI{12.00}{\gram\per\mole} \),
+      \( M(\ch{N}) = \SI{14.01}{\gram\per\mole} \),
+      \( M(\ch{O}) = \SI{16.00}{\gram\per\mole} \),
+      \( N_A = \SI{6.022e23}{partículas}\).
+    \end{gexdatos}
+  \end{exercise}
+
+  \begin{solution}
+    \begin{enumerate*}
+      \item \SI{498,6}{\gram}; \item \SI{8,3}{\mole}; \item \SI{232,6}{\gram}; \item \SI{2e25}{átomos}.
+    \end{enumerate*}
+  \end{solution}
+
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B SAN 2015, p43, e39},
+    ]
+    El aluminio se extrae de un mineral denominado bauxita,
+    cuyo componente fundamental es el óxido de aluminio,
+    \ch{Al2O3}. ¿Qué cantidad, en gramos, de óxido de aluminio
+    necesitamos para obtener \SI{0.5}{\kilo\gram} de aluminio?
+
+    \begin{gexdatos}
+      \( M(\ch{Al}) = \SI{26.98}{\gram\per\mole} \),
+      \( M(\ch{O}) = \SI{16.00}{\gram\per\mole} \),
+      \( N_A = \SI{6.022e23}{partículas}\).
+    \end{gexdatos}
+  \end{exercise}
+
+  \begin{solution}
+    \SI{944.8}{\gram}
+  \end{solution}
+
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B OXF 2015, p43, e34},
+    ]
+    Sabiendo que la densidad del \ch{H2O} es \SI{1}{\gram\per\cubic\centi\meter}, indica cuántos moles son:
+    \begin{enumerate}
+      \item \SI{3.42}{\gram} de \ch{H2O};
+      \item \SI{10}{\cubic\centi\meter} de \ch{H2O};
+      \item \SI{1.82e23}{moléculas} de \ch{H2O};
+    \end{enumerate}
+  \end{exercise}
+
+  \begin{solution}
+    \begin{enumerate*}
+      \item \SI{0.19}{\mole};
+      \item \SI{0.56}{\mole};
+      \item \SI{0.3}{\mole}.
+    \end{enumerate*}
+  \end{solution}
+
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B OXF 2015, p43, e37},
+    ]
+    En una muestra de fósforo hay \SI{e24}{átomos}. Calcula:
+    \begin{enumerate}
+      \item La cantidad, en mol, de átomos de fósforo que hay en la muestra.
+      \item La cantidad, en mol, de moléculas de fósforo que hay en la muestra (la molécula de fósforo es \ch{P4}).
+    \end{enumerate}
+  \end{exercise}
+
+  \begin{solution}
+    \begin{enumerate*}
+      \item \SI{1.66}{\mole};
+      \item \SI{0.415}{\mole};
+    \end{enumerate*}
+  \end{solution}
+\end{multicols}
+
+
+
+
+
+% 2. Composición y fórmulas
+\begin{multicols}{2}[
+  \section{Composición y fórmulas}
+  ]
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B OXF 2015, p43, e40},
+    ]
+    El azufre, el oxígeno y el cinc forman el sulfato de cinc en la siguiente relación S:O:Zn; 1:1,99:2,04. Calcula la composición centesimal.
+  \end{exercise}
+
+  \begin{solution}
+    19,9\% de \ch{S}; 39,6\% de \ch{O}; 40,5\% de \ch{Zn}.
+  \end{solution}
+
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B OXF 2015, p43, e41},
+    ]
+    Tenemos \SI{25}{\kilo\gram} de un abono nitrogenado de una riqueza en nitrato de potasio, \ch{KNO3}, del 60\%. Calcula la cantidad de nitrógeno, en \si{\kilo\gram}, que contiene el abono.
+  \end{exercise}
+
+  \begin{solution}
+    \SI{2.1}{\kilo\gram}
+  \end{solution}
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B SAN 2015, p43, e43},
+    ]
+    Determina la composición centesimal de la glucosa, \ch{C6H12O6}.
+
+    \begin{gexdatos}
+      \( M(\ch{H}) = \SI{1.008}{\gram\per\mole} \),
+      \( M(\ch{C}) = \SI{12.00}{\gram\per\mole} \),
+      \( M(\ch{O}) = \SI{16.00}{\gram\per\mole} \).
+    \end{gexdatos}
+  \end{exercise}
+
+  \begin{solution}
+    39.98\% de \ch{C}; 6.72\% de \ch{H}; 53.30\% de \ch{O}
+  \end{solution}
+
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B SAN 2015, p43, e44},
+    ]
+    En el carbonato de sodio, por cada gramo de carbono se combinan \SI{4}{\gram} de oxígeno y \SI{3.83}{\gram} de sodio. Calcula su composición centesimal.
+  \end{exercise}
+
+  \begin{solution}
+    11.3\% de \ch{C}; 45.3\% de \ch{O}; 43.4\% de \ch{Na}
+  \end{solution}
+
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B OXF 2015, p43, e42},
+    ]
+    Calcula la composición centesimal del sulfato de aluminio, \ch{Al2(SO4)3}.
+  \end{exercise}
+
+  \begin{solution}
+    15,8\% de \ch{Al}; 28,1\% de \ch{S}; 56,1\% de \ch{O}.
+  \end{solution}
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B OXF 2015, p43, e43},
+    ]
+    Calcula la composición centesimal del \ch{KNO3}.
+  \end{exercise}
+
+  \begin{solution}
+    38,6\% de \ch{K}; 13.9\% de \ch{N}; 47.5\% de \ch{O}.
+  \end{solution}
+
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B OXF 2015, p43, e45},
+    ]
+    Un óxido de vanadio que pesa \SI{3,53}{\gram} se redujo con dihidrógeno, y se obtuvo agua y otro óxido de vanadioque pesaba \SI{2,909}{\gram}. Este segundo óxido se volvió a reducir hasta obtener \SI{1,979}{\gram} de metal.
+    \begin{enumerate}
+      \item ¿Cuáles son las fórmulas empíricas de ambos óxidos?
+      \item ¿Cuáles la cantidad total de agua formada en las dos reacciones?
+    \end{enumerate}
+  \end{exercise}
+
+  \begin{solution}
+    \begin{enumerate*}
+      \item \ch{V2O3}; \ch{V2O5};
+      \item \SI{1.74}{\gram}
+    \end{enumerate*}
+  \end{solution}
+
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B OXF 2015, p43, e46},
+    ]
+    El análisis de un compuesto de carbono dio los siguientes porcentajes: 30,45\% de \ch{C}, 3,83\% de \ch{H}, 45,69\% de \ch{Cl} y 20,23\% de \ch{O}. Se sabe que la masa molar del compuesto es \SI{157}{\gram\per\mole}. ¿Cuál es la fórmula molecular del compuesto de carbono?
+  \end{exercise}
+
+  \begin{solution}
+    \ch{C4H6O2Cl2}
+  \end{solution}
+
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B SAN 2015, p44, e52},
+    ]
+    Para determinar la fórmula química del mármol se descompone una muestra de \SI{2}{\gram} del mismo y se obtienen \SI{900}{\milli\gram} de calcio y \SI{240}{\milli\gram} de carbono; se sabe que el resto es oxígeno, ¿cuál es la fórmula?
+
+    \begin{gexdatos}
+      \( M(\ch{Ca}) = \SI{40.08}{\gram\per\mole} \),
+      \( M(\ch{C}) = \SI{12.00}{\gram\per\mole} \),
+      \( M(\ch{O}) = \SI{16.00}{\gram\per\mole} \).
+    \end{gexdatos}
+  \end{exercise}
+
+  \begin{solution}
+    \ch{CaCO3}
+  \end{solution}
+
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B SAN 2015, p44, e53},
+    ]
+    El hierro se oxida cuando se combina con oxígeno. Para determinar la fórmula del óxido resultante se calientan \SI{223.2}{\milli\gram} de hierro en presencia de exceso de oxígeno, obteniéndose una cantidad máxima de \SI{319.2}{\milli\gram} de óxido. ¿Cuál es la fórmula del compuesto que se formó?
+
+    \begin{gexdatos}
+      \( M(\ch{Fe}) = \SI{55.85}{\gram\per\mole} \),
+      \( M(\ch{O}) = \SI{16.00}{\gram\per\mole} \).
+    \end{gexdatos}
+  \end{exercise}
+
+  \begin{solution}
+    \ch{Fe2O3}
+  \end{solution}
+\end{multicols}
+
+
+
+
+% 3. Leyes de los gases
+\begin{multicols}{2}[
+  \section{Leyes de los gases}
+  ]
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B OXF 2015, p60, e46},
+    ]
+    Un gas ocupa un volumen de \SI{2}{\liter} en condiciones normales de presión y temperatura. ¿Qué volumen ocupará la misma masa de gas a \SI{2}{atm} de presión y \SI{50}{\celsius} de temperatura?
+  \end{exercise}
+
+  \begin{solution}
+    \SI{1.18}{\liter}.
+  \end{solution}
+
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B OXF 2015, p60, e16},
+    ]
+    Un gas ocupa un volumen de \SI{80}{\cubic\centi\meter} a \SI{10}{\celsius} y \SI{715}{\mmHg}. ¿Qué volumen ocupará este gas en CN?
+  \end{exercise}
+
+  \begin{solution}
+    \SI{72.6}{\cubic\centi\meter}.
+  \end{solution}
+
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B OXF 2015, p60, e19},
+    ]
+    La densidad de un gas en condiciones normales es \SI{1.48}{\gram\per\liter}. ¿Cuál será su densidad a \SI{320}{\kelvin} y \SI{730}{\mmHg}?
+  \end{exercise}
+
+  \begin{solution}
+    \SI{1.21}{\gram\per\liter}.
+  \end{solution}
+
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B SAN 2015, p66, e37},
+    ]
+    En una ampolla de \SI{750}{\milli\liter} tenemos un gas que ejerce una presión de \SI{1.25}{atm} a \SI{50}{\celsius}. Lo conectamos a una segunda ampolla de \SI{2}{\liter}. ¿Qué presión leeremos ahora en el manómetro si no varía la temperatura?
+  \end{exercise}
+
+  \begin{solution}
+    \SI{259}{\mmHg}.
+  \end{solution}
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B SAN 2015, p66, e39},
+    ]
+    Tenemos un gas encerrado en un recipiente rígido de \SI{5}{\liter}. ¿En cuánto cambia su temperatura si su presión pasa de \SI{300}{\mmHg} a \SI{600}{\mmHg}?
+  \end{exercise}
+
+  \begin{solution}
+    Se duplica su temperatura absoluta.
+  \end{solution}
+
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B SAN 2015, p66, e39},
+    ]
+    Una pieza de una máquina está formada por un pistón que tiene un gas en su interior. En un momento dado, el volumen del pistón es de \SI{225}{\milli\liter} y la temperatura del gas es de \SI{50}{\celsius}. ¿Cuánto debe cambiar la temperatura para que el volumen sea de \SI{275}{\milli\liter} si la presión no varía?
+  \end{exercise}
+
+  \begin{solution}
+    \( \Delta T = \SI{+71.7}{\kelvin} \)
+  \end{solution}
+
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B OXF 2015, p60, e22},
+    ]
+    Se dispone de \SI{45.0}{\gram} de metano (\ch{CH4}) a \SI{800}{\mmHg} y \SI{27}{\celsius}. Calcula:
+    \begin{enumerate}
+      \item El volumen que ocupa en las citadas condiciones.
+      \item El número de moléculas existentes
+    \end{enumerate}
+  \end{exercise}
+
+  \begin{solution}
+    \begin{enumerate}
+      \item \SI{66}{\liter}
+      \item \SI{1.7e24}{moléculas}.
+    \end{enumerate}
+  \end{solution}
+
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B OXF 2015, p61, e24-25},
+    ]
+    En un matraz de \SI{1}{\liter} están contenidos \SI{0.9}{\gram} de un gas a una temperatura de \SI{25}{\celsius}. Un manómetro acoplado al matraz indica \SI{600}{\mmHg}. Calcula la masa  molecular del gas. ¿Qué presión indicará el manómetro anterior si calentamos el gas hasta \SI{80}{\celsius}?
+  \end{exercise}
+
+  \begin{solution}
+    \SI{27.9}{u}; \SI{710.7}{\mmHg}
+  \end{solution}
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B OXF 2015, p61, e29},
+    ]
+    Un recipiente contiene \SI{50}{\liter} de un gas de densidad \SI{1.45}{\gram\per\liter}. La temperatura a la que se encuentra el gas es \SI{353}{\kelvin}, y su presión \SI{10}{atm}. Calcula:
+    \begin{enumerate}
+      \item Los moles que contiene el recipiente.
+      \item La masa de un mol del gas.
+    \end{enumerate}
+  \end{exercise}
+
+  \begin{solution}
+    \begin{enumerate*}
+      \item \SI{18.87}{\mole};
+      \item \SI{3.8}{\gram}.
+    \end{enumerate*}
+  \end{solution}
+
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B SAN 2015, p67, e49},
+    ]
+    Una bombona de butano, \ch{C4H10}, tiene una capacidad de \SI{26}{\liter}, y cuando está llena su masa es \SI{12.5}{\kilo\gram} mayor que cuando está vacía. ¿Qué presión ejercería el butano que hay en su interior si estuviese en fase gaseosa? consideramos que la temperatura es de \SI{20}{\celsius}.
+  \end{exercise}
+
+  \begin{solution}
+    \SI{198.9}{atm}
+  \end{solution}
+
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B SAN 2015, p68, e56},
+    ]
+    En una bombona tenemos una mezcla de gas hidrógeno y gas nitrógeno al 50\% en volumen. Si la presión de la mezcla es de \SI{800}{\mmHg}, ¿cuál es la presión parcial que ejerce cada gas?
+  \end{exercise}
+
+  \begin{solution}
+    \( p_{\ch{H2}} = p_{\ch{N2}} = \SI{400}{\mmHg} \)
+  \end{solution}
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B SAN 2015, p68, e57},
+    ]
+    En un recipiente tenemos \SI{3.2}{\gram} de oxígeno que ejercen una presión de \SI{500}{\mmHg}. Sin que varíen la temperatura ni el volumen, añadimos al mismo recipiente \SI{4.2}{\gram} de gas hidrógeno. ¿Cuál será el valor
+    de la presión ahora?
+  \end{exercise}
+
+  \begin{solution}
+    \SI{11000}{\mmHg}.
+  \end{solution}
+
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B SAN 2015, p68, ejercicio resuelto 16},
+    ]
+    El aire seco es, fundamentalmente, una mezcla de \ch{N2} y \ch{O2}, cuya composición en masa es 75,5\% de \ch{N2} y 24,3\% de \ch{O2}. Cierto día la presión atmosférica es de \SI{720}{\mmHg}. ¿Qué presión ejerce el \ch{N2} ese día?
+  \end{exercise}
+
+  \begin{solution}
+    \SI{562}{\mmHg}.
+  \end{solution}
+
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B SAN 2015, p68, e61},
+    ]
+    En un recipiente cerrado tenemos \SI{0.5}{\gram}de gas hidrógeno a \SI{150}{\celsius} y \SI{2}{atm}. A continuación,
+    y sin modificar el volumen ni la temperatura,
+    añadimos \SI{0.1}{\mole} de oxígeno.
+    \begin{enumerate}
+      \item Calcula la presión que ejerce la mezcla.
+      \item Los dos gases reaccionan para dar agua (vapor), hasta
+      que se consume todo el oxígeno. Calcula la presión
+      en el recipiente al finalizar el proceso, suponiendo que
+      no cambia la temperatura ni el volumen.
+    \end{enumerate}
+  \end{exercise}
+
+  \begin{solution}
+    \begin{enumerate*}
+      \item \SI{2.8}{atm};
+      \item \SI{2}{atm}.
+    \end{enumerate*}
+  \end{solution}
+\end{multicols}
+
+
+
+
+
+% 4. Disoluciones
+\begin{multicols}{2}[
+  \section{Disoluciones}
+  ]
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B OXF 2015, p78, e9},
+    ]
+    Se disuelven \SI{10}{\gram} de sacarosa en \SI{250}{\gram} de agua. Indica la concentración de la disolución en:
+    \begin{enumerate}
+      \item Masa (\si{\gram}) de soluto/\SI{100}{\gram} de disolvente.
+      \item Masa (\si{\gram}) de soluto/\SI{100}{\gram} de disolución.
+    \end{enumerate}
+  \end{exercise}
+
+  \begin{solution}
+    \begin{enumerate*}
+      \item 4;
+      \item 3,85.
+    \end{enumerate*}
+  \end{solution}
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B SAN 2015, p92, e25},
+    ]
+    El suero fisiológico es una disolución de sal en agua al 0,9\%
+    (porcentaje en masa). Calcula la cantidad de sal y de agua
+    que necesitas para preparar \SI{2}{\kilo\gram} de suero fisiológico.
+  \end{exercise}
+
+  \begin{solution}
+    \SI{18}{\gram} de sal y \SI{1982}{\gram} de agua.
+  \end{solution}
+
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B SAN 2015, p92, e28},
+    ]
+    Necesitamos preparar \SI{500}{\milli\liter} de una disolución de hidróxido de sodio \SI{2}{M}. Calcula qué cantidad de soluto necesitas y explica cómo la prepararás si se dispone de un producto comercial del 95\% de riqueza en \ch{NaOH}.
+  \end{exercise}
+
+  \begin{solution}
+    Necesitas \SI{42.11}{\gram} de \ch{NaOH} comercial.
+  \end{solution}
+
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B SAN 2015, p92, e33},
+    ]
+    En el laboratorio tenemos un ácido clorhídrico del 37\% de riqueza en masa y \SI{1.18}{\gram\per\milli\liter} de densidad. Si cogemos \SI{70}{\milli\liter} del contenido de esa botella, ¿Cuánto ácido
+    clorhídrico estaremos tomando?
+  \end{exercise}
+
+  \begin{solution}
+    \SI{30.6}{\gram}.
+  \end{solution}
+
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B OXF 2015, p78, e11},
+    ]
+    Se prepara una disolución con \SI{5}{\gram} de \ch{NaOH} en \SI{25}{\gram} de agua destilada. Si el volumen final es de \SI{27.1}{\cubic\centi\meter}, calcula la concentración de la disolución en:
+    \begin{enumerate}
+      \item Porcentaje en masa.
+      \item Masa (\si{\gram}) por litro.
+      \item Molaridad.
+      \item Molalidad.
+    \end{enumerate}
+  \end{exercise}
+
+  \begin{solution}
+    \begin{enumerate*}
+      \item 16,7\%:
+      \item \SI{184.5}{\gram\per\liter};
+      \item \SI{4.6}{M};
+      \item \SI{5}{m}.
+    \end{enumerate*}
+  \end{solution}
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B SAN 2015, p94, e63},
+    ]
+    Se ha preparado una disolución mezclando \SI{100}{\milli\liter} de \ch{CaCl2} \SI{2}{M} con \SI{150}{\milli\liter} de \ch{NaCl} \SI{1.5}{M}.
+    ¿Cuál será la concentración de los iones cloruro en la disolución resultante? Para calcularlo, supón que los volúmenes son aditivos.
+  \end{exercise}
+
+  \begin{solution}
+      \SI{2.5}{M};
+  \end{solution}
+
+  % \vfill\null
+\end{multicols}
+
+
+
+
+
+
+% 5. Propiedades coligativas
+\begin{multicols}{2}[
+  \section{Propiedades coligativas}
+  ]
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B OXF 2015, p79, e41},
+    ]
+    Calcula la temperatura de congelación de una disolución formada por \SI{9.5}{\gram} de etilenglicol (anticongelante usado en los automóviles cuya fórmula es \ch{CH2OH-CH2OH}) y \SI{20}{\gram} de agua.
+  \end{exercise}
+
+  \begin{solution}
+    \SI{-14,25}{\celsius}
+  \end{solution}
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B SAN 2015, p94, e51},
+    ]
+    Cuál será, a \SI{80}{\celsius}, la presión de vapor de una disolución que se prepara disolviendo \SI{30}{\milli\liter} de glicerina, \ch{C3H8O3}, en \SI{70}{\milli\liter} de agua.
+
+    \begin{gexdatos}
+      \( p_{\mathrm{agua}}(\SI{80}{\celsius}) = \SI{355}{\mmHg} \),
+      \( d_{\mathrm{agua}} = \SI{1}{\gram\per\milli\liter} \),
+      \( d_{\mathrm{glicerina}} = \SI{1.26}{\gram\per\milli\liter} \). % REVIEW revisar si mathrm formatea bien el texto en recto
+    \end{gexdatos}
+  \end{exercise}
+
+  \begin{solution}
+    \SI{321}{\mmHg}
+  \end{solution}
+
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B OXF 2015, p79, e44},
+    ]
+    Suponiendo un comportamiento ideal, ¿cuál sería la presión de vapor de la disolución obtenida al mezclar \SI{500}{\milli\liter} de agua y \SI{90}{\gram} de glucosa (\ch{C6H12O6}) si la presión de vapor del agua a la temperatura de la mezcla es de \SI{55.3}{\mmHg}?
+  \end{exercise}
+
+  \begin{solution}
+    \SI{54.32}{\mmHg}
+  \end{solution}
+
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B OXF 2015, p79, e46},
+    ]
+    Un cierto compuesto contiene 43,2\% de \ch{C}, 16,6\% de \ch{N}, 2,4\% de \ch{H} y 37,8\% de \ch{O}. La adición de \SI{6.45}{\gram} de esa sustancia en \SI{50}{\milli\liter} de benceno (\ch{C6H6}), cuya densidad es \SI{0.88}{\gram\per\cubic\centi\meter}, hace bajar el punto de congelación del benceno de \SI{5.51}{\celsius} a \SI{1.25}{\celsius}. Halla la fórmula molecular de ese compuesto.
+
+    \begin{gexdatos}
+      \( K_c (\ch{C6H6}) = \SI{5.02}{\celsius\kilo\gram\per\mole} \)
+    \end{gexdatos}
+  \end{exercise}
+
+  \begin{solution}
+    \ch{C6N2O4H4}
+  \end{solution}
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B SAN 2015, p94, e54},
+    ]
+    Determina la masa molar de una sustancia si al disolver \SI{17}{\gram} de la misma en \SI{150}{\gram} de benceno se obtiene una mezcla que se congela a \SI{-4}{\celsius}.
+
+    \begin{gexdatos}
+      \( K_c (\ch{C6H6}) = \SI{5.07}{\celsius\kilo\gram\per\mole} \),
+      \( T_f (\ch{C6H6}) = \SI{6}{\celsius} \).
+    \end{gexdatos}
+  \end{exercise}
+
+  \begin{solution}
+    \SI{57.46}{\gram\per\mole}
+  \end{solution}
+
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B OXF 2015, p79, e48},
+    ]
+    La presión osmótica de una disolución es \SI{4.2}{atm} a \SI{20}{\celsius}. ¿Qué presión osmótica tendrá a \SI{50}{\celsius}?
+  \end{exercise}
+
+  \begin{solution}
+    \SI{4.6}{atm}
+  \end{solution}
+
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B SAN 2015, p94, e59},
+    ]
+    La albúmina es una proteína del huevo. Calcula la masa
+    molar de la albúmina si una disolución de \SI{50}{\gram} de albúmina
+    por litro de agua ejerce una presión osmótica de
+    \SI{14}{\mmHg} a \SI{25}{\celsius}.
+  \end{exercise}
+
+  \begin{solution}
+    \SI{6.63e4}{\gram\per\mole}
+  \end{solution}
+
+
+
+
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B OXF 2015, p79, e50},
+    ]
+    Una muestra de \SI{2}{\gram} de un compuesto orgánico disuelto en \SI{100}{\cubic\centi\meter} de disolución se encuentra a una presión de \SI{1.31}{atm}, en el equilibrio osmótico. Sabiendo que la disolución está a \SI{0}{\celsius}, calcula la masa molar del compuesto orgánico.
+  \end{exercise}
+
+  \begin{solution}
+    \SI{342}{\gram\per\mole}
+  \end{solution}
+  \vfill\null
+\end{multicols}
+
+\end{document}

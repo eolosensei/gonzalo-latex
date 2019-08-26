@@ -1,4 +1,4 @@
-\documentclass[10pt]{article}
+\documentclass[10pt,a5paper,twoside]{article}
   \title{Formulación inorgánica}
   \author{\textit{Gonzalo Esteban}}
 
@@ -58,13 +58,13 @@
 \usepackage{booktabs}
 \usepackage{tasks}
 \usepackage{fancyhdr}
+\usepackage{fancyhdr}
   \pagestyle{fancy}
-  \lhead{\textbf{Formulación inorgánica}}
-  \chead{}
-  \rhead{1 BACH}
-  \lfoot{}
-  \cfoot{\thepage}
-  \rfoot{}
+  \fancyhead{}
+  \fancyhead[LE]{\textbf{Formulación inorgánica}}
+  \fancyhead[RO]{1 BACH}
+  \fancyfoot{}
+  \fancyfoot[C]{\thepage}
   \renewcommand{\headrulewidth}{0.2pt}
   \renewcommand{\footrulewidth}{0pt}
 
@@ -72,7 +72,8 @@
 
 
 \newenvironment{gexdatos}{
-  \noindent\makebox[0pt][r]{\textit{Datos:}}
+    \vspace{4pt}
+    \noindent\small\textit{Datos:}
   }{\vspace{5pt}}
 
 \newcommand{\gexBinRow}[3]{
@@ -96,9 +97,7 @@
 
 \maketitle
 
-\begin{multicols*}{2}[
-  \section{Ejercicios variados}
-  ]
+\section{Ejercicios variados}
 
 \begin{exercise}[
     tags    = {inorgánica,compuestos binarios,sales binarias,sales,hidruros},
@@ -662,9 +661,6 @@
 \end{exercise}
 
 
-\end{multicols*}
-
-% \newpage
 
 
 
@@ -677,11 +673,7 @@
 
 
 
-
-
-\begin{multicols*}{2}[
-  \section{Ejercicios de nomenclatura}
-  ]
+\section{Ejercicios de nomenclatura}
 
 \begin{exercise}[
     tags    = {inorgánica,nomenclatura,múltiple,2B},
@@ -930,7 +922,6 @@
   \end{enumerate}
 \end{solution}
 
-\end{multicols*}
 
 
 
@@ -947,10 +938,7 @@
 
 
 
-
-\begin{multicols*}{2}[
-  \section{Ejercicios de formulación}
-  ]
+\section{Ejercicios de formulación}
 
 \begin{exercise}[
     tags    = {inorgánica,formulación,múltiple,2B},
@@ -1256,8 +1244,6 @@
     \item \ch{K2CrO4}
   \end{multicols}\end{enumerate}
 \end{solution}
-
-\end{multicols*}
 
 \end{document}
 

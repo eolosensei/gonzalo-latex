@@ -1,4 +1,4 @@
-\documentclass[10pt]{article}
+\documentclass[10pt,a5paper,twoside]{article}
   \title{Formulación orgánica}
   \author{\textit{Gonzalo Esteban}}
 
@@ -20,16 +20,15 @@
 % Configuración general de xsim
   \loadxsimstyle{layouts}
   \xsimsetup{
-    path              = {xsim-files},
-    exercise/template = {runin},
-    exercise/name     = {E},
-    exercise/print    = {false},
-    solution/template = {runin},
-    solution/name     = {S},
-    solution/print    = {true},
+    path                  = {xsim-files},
+    exercise/template     = {runin},
+    exercise/name         = {},
+    exercise/print        = {false},
+    solution/template     = {runin},
+    solution/name         = {S},
+    solution/print        = {true},
     exercise/within       = section,
-    exercise/the-counter  = \thesection.\arabic{exercise}
-  }
+    exercise/the-counter  = \thesection.\arabic{exercise}  }
   \DeclareExerciseProperty{source}
 \usepackage{siunitx}
 % Exponent symbol options: \times for the typical cross
@@ -59,12 +58,11 @@
 \usepackage{tasks}
 \usepackage{fancyhdr}
   \pagestyle{fancy}
-  \lhead{\textbf{Formulación orgánica}}
-  \chead{}
-  \rhead{1 BACH}
-  \lfoot{}
-  \cfoot{\thepage}
-  \rfoot{}
+  \fancyhead{}
+  \fancyhead[LE]{\textbf{Formulación orgánica}}
+  \fancyhead[RO]{1 BACH}
+  \fancyfoot{}
+  \fancyfoot[C]{\thepage}
   \renewcommand{\headrulewidth}{0.2pt}
   \renewcommand{\footrulewidth}{0pt}
 
@@ -74,8 +72,9 @@
 
 
 \newenvironment{gexdatos}{
-  \noindent\makebox[0pt][r]{\textit{Datos:}}
-  }{\vspace{5pt}}
+  \vspace{4pt}
+  \noindent\small\textit{Datos:}
+}{\vspace{5pt}}
 
 \newcommand{\gexBinRow}[3]{
   \ch{#1} & #2 & #3 \\ \midrule
@@ -94,9 +93,7 @@
 
 \maketitle
 
-\begin{multicols*}{2}[
-  \section{Ejercicios de nomenclatura}
-  ]
+\section{Ejercicios de nomenclatura}
 
   \begin{exercise}[
       tags    = {orgánica,formulación,múltiple,2B},
@@ -293,7 +290,6 @@
   \end{enumerate}
 \end{solution}
 
-\end{multicols*}
 
 
 
@@ -304,10 +300,7 @@
 
 
 
-
-\begin{multicols*}{2}[
-  \section{Ejercicios de formulación}
-  ]
+\section{Ejercicios de formulación}
 
 \begin{exercise}[
     tags    = {orgánica,nomenclatura,múltiple,2B},
@@ -577,8 +570,6 @@
   \end{enumerate}
 \end{solution}
 
-
-\end{multicols*}
 
 \end{document}
 
