@@ -137,7 +137,10 @@ sympy-plots-for-*.tex/
 
 # Auxiliary xsim files
 */xsim-files
+*/xsim
 *.xsim
+*-exercise-body.tex
+*-solution-body.tex
 
 # Experiment zone
 /experiments
