@@ -1,236 +1,6 @@
-\documentclass[10pt]{article}
-\title{Ejercicios Termoquímica}
-\author{Gonzalo Esteban}
+\section{Entropía y espontaneidad}
 
-\usepackage{polyglossia}
-    \setdefaultlanguage{spanish}
-\usepackage{fontspec}
-    \setmainfont{Fira Sans}
-\usepackage{amsmath, amsthm, amssymb}
-\usepackage{unicode-math}
-  \unimathsetup{
-    math-style  = ISO,
-    bold-style  = ISO
-  }
-  \setmathfont{Fira Math}
-\usepackage{multicol}
-  \setlength{\columnsep}{1cm}
-\usepackage[top=3cm, bottom=3cm, left=2.5cm, right=2.5cm]{geometry}
-\usepackage{xsim}
-% Configuración general de xsim
-  \loadxsimstyle{layouts}
-  \xsimsetup{
-  path                  = {xsim-files},
-  exercise/template     = {runin},
-  exercise/name         = {},
-  exercise/print        = {false},
-  solution/template     = {runin},
-  solution/name         = {S},
-  solution/print        = {true},
-  exercise/within       = section,
-  exercise/the-counter  = \thesection.\arabic{exercise}
-  }
-  \DeclareExerciseProperty{source}
-\usepackage{siunitx}
-% Exponent symbol options: \times for the typical cross
-  \sisetup{
-    per-mode                = symbol,
-    output-decimal-marker   = {,},
-    group-digits            = decimal,
-    exponent-product        = \cdot,
-    text-celsius            = ^^b0\kern -\scriptspace C,  % soluciona problemas con el símbolo de grados
-    math-celsius            = ^^b0\kern -\scriptspace C,
-    list-final-separator    = { y },
-    list-pair-separator     = { y },
-    range-phrase            = { \translate{to (numerical range)} },
-    qualifier-mode          = brackets,
-  }
-\usepackage[inline]{enumitem}
-% Configuración general de enumitem
-% Establece la configuración por defecto en a), b), c)
-  \setlist[enumerate,1]{
-    label   = \alph*),
-    itemsep = 0.3\itemsep,
-  }
-\usepackage{chemformula}
-\usepackage{chemfig}
-  \setchemfig{atom sep=2em}
-\usepackage{booktabs}
-\usepackage{icomma}    % resuelve el problema de espaciado excesivo en la coma decimal
-\usepackage{fancyhdr}
-  \pagestyle{fancy}
-  \lhead{\textbf{Termoquímica}}
-  \chead{}
-  \rhead{1 BACH}
-  \lfoot{}
-  \cfoot{\thepage}
-  \rfoot{}
-  \renewcommand{\headrulewidth}{0.2pt}
-  \renewcommand{\footrulewidth}{0pt}
-
-
-
-
-  \newenvironment{gexdatos}{
-      \vspace{2pt}
-      \noindent\textit{Datos:}
-    }{\vspace{5pt}}
-
-
-
-
-
-
-\begin{document}
-
-\maketitle
-
-\begin{multicols}{2}[
-    \section{Calor y entalpía}
-  ]
-
-  \subsection{Entalpía de reacción}
-
-  \begin{exercise}[
-      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
-      topics  = {química, termoquímica, termodinámica},
-      source  = {},
-    ]
-    Utilizando los datos tabulados, calcular la variación de entalpía en la formación de las siguientes sustancias.
-    \begin{enumerate}
-      \item \SI{180}{\gram} de agua en estado gaseoso.
-      \item \SI{300}{\gram} de óxido de nitrógeno(II) gaseoso.
-    \end{enumerate}
-  \end{exercise}
-
-  \begin{solution}
-    \begin{enumerate*}
-      \item \SI{-2420}{\kilo\joule}; \item \SI{900}{\kilo\joule}
-    \end{enumerate*}
-  \end{solution}
-
-
-
-
-  \begin{exercise}[
-      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
-      topics  = {química, termoquímica, termodinámica},
-      source  = {},
-    ]
-    La energía que proporciona una golosina de glucosa, \ch{C6H12O6}, es la misma si la digerimos que si la quemamos en el aire. La diferencia es la velocidad de liberación de la energía.
-    \begin{enumerate}
-      \item Escribir la ecuación termoquímica de la combustión de la glucosa si la entalpía de combustión es \SI{2800}{kJ/mol}.
-      \item Calcular la energía que proporciona una golosina con \SI{18}{\gram} de glucosa.
-    \end{enumerate}
-  \end{exercise}
-
-  \begin{solution}
-    b) \SI{280}{\kilo\joule}
-  \end{solution}
-
-
-
-
-  \subsection{Entalpía de reacción}
-
-  \begin{exercise}[
-      tags    = {termodinámica, entalpía, ley de Hess},
-      topics  = {química, termoquímica, termodinámica},
-      source  = {},
-    ]
-    Alguien ha propuesto fabricar diamantes a partir de la oxidación del metano, según la reacción:
-    \[ \ch{CH4(g) + O2(g) -> C(diamante) + 2 H2O(l)}  \]
-    Calcular la variación de entalpía del proceso conocidas las variaciones de entalpía de las siguientes reacciones:
-    \begin{multline*}
-      \mathbf{A:}\quad\ch{CH4(g) + 2 O2(g) -> CO2(g) + 2 H2O(l)} \\
-        \Delta H_A = \SI{-890}{\kilo\joule}
-    \end{multline*}
-    \begin{multline*}
-      \mathbf{B:}\quad\ch{C(diamante) + O2(g) -> CO2(g) + 2 H2O(l)} \\
-        \Delta H_B = \SI{-395}{\kilo\joule}
-    \end{multline*}
-
-
-  \end{exercise}
-
-  \begin{solution}
-    \SI{-495}{\kilo\joule}
-  \end{solution}
-
-
-
-
-  \begin{exercise}[
-      tags    = {termodinámica, entalpía, ley de Hess},
-      topics  = {química, termoquímica, termodinámica},
-      source  = {},
-    ]
-    La variación de entalpía de la reacción de síntesis del metano no se puede calcular directamente:
-    \[ \ch{C(grafito) + 2 H2(g) -> CH4(g)}  \]
-    Calcular su valor a partir de las siguientes reacciones:
-    \begin{multline*}
-      \mathbf{A:} \quad \ch{C(grafito) + O2(g) -> CO2(g) + 2 H2O(l)} \\
-      \Delta H_A = \SI{-394}{\kilo\joule}
-    \end{multline*}
-    \begin{multline*}
-      \mathbf{B:} \quad \ch{2 H2(g) + O2(g)-> H2O(g)} \\
-      \Delta H_B = \SI{-572}{\kilo\joule}
-    \end{multline*}
-    \begin{multline*}
-      \mathbf{C:} \quad \ch{CH4(g) + 2 O2(g) -> CO2(g) + 2 H2O(l)} \\
-      \Delta H_C = \SI{-890}{\kilo\joule}
-    \end{multline*}
-  \end{exercise}
-
-  \begin{solution}
-    \SI{-76}{\kilo\joule}
-  \end{solution}
-
-
-
-
-  \begin{exercise}[
-      tags    = {termodinámica, entalpía, ley de Hess},
-      topics  = {química, termoquímica, termodinámica},
-      source  = {},
-    ]
-    La aluminiotermia es una técnica utilizada para obtener hierro, a partir de aluminio y óxido de hierro(III), según la reacción:
-    \[ \ch{2 Al(s) + Fe2O3(s) -> 2 Fe(l) + Al2O3(s)} \]
-    \begin{enumerate}
-      \item Deducir la entalpía de dicha reacción a partir de las ecuaciones termoquímicas:
-        \begin{multline*}
-          \mathbf{A:} \quad \ch{CH4(g) + 2 O2(g) -> CO2(g) + 2 H2O(l)} \\
-          \Delta H_A = \SI{-890}{\kilo\joule}
-        \end{multline*}
-        \begin{multline*}
-          \mathbf{B:} \quad \ch{CH4(g) + 2 O2(g) -> CO2(g) + 2 H2O(l)} \\
-          \Delta H_B = \SI{-890}{\kilo\joule}
-        \end{multline*}
-      \item Calcular el calor desprendido en la aluminiotermia de \SI{16}{\gram} de óxido de hierro(III).
-      \item ¿Qué cantidad de hierro se habrá formado cuando se liberan 195 kJ?
-    \end{enumerate}
-  \end{exercise}
-
-  \begin{solution}
-    \begin{enumerate}
-      \item \SI{-780}{\kilo\joule};
-      \item \SI{78}{\kilo\joule};
-      \item \SI{0.5}{\mole\of{Fe}}.
-    \end{enumerate}
-  \end{solution}
-
-\end{multicols}
-
-
-
-
-
-
-\begin{multicols}{2}[
-  \section{Entropía y espontaneidad}
-  ]
-
-  \subsection{Entropía}
+  \subsection*{Entropía}
 
   \begin{exercise}[
       tags    = {termodinámica, entropía},
@@ -320,7 +90,7 @@
 
 
 
-  \subsection{Espontaneidad y energía libre de Gibbs}
+  \subsection*{Espontaneidad y energía libre de Gibbs}
 
   \begin{exercise}[
       tags    = {termodinámica, espontaneidad, Gibbs},
@@ -389,7 +159,7 @@
   \begin{exercise}[
       tags    = {termodinámica, espontaneidad, Gibbs},
       topics  = {química, termoquímica, termodinámica},
-      source  = {},
+      source  = {FQ 1B OXF 2015, p145, e34},
     ]
     El proceso que ocurre en las llamadas “bolsas de calor” es el siguiente:
     \begin{multline*}
@@ -405,7 +175,7 @@
   \end{exercise}
 
   \begin{solution}
-    AÚN SIN SOLUCIÓN % FIXME sin solución
+    El proceso siempre será espontáneo, ya que \( ∆H > 0 \) y \( ∆S > 0 \) (la entropía aumenta porque aparecen elementos en fase acuosa que antes eran sólidos).
   \end{solution}
 
 
@@ -425,7 +195,7 @@
 
     \begin{gexdatos}
       \begin{tabular}{ccc}
-        Sust. & \( \Delta H^0_f \si{\kilo\joule\per\mole}\) & \( S^0 \si{\joule\per\kelvin\per\mole} \) \\
+        Sust. & \( \Delta H^0_f (\si{\kilo\joule\per\mole}) \) & \( S^0 (\si{\joule\per\kelvin\per\mole}) \) \\
         \toprule
         \ch{CO2(g)} & \( -393,5 \) & \( 213,6 \) \\
         \ch{H2O(l)} & \( -285,8 \) & \( 69,9 \) \\
@@ -463,10 +233,10 @@
 
     \begin{gexdatos}
       \begin{tabular}{ccc}
-        Sust. & \( \Delta H^0_f \si{\kilo\joule\per\mole}\) & \( S^0 \si{\joule\per\kelvin\per\mole} \) \\
+        Sust. & \( \Delta H^0_f (\si{\kilo\joule\per\mole}) \) & \( S^0 (\si{\joule\per\kelvin\per\mole}) \) \\
         \toprule
-        \ch{Br2(l)} & \( 0 \) & \( 152,2 \) \\
-        \ch{Br2(g)} & \( 30,61 \) & \( 245,4 \) \\
+        \ch{Br2 (l)} & \( 0 \) & \( 152,2 \) \\
+        \ch{Br2 (g)} & \( 30,61 \) & \( 245,4 \) \\
         \bottomrule
       \end{tabular}
     \end{gexdatos}
@@ -484,6 +254,57 @@
 
 
 
-\end{multicols}
+  \begin{exercise}[
+      tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+      topics  = {química, termoquímica, termodinámica},
+      source  = {FQ 1B ANA 2016, p166, e32},
+    ]
+    Utilizando los valores que aparecen en la tabla, todos ellos obtenidos a la temperatura de \SI{25}{\celsius}, para la siguiente reacción de obtención del fosgeno:
+    \[ \ch{CO (g) + Cl2 (g) -> COCl2 (g)} \]
 
-\end{document}
+    \begin{enumerate}
+      \item Indica si será o no espontánea y si este hecho depende de la temperatura.
+      \item Calcula la energía transferida al formarse \SI{5}{\gram} de fosgeno e indica, justificando tu respuesta, si se desprende o se absorbe la energía en el proceso.
+    \end{enumerate}
+
+    \begin{gexdatos}
+      \begin{tabular}{ccc}
+        Sust. & \( \Delta H^0_f \) (\si{\kilo\joule\per\mole}) & \( S^0 \) (\si{\joule\per\kelvin\per\mole}) \\
+        \toprule
+        \ch{CO (g)} & \( -110,4 \) & \( 197,7 \) \\
+        \ch{Cl2 (g)} & \( 0,0 \) & \( 223,1 \) \\
+        \ch{COCl2 (g)} & \( -222,8 \) & \( 288,8 \) \\
+        \bottomrule
+      \end{tabular}
+    \end{gexdatos}
+
+  \end{exercise}
+
+  \begin{solution}
+    \begin{enumerate}
+      \item La reacción es espontánea a \SI{289}{\kelvin}.
+      \item \( \Delta H_r = \SI{-5.68}{\kilo\joule} \).
+    \end{enumerate}
+  \end{solution}
+
+
+
+
+  \begin{exercise}[
+        tags    = {termodinámica, entalpía, entalpia de reacción, calor},
+        topics  = {química, termoquímica, termodinámica},
+        source  = {FQ 1B ANA 2016, p167, e34},
+    ]
+    La fermentación alcohólica supone la transformación de la glucosa sólida en etanol líquido y dióxido de carbono gas. Sabiendo que para esta reacción es \( \Delta H^0 = \SI{-69.4}{\kilo\joule} \) a \SI{25}{\celsius}, razona si el proceso será espontáneo a
+    cualquier temperatura y calcula \( \Delta G^0 \) a \SI{25}{\celsius}.
+
+    \begin{gexdatos}
+        \( S^0 (\ch{C6H12O6}) = \SI{182.4}{\joule\per\mole\per\kelvin} \);
+        \( S^0 (\ch{C2H6O}) = \SI{160.7}{\joule\per\mole\per\kelvin} \);
+        \( S^0 (\ch{CO2}) = \SI{213.7}{\joule\per\mole\per\kelvin} \).
+    \end{gexdatos}
+  \end{exercise}
+
+  \begin{solution}
+    El proceso es espontáneo a cualquier temperatura. \( \Delta S_r = \SI{566.4}{\joule\per\kelvin} \); \( \Delta G_r (\SI{25}{\celsius}) = \SI{-238.2}{\kilo\joule} \)
+  \end{solution}
