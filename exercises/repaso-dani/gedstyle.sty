@@ -39,8 +39,8 @@
 % proporciona herramientas para escribir unidades del SI
 \usepackage{siunitx}
   \sisetup{
-    per-mode                = symbol,
-    output-decimal-marker   = {,}, 
+    per-mode                = symbol, % fraction or text
+    output-decimal-marker   = {,},
     group-digits            = decimal,
     exponent-product        = \cdot, % \times for the typical cross
     text-celsius            = ^^b0\kern -\scriptspace C, % soluciona problemas con el símbolo de grados
@@ -103,5 +103,3 @@
   \vspace{4pt}
   \noindent\small\textit{Datos:}
   }{\vspace{5pt}}
-
-    
